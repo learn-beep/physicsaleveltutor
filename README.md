@@ -1,0 +1,39 @@
+# physicsaleveltutor.com
+
+Static Astro site for AQA A-level Physics (7408) and AS (7407), deployed on Netlify. Built from the chemistryaleveltutor.com template with the `subject-revision-site` skill on 12 November 2026. Tutor: Rosey.
+
+## Run locally
+    npm install
+    npm run dev        # http://localhost:4321
+    npm run build      # writes dist/ (234 pages)
+
+## Deploy
+Push to `main` of the linked GitHub repository (`learn-beep/physicsaleveltutor`); Netlify builds with `npm run build` (Node 22) and publishes `dist/`.
+Set `CROPS=off` in Netlify's environment to replace every AQA crop with a link to AQA's site.
+
+## Data
+- `scripts/export.py --bank "<Question Bank folder>" --topics topics.json --config site.config.json [--images [--only <bundle>]]`
+  reads the AQA Physics question bank (`Dropbox\Teaching\Physics\AQA\Question Bank`: `data/index.js`, `data/img/*.js`) and writes `src/data/questions.json`, `papers.json`, `topics.json`, `spec.json`, `weighting.json`, and with `--images` the WebP crops under `public/img/<bundle>/` (5,125 crops, 105 MB).
+  `--only` rewrites the data files with a single paper: always follow it with the full run.
+- AQA Physics bank specifics handled in `export.py`: MCQ answers from the bank's `key`; AO as `[ao1, ao2, ao3]` marks (older mark schemes print no AO, so `aoText` is empty); practical parts from `RP`, `PS`, `AT` skill codes or the "Practical and data analysis" type; skills list keeps `MS`, `PS`, `AT` and `RP` codes; `cp` becomes `contextCrops` (the opening part of the question, folded out above later parts); paper codes `1`, `2`, `3A`, `3BA`–`3BE`.
+- `topics.json` maps the 641 specification statements to 45 site topics (36 core topics in sections 3.1 to 3.8, nine for the five options). `scripts/make_topics.py` generated it from the bank's spec. `src/lib/groups.ts` holds the section groups, badges, where each is examined and the topic motifs.
+- `site.config.json` holds the site line, WhatsApp wording, exam dates, grade boundaries and paper names; `src/data/tutors.json` holds Rosey's profile.
+
+## Pages that differ from the Chemistry template
+- `/formula-sheet/` (was `/data-sheet/`): the AQA data and formulae booklet section by section, and what is not on it. Named for the search demand ("a level physics formula sheet" 8,100/month UK).
+- `/required-practicals/` (was `/practicals/`): RP1 to RP12 with what the papers ask, and every question tagged to each.
+- `/maths-skills/`: MS 0.1 to MS 4.7.
+- `/six-mark-questions/`: the six-mark extended responses (one per Paper 3B option paper, most AS Paper 1s).
+- `/mechanisms/` removed.
+- `/mock/` assembles AQA-shaped papers: A-level Papers 1 and 2 = 60 structured marks + 25 MCQ; Paper 3 = 45 marks Section A + 35 marks of the chosen option; AS Paper 1 = 70 structured; AS Paper 2 = 40 structured + 30 MCQ. Structured questions are kept whole.
+- Question types: Multiple choice, Calculation, Show that, Explanation, Diagram or graph, Extended response, Practical and data analysis, Short answer.
+- Grade boundaries out of 250 (85 + 85 + 80, unweighted). AQA sets a separate A-level boundary per Paper 3 option; the page shows the indicative subject boundaries (tutor2u's summary of AQA's data) and says so. AS out of 140 from AQA.
+- Past-paper index: columns Paper 1, Paper 2, Paper 3A and the five 3B options.
+
+## Content that needs the tutor's check before launch
+- The nine key-term decks in `src/data/decks/` (`"checked": false` shows a "being checked" line).
+- The formula sheet "learn these" list, the required-practical notes, the maths-skills notes and the six-mark level summary.
+- Rosey's profile in `src/data/tutors.json` (no photo yet: the page shows an initial; add `public/tutors/rosey.webp`, 320×320, and set `"photo": "/tutors/rosey.webp"`).
+
+## Upkeep
+New papers (AQA publishes each summer's papers the following summer): run the bank pipeline, then `export.py --images`, commit `src/data` and `public/img`. Grade boundaries (`site.config.json` → `src/data/boundaries.json`) in August; exam dates (`src/data/exams.json`) when AQA publishes the final timetable.

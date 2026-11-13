@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allPapers, OCR_MATERIALS } from '../../lib/data';
+const seriesList = [...new Set(allPapers.map((p) => p.series))];
+const cell = (series, spec, code) => allPapers.find((p) => p.series === series && p.spec === spec && String(p.paperNo).replace(/^0/, '') === code);
+const OPTS = [['3BA', 'Astro'], ['3BB', 'Medical'], ['3BC', 'Engineering'], ['3BD', 'Turning points'], ['3BE', 'Electronics']];
+---
+<Base title="AQA A-level Physics past papers (7408 and AS 7407) 2016–2025 with question-by-question tables" context="past-papers">
+  <h1>AQA A-level Physics past papers</h1>
+  <p>Every 7408 and 7407 series since 2016, all from AQA's own downloads. Each paper page lists every question with its topic, marks and type, and shows the questions with their mark schemes and examiner's comments.</p>
+  <p><a class="btn" href={OCR_MATERIALS} rel="noopener">AQA's assessment resources</a></p>
+  <h2>A level (7408)</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Series</th><th>Paper 1</th><th>Paper 2</th><th>Paper 3A</th><th>Paper 3B (option)</th></tr></thead>
+    <tbody>{seriesList.filter((s) => allPapers.some((p) => p.series === s && p.spec === '7408')).map((s) => <tr><td>{s}</td>{['1', '2', '3A'].map((n) => { const p = cell(s, '7408', n); return <td>{p ? <a href={`/past-papers/${p.slug}/`}>{n === '3A' ? 'Section A' : p.paper}</a> : '—'}</td>; })}<td>{OPTS.map(([c, name], i) => { const p = cell(s, '7408', c); return p ? <>{i ? ' · ' : ''}<a href={`/past-papers/${p.slug}/`}>{name}</a></> : null; })}</td></tr>)}</tbody>
+  </table></div>
+  <h2 id="as">AS (7407)</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Series</th><th>Paper 1</th><th>Paper 2</th></tr></thead>
+    <tbody>{seriesList.filter((s) => allPapers.some((p) => p.series === s && p.spec === '7407')).map((s) => <tr><td>{s}</td>{['1', '2'].map((n) => { const p = cell(s, '7407', n); return <td>{p ? <a href={`/past-papers/${p.slug}/`}>{p.paper}</a> : '—'}</td>; })}</tr>)}</tbody>
+  </table></div>
+  <p class="muted">There were no summer exams in 2020 or 2021; the November 2020 and November 2021 papers are the autumn series AQA ran instead, using the papers written for June 2020 and June 2021. The A-level papers start in June 2017 and the AS papers in June 2016; the specimen papers are listed at the bottom of the A-level table. Paper 3 is one exam: Section A (practical skills and data analysis) and Section B, the option you studied. The June 2026 papers will be added when AQA makes them public.</p>
+</Base>

@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import { OCR_MATERIALS } from '../../lib/data';
+// From AQA's "A-level Physics data and formulae" booklet (version 1.5, for exams from June 2017). Retyped by the site; being checked by our tutor.
+const sheet = [
+  ['Fundamental constants and values', ['speed of light c = 3.00 × 10⁸ m s⁻¹', 'permeability of free space μ₀ = 4π × 10⁻⁷ H m⁻¹', 'permittivity of free space ε₀ = 8.85 × 10⁻¹² F m⁻¹', 'charge of the electron e = 1.60 × 10⁻¹⁹ C', 'Planck constant h = 6.63 × 10⁻³⁴ J s', 'gravitational constant G = 6.67 × 10⁻¹¹ N m² kg⁻²', 'Avogadro constant N_A = 6.02 × 10²³ mol⁻¹', 'molar gas constant R = 8.31 J K⁻¹ mol⁻¹', 'Boltzmann constant k = 1.38 × 10⁻²³ J K⁻¹', 'Stefan constant σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴', 'Wien constant α = 2.90 × 10⁻³ m K', 'electron rest mass mₑ = 9.11 × 10⁻³¹ kg; e/mₑ = 1.76 × 10¹¹ C kg⁻¹', 'proton rest mass mₚ = 1.673 × 10⁻²⁷ kg; e/mₚ = 9.58 × 10⁷ C kg⁻¹', 'neutron rest mass mₙ = 1.675 × 10⁻²⁷ kg', 'g = 9.81 N kg⁻¹ (9.81 m s⁻²)', 'atomic mass unit u = 1.661 × 10⁻²⁷ kg (1 u is equivalent to 931.5 MeV)']],
+  ['Algebra, geometry and astronomical data', ['quadratic formula', 'arc length = rθ; circumference 2πr; area of circle πr²', 'curved surface of a cylinder 2πrh; area of sphere 4πr²; volume of sphere 4/3 πr³', 'mass and mean radius of the Sun and the Earth']],
+  ['Particle physics', ['table of particles with rest energies in MeV (photon, neutrinos, electron, muon, π and K mesons, proton, neutron)', 'properties of quarks u, d, s: charge, baryon number, strangeness (antiquarks opposite)', 'lepton numbers: +1 for e⁻, νₑ, μ⁻, ν_μ; −1 for their antiparticles']],
+  ['Photons and energy levels', ['E = hf = hc/λ', 'hf = φ + E_k(max)', 'hf = E₁ − E₂', 'λ = h/p = h/mv']],
+  ['Waves', ['c = fλ; f = 1/T', 'first harmonic f = (1/2l)√(T/μ)', 'fringe spacing w = λD/s', 'diffraction grating d sin θ = nλ', 'n = c/cₛ; n₁ sin θ₁ = n₂ sin θ₂; sin θ_c = n₂/n₁']],
+  ['Mechanics', ['moment = Fd', 'v = Δs/Δt; a = Δv/Δt', 'v = u + at; s = ½(u + v)t; v² = u² + 2as; s = ut + ½at²', 'F = ma; F = Δ(mv)/Δt; impulse FΔt = Δ(mv)', 'W = Fs cos θ; E_k = ½mv²; ΔE_p = mgΔh', 'P = ΔW/Δt; P = Fv; efficiency = useful output power ÷ input power']],
+  ['Materials', ['ρ = m/V', 'F = kΔL', 'Young modulus = tensile stress ÷ tensile strain; stress = F/A; strain = ΔL/L', 'energy stored E = ½FΔL']],
+  ['Electricity', ['I = ΔQ/Δt; V = W/Q; R = V/I', 'ρ = RA/L', 'series R_T = R₁ + R₂ + …; parallel 1/R_T = 1/R₁ + 1/R₂ + …', 'P = VI = I²R = V²/R', 'ε = E/Q; ε = I(R + r)']],
+  ['Circular motion and SHM', ['ω = v/r; ω = 2πf', 'a = v²/r = ω²r; F = mv²/r = mω²r', 'a = −ω²x; x = A cos ωt; v = ±ω√(A² − x²)', 'v_max = ωA; a_max = ω²A', 'T = 2π√(m/k); T = 2π√(l/g)']],
+  ['Thermal physics', ['Q = mcΔθ; Q = ml', 'pV = nRT; pV = NkT', 'pV = ⅓Nm(c_rms)²', '½m(c_rms)² = 3/2 kT = 3RT/2N_A']],
+  ['Gravitational fields', ['F = Gm₁m₂/r²; g = F/m; g = GM/r²', 'ΔW = mΔV; V = −GM/r; g = −ΔV/Δr']],
+  ['Electric fields and capacitors', ['F = Q₁Q₂/4πε₀r²; F = EQ', 'E = V/d; E = Q/4πε₀r²; E = ΔV/Δr', 'ΔW = QΔV; V = Q/4πε₀r', 'C = Q/V; C = Aε₀ε_r/d', 'E = ½QV = ½CV² = ½Q²/C', 'charging Q = Q₀(1 − e^(−t/RC)); discharge Q = Q₀e^(−t/RC); time constant RC']],
+  ['Magnetic fields', ['F = BIl; F = BQv', 'Φ = BA; NΦ = BAN cos θ', 'ε = NΔΦ/Δt; rotating coil ε = BANω sin ωt', 'I_rms = I₀/√2; V_rms = V₀/√2', 'Nₛ/Nₚ = Vₛ/Vₚ; efficiency = IₛVₛ/IₚVₚ']],
+  ['Nuclear physics', ['I = k/x²', 'ΔN/Δt = −λN; N = N₀e^(−λt); A = λN', 'T½ = ln 2/λ', 'R = R₀A^(1/3)', 'E = mc²']],
+  ['Options (Section B)', ['Astrophysics: AU, light year, parsec, Hubble constant; telescope magnification M = f₀/fₑ; θ ≈ λ/D; m − M = 5 log(d/10); Wien and Stefan laws; Schwarzschild radius; Doppler shift and red shift; v = Hd', 'Medical physics: lens equations; threshold of hearing; intensity level = 10 log(I/I₀); I = I₀e^(−μx); μₘ = μ/ρ; Z = ρc; reflected fraction; effective half-life', 'Engineering physics: I = Σmr²; E_k = ½Iω²; angular equations of motion; T = Iα; T = Fr; angular momentum Iω; TΔt = Δ(Iω); W = Tθ; P = Tω; Q = ΔU + W; W = pΔV; pV^γ = constant; engine efficiencies; indicated power', 'Turning points: specific charge, Millikan, special relativity (time dilation, length contraction, relativistic energy)', 'Electronics: MOSFET, op-amp gains (inverting, non-inverting, summing), LC resonance, bandwidth and bit rate']],
+];
+const learn = [
+  ['Uncertainties', 'Percentage uncertainty = uncertainty ÷ value × 100. Add percentage uncertainties when multiplying or dividing, add absolute uncertainties when adding or subtracting, and multiply by n for a power. None of this is on the sheet.'],
+  ['Weight and momentum', 'W = mg and p = mv are not printed on their own, though they sit inside other equations.'],
+  ['Potential divider', 'V_out = V_in × R₂ ÷ (R₁ + R₂), and Kirchhoff’s laws for current and pd.'],
+  ['Temperature', 'T (K) = θ (°C) + 273 (273.15 if the question gives that). Gas law and kinetic theory equations need kelvin.'],
+  ['Circular motion', 'v = 2πr/T, linking speed and period, follows from ω = v/r and ω = 2πf but is not given.'],
+  ['Intensity', 'I = P/A for a wave spreading over an area; inverse-square for a point source.'],
+  ['Specific charge', 'Specific charge = charge ÷ mass, in C kg⁻¹ (AS particles). The values for the electron and proton are on the sheet; the definition is not.'],
+  ['Definitions', 'Every definition the specification asks for (the volt, the ohm, emf, the Young modulus, the tesla, the decay constant, binding energy and so on) has to be learnt word for word.'],
+];
+---
+<Base title="A-level Physics formula sheet: AQA data and formulae booklet, what is given and what to learn" description="What is on the AQA A-level Physics data and formulae booklet (constants, particle tables and every equation section from photons to the options), and what is not on it and has to be learnt: uncertainties, the potential divider, W = mg, v = 2πr/T and the definitions." context="formula-sheet" leadLine="Not sure which equations you are expected to know? A tutor can go through the booklet with you.">
+  <h1>A-level Physics formula sheet: the AQA data and formulae booklet</h1>
+  <p>Every AQA A-level and AS Physics paper comes with the <strong>data and formulae booklet</strong> (version 1.5, used since June 2017). It gives you the constants, the particle physics tables and most of the equations, section by section, including the equations for all five options. The past-paper questions on this site do not include it, so have a copy beside you when you practise.</p>
+  <p><a class="btn" href={OCR_MATERIALS} rel="noopener">Get the booklet from AQA</a></p>
+  <h2>What the booklet gives you</h2>
+  {sheet.map(([h, items]) => <><h3>{h}</h3><ul>{items.map((x) => <li>{x}</li>)}</ul></>)}
+  <h2>Not on the booklet: learn these</h2>
+  <div class="table-wrap"><table><thead><tr><th>Area</th><th>What to know</th></tr></thead><tbody>{learn.map(([a, b]) => <tr><td>{a}</td><td>{b}</td></tr>)}</tbody></table></div>
+  <p class="muted">Both lists were retyped by the site from AQA's booklet and specification and are being checked by our tutor. If something here differs from the booklet in front of you, the booklet is right: please <a href="/report/">tell us</a>.</p>
+  <h2>Using it in the exam</h2>
+  <ul>
+    <li>Find the equation in the booklet, write it down, then substitute. Writing the equation first often earns a mark even if the answer goes wrong.</li>
+    <li>Use the constants to the figures printed. Mark schemes are written from those values.</li>
+    <li>Watch the symbols: the booklet uses ε for emf, φ for the work function and α for the Wien constant; the same letters mean other things elsewhere.</li>
+    <li>Convert to SI units first: MeV to J (× 1.60 × 10⁻¹³), mm to m, μF to F.</li>
+  </ul>
+  <p><a href="/maths-skills/">Calculations and maths skills</a> · <a href="/questions/type/calculations/">Every calculation question</a> · <a href="/questions/type/show-that/">Show that questions</a></p>
+</Base>

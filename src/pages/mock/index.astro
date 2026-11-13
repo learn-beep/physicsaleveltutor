@@ -1,0 +1,88 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+---
+<Base title="AQA A-level Physics mini-mock builder: timed papers from real questions" description="Build a timed mini-mock from real AQA Physics past-paper questions in the shape of Paper 1, 2 or 3 with your option (or the AS papers): the multiple-choice section, whole structured questions, or a full paper. Play it on screen or print it with the mark schemes." context="mock" leadLine="Want a mock marked properly and gone through? Message us.">
+  <h1>Mini-mock builder</h1>
+  <p>Assembles a paper from real AQA questions in the shape of the exam. A-level Papers 1 and 2 are 60 marks of structured questions (Section A) and 25 multiple-choice questions (Section B), in 2 hours. Paper 3 is 45 marks of practical skills and data analysis (Section A) and 35 marks on your option (Section B), in 2 hours. AS Paper 1 is 70 marks of structured questions; AS Paper 2 is 40 marks of structured questions and 30 multiple-choice questions, each in 1 hour 30 minutes. Structured questions are kept whole, so every part has the information it needs. Have the data and formulae booklet beside you.</p>
+  <div class="panel" id="setup">
+    <h3>Paper</h3>
+    <div class="chips" data-group="paper"><button class="chip" type="button" data-v="Paper 1" aria-pressed="true">Paper 1 (3.1 to 3.6.1)</button><button class="chip" type="button" data-v="Paper 2">Paper 2 (3.6.2 to 3.8)</button><button class="chip" type="button" data-v="Paper 3">Paper 3 (practical and option)</button></div>
+    <h3>Level</h3>
+    <div class="chips" data-group="level"><button class="chip" type="button" data-v="A level" aria-pressed="true">A level</button><button class="chip" type="button" data-v="AS">AS</button></div>
+    <h3>Option (Paper 3 only)</h3>
+    <div class="chips" data-group="opt"><button class="chip" type="button" data-v="Astrophysics" aria-pressed="true">Astrophysics</button><button class="chip" type="button" data-v="Medical physics">Medical physics</button><button class="chip" type="button" data-v="Engineering physics">Engineering physics</button><button class="chip" type="button" data-v="Turning points">Turning points</button><button class="chip" type="button" data-v="Electronics">Electronics</button></div>
+    <h3>Length</h3>
+    <div class="chips" data-group="part"><button class="chip" type="button" data-v="A" aria-pressed="true">Multiple choice only</button><button class="chip" type="button" data-v="B">Structured questions, about 40 marks</button><button class="chip" type="button" data-v="full">Full paper</button></div>
+    <p class="muted" id="shape"></p>
+    <div><button class="btn btn-accent" type="button" id="build">Build my mock</button></div>
+  </div>
+  <div id="paper" hidden>
+    <div class="playbar"><span id="title"></span><span class="timer" id="timer"></span><span><button class="btn" type="button" id="starttimer"><Icon name="timer" />Start timer</button> <button class="btn" type="button" id="print"><Icon name="printer" />Print</button> <button class="btn" type="button" id="share"><Icon name="link" />Copy link</button></span></div>
+    <div id="cards"></div>
+    <div class="btn-row"><button class="btn btn-accent" type="button" id="rebuild">Build another</button></div>
+  </div>
+  <script>
+    import { loadBank, card, shuffle, fmtTime } from '../../scripts/player.js';
+    const $ = (s) => document.querySelector(s);
+    const sel = { paper: 'Paper 1', level: 'A level', part: 'A', opt: 'Astrophysics' };
+    let bank = null, timer = null, secs = 0;
+    // [multiple-choice questions, structured marks, seconds per mark] for each paper
+    const SHAPE = { 'A level': { 'Paper 1': [25, 60, 85], 'Paper 2': [25, 60, 85], 'Paper 3': [0, 80, 90] }, AS: { 'Paper 1': [0, 70, 77], 'Paper 2': [30, 40, 77] } };
+    const shapeOf = () => SHAPE[sel.level][sel.paper];
+    const mins = (m, sh) => Math.round(m * sh[2] / 60);
+    function shape() {
+      const sh = shapeOf();
+      if (!sh) { $('#shape').textContent = 'There is no AS Paper 3; the AS papers are Paper 1 and Paper 2.'; return; }
+      const [mc, st] = sh;
+      const p3 = sel.level === 'A level' && sel.paper === 'Paper 3';
+      const t = { A: mc ? `${mc} multiple-choice questions, marked instantly (${mc} marks, about ${mins(mc, sh)} minutes).` : `${sel.level === 'AS' ? 'AS ' : ''}${sel.paper} has no multiple-choice section; choose structured questions or the full paper.`,
+        B: p3 ? `Whole questions adding up to about 40 marks: Section A practical questions and your ${sel.opt} option (about ${mins(40, sh)} minutes).` : `Whole structured questions adding up to about ${Math.min(40, st)} marks (about ${mins(Math.min(40, st), sh)} minutes).`,
+        full: p3 ? `Section A: 45 marks of practical skills and data analysis. Section B: 35 marks of ${sel.opt} (80 marks, 2 hours).` : `${st} marks of structured questions${mc ? ` and ${mc} multiple-choice questions` : ''} (${mc + st} marks, ${sel.level === 'AS' ? '1 hour 30 minutes' : '2 hours'}).` };
+      $('#shape').textContent = t[sel.part];
+    }
+    document.querySelectorAll('[data-group]').forEach((g) => g.querySelectorAll('.chip').forEach((b) => b.addEventListener('click', () => { g.querySelectorAll('.chip').forEach((x) => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', 'true'); sel[g.dataset.group] = b.dataset.v; shape(); })));
+    shape();
+    loadBank().then((b) => { bank = b; });
+    const groupsOf = (qs) => { const m = new Map(); for (const q of qs) { if (!m.has(q.g)) m.set(q.g, []); m.get(q.g).push(q); } return [...m.values()]; };
+    const marksOf = (g) => g.reduce((a, q) => a + q.m, 0);
+    function fill(groups, target) {
+      // whole questions up to the target: take any that fit, then stop near the target
+      const out = []; let total = 0;
+      for (const g of groups) { const m = marksOf(g); if (total + m <= target + 2) { out.push(g); total += m; } if (total >= target - 2) break; }
+      return out;
+    }
+    $('#build').addEventListener('click', () => {
+      if (!bank) return;
+      const sh = shapeOf(); if (!sh) return;
+      const [mc, st] = sh;
+      const p3 = sel.level === 'A level' && sel.paper === 'Paper 3';
+      const ok = (q) => !q.old && q.c && q.l === sel.level;
+      const pool = bank.q.filter((q) => ok(q) && q.p === sel.paper);
+      const mcqs = shuffle(pool.filter((q) => q.f === 'Multiple choice' && q.ans));
+      const groups = shuffle(groupsOf(pool.filter((q) => q.f !== 'Multiple choice')));
+      const secA = shuffle(groupsOf(bank.q.filter((q) => ok(q) && q.p === 'Paper 3 Section A')));
+      const secB = shuffle(groupsOf(bank.q.filter((q) => ok(q) && q.p === 'Paper 3B ' + sel.opt)));
+      let picked = [];
+      const add = (g) => { picked = picked.concat(g.slice().sort((a, b) => a.q.localeCompare(b.q, undefined, { numeric: true }))); };
+      if (sel.part === 'A') { if (!mc) { shape(); return; } picked = mcqs.slice(0, mc); }
+      else if (p3) { if (sel.part === 'B') { fill(secA, 22).forEach(add); fill(secB, 18).forEach(add); } else { fill(secA, 45).forEach(add); fill(secB, 35).forEach(add); } }
+      else if (sel.part === 'B') fill(groups, Math.min(40, st)).forEach(add);
+      else { fill(groups, st).forEach(add); picked = picked.concat(mcqs.slice(0, mc)); }
+      if (!picked.length) { $('#shape').textContent = 'Nothing matched; try another combination.'; return; }
+      const total = picked.reduce((a, q) => a + q.m, 0);
+      $('#setup').hidden = true; $('#paper').hidden = false;
+      $('#title').textContent = `${sel.level} ${sel.paper}${p3 ? ' (' + sel.opt + ')' : ''}: ${picked.length} parts, ${total} marks`;
+      secs = Math.round(total * sh[2]); $('#timer').textContent = fmtTime(secs); if (timer) clearInterval(timer);
+      renderPicked(picked);
+      location.hash = 'set=' + picked.map((q) => q.id).join(',');
+      window.scrollTo({ top: 0 });
+    });
+    function renderPicked(picked) { const holder = $('#cards'); holder.innerHTML = ''; let lastG = null; picked.forEach((q, n) => { const c = card(q, { mcq: true }); c.querySelector('.meta strong').textContent = `Part ${n + 1} (from ${q.s} ${q.l === 'AS' ? 'AS ' : ''}${q.p} Q${q.q})`; if (q.g === lastG) { const st = c.querySelector('details.stem'); if (st) st.remove(); } lastG = q.g; holder.appendChild(c); }); }
+    $('#share').addEventListener('click', async () => { const url = location.href.split('#')[0] + location.hash; try { await navigator.clipboard.writeText(url); window.maltToast && window.maltToast('Link copied'); } catch { prompt('Copy this link', url); } });
+    loadBank().then(() => { const m = location.hash.match(/set=([^&]+)/); if (!m || !bank) return; const ids = decodeURIComponent(m[1]).split(','); const picked = ids.map((id) => bank.q.find((q) => q.id === id)).filter(Boolean); if (!picked.length) return; const total = picked.reduce((a, q) => a + q.m, 0); $('#setup').hidden = true; $('#paper').hidden = false; $('#title').textContent = `Shared mock: ${picked.length} parts, ${total} marks`; secs = Math.round(total * 80); $('#timer').textContent = fmtTime(secs); renderPicked(picked); });
+    $('#starttimer').addEventListener('click', () => { if (timer) clearInterval(timer); timer = setInterval(() => { secs--; $('#timer').textContent = fmtTime(Math.max(secs, 0)); if (secs <= 0) { clearInterval(timer); $('#timer').textContent = "Time's up"; } }, 1000); });
+    $('#print').addEventListener('click', () => { document.querySelectorAll('#cards img[data-src]').forEach((img) => { img.src = img.dataset.src; img.removeAttribute('data-src'); }); document.querySelectorAll('#cards details.stem').forEach((d) => { d.open = true; }); setTimeout(() => window.print(), 300); });
+    $('#rebuild').addEventListener('click', () => { if (timer) clearInterval(timer); $('#paper').hidden = true; $('#setup').hidden = false; window.scrollTo({ top: 0 }); });
+  </script>
+</Base>

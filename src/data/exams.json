@@ -1,0 +1,49 @@
+{
+  "series": "Summer 2027",
+  "source": "AQA exam timetable May/June 2027 (final)",
+  "alevel": [
+    {
+      "code": "7408/1",
+      "name": "Paper 1: sections 3.1 to 3.5 and 3.6.1 periodic motion",
+      "date": "2027-05-21",
+      "session": "Morning",
+      "length": "2 hours",
+      "marks": 85
+    },
+    {
+      "code": "7408/2",
+      "name": "Paper 2: sections 3.6.2 to 3.8, with assumed knowledge of 3.1 to 3.6.1",
+      "date": "2027-05-27",
+      "session": "Afternoon",
+      "length": "2 hours",
+      "marks": 85
+    },
+    {
+      "code": "7408/3",
+      "name": "Paper 3: practical skills and data analysis (Section A) and your option (Section B)",
+      "date": "2027-06-08",
+      "session": "Morning",
+      "length": "2 hours",
+      "marks": 80
+    }
+  ],
+  "as": [
+    {
+      "code": "7407/1",
+      "name": "AS Paper 1",
+      "date": "2027-05-12",
+      "session": "Morning",
+      "length": "1 hour 30 minutes",
+      "marks": 70
+    },
+    {
+      "code": "7407/2",
+      "name": "AS Paper 2",
+      "date": "2027-05-18",
+      "session": "Afternoon",
+      "length": "1 hour 30 minutes",
+      "marks": 70
+    }
+  ],
+  "asNote": ""
+}

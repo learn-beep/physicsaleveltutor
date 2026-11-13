@@ -1,0 +1,38 @@
+{
+ "topic": "current-voltage-and-resistivity",
+ "name": "Current, potential difference and resistivity",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Current",
+   "definition": "The rate of flow of charge, I = ΔQ/Δt.",
+   "examiner": ""
+  },
+  {
+   "term": "Potential difference",
+   "definition": "The work done (energy transferred) per unit charge between two points, V = W/Q.",
+   "examiner": "The volt is one joule per coulomb."
+  },
+  {
+   "term": "Resistance",
+   "definition": "Potential difference divided by current, R = V/I.",
+   "examiner": "The ohm is one volt per ampere."
+  },
+  {
+   "term": "Ohm's law",
+   "definition": "For an ohmic conductor at constant temperature, current is directly proportional to potential difference.",
+   "examiner": "Say 'at constant temperature' (physical conditions constant)."
+  },
+  {
+   "term": "Resistivity",
+   "definition": "ρ = RA/L: the resistance of a 1 m length of material with a 1 m² cross-sectional area.",
+   "examiner": "Unit Ω m. It depends on the material and temperature, not the dimensions."
+  },
+  {
+   "term": "Superconductor",
+   "definition": "A material whose resistivity becomes zero below its critical temperature.",
+   "examiner": "Uses: strong magnetic fields, power cables with no energy loss."
+  }
+ ]
+}

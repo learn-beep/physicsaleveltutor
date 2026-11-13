@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allQuestions, topicByslug } from '../../lib/data';
+const prac = allQuestions.filter((q) => (q.features || []).includes('practical') && !q.notCurrentSpec);
+const codes = {};
+for (const q of prac) for (const s of q.skills || []) { if (!/^RP\d/.test(s.code)) continue; if (!codes[s.code]) codes[s.code] = { text: s.text, qs: [] }; codes[s.code].qs.push(q); }
+const skillsOnly = prac.filter((q) => !(q.skills || []).some((s) => /^RP\d/.test(s.code)));
+// What each required practical involves and what the written papers ask about it, in the site's words. To be checked by a tutor.
+const how = {
+  'RP1': ['Stationary waves on a string', 'Vibration generator, pulley and hanging masses. Vary the length, the tension or the mass per unit length and find the first-harmonic frequency. Papers ask how to find the node positions accurately, why you measure several loops, and for a graph of f against 1/l or √T to test f = (1/2l)√(T/μ).'],
+  'RP2': ["Young's slits and the diffraction grating", "Laser through a double slit or grating onto a screen. Measure across several fringes to find the fringe spacing, then λ = ws/D; for a grating d sin θ = nλ. Papers ask about laser safety, measuring across many fringes, and the uncertainty in each length."],
+  'RP3': ['g by a free-fall method', 'Drop a ball through a light gate or electromagnet-and-trap-door timer, or film it. Plot 2h against t² (or h against t²) and g is the gradient. Papers ask about the intercept from a delay in release, air resistance and why you repeat the timings.'],
+  'RP4': ['The Young modulus by a simple method', 'Long wire loaded with masses, extension read with a vernier scale or a fixed marker; diameter with a micrometer at several points. E = gradient of stress–strain, or from F against extension. Papers ask why the wire is long and thin, using a control wire, and the largest source of uncertainty (the diameter).'],
+  'RP5': ['Resistivity of a wire', 'Measure V and I for different lengths of wire, diameter with a micrometer. Plot R against l; ρ = gradient × A. Papers ask about heating effects (small current, switch off between readings), zero errors and the contact resistance at the crocodile clips.'],
+  'RP6': ['Emf and internal resistance', 'Vary an external resistance and measure terminal pd and current. Plot V against I: the intercept is the emf and the gradient is −r. Papers ask why a protective resistor is used and how the battery warming up changes r.'],
+  'RP7': ['Simple harmonic motion: mass–spring and pendulum', 'Time 10 or more oscillations from the equilibrium position with a fiducial marker. Plot T² against m (spring) or T² against l (pendulum) to find k or g. Papers ask about small amplitudes for the pendulum, timing from the centre of the swing, and the mass of the spring.'],
+  'RP8': ["Boyle's law and Charles's law", "Trapped gas in a tube with a pressure gauge (Boyle's law: p against 1/V at constant temperature) or a capillary tube in a water bath (Charles's law: V against θ, extrapolated to absolute zero). Papers ask for the time to let temperature settle and how to estimate absolute zero."],
+  'RP9': ['Charge and discharge of a capacitor', 'Capacitor discharging through a resistor, pd or current recorded against time with a stopwatch or data logger. Plot ln V against t: gradient = −1/RC. Papers ask about time-constant methods, half-life of the discharge and the uncertainty in reading the meter while it changes.'],
+  'RP10': ['Force on a current-carrying wire', 'A wire between magnets on a top-pan balance: the change in reading gives the force. Vary current or length; F = BIl, so B is from the gradient of F against I. Papers ask why the balance is zeroed with the current off, and about reversing the current.'],
+  'RP11': ['Search coil and flux linkage', 'A search coil connected to an oscilloscope near a coil carrying alternating current. Vary the angle between the coils: the induced emf follows cos θ. Papers ask how to read the peak value on the oscilloscope and why a.c. is used.'],
+  'RP12': ['Inverse-square law for gamma radiation', 'A sealed gamma source and a GM tube at different distances; subtract the background count. Plot corrected count rate against 1/d², allowing for the unknown position of the source in its holder. Papers ask about safe handling, long counting times and the systematic error in d.'],
+};
+const ref = (q) => `${q.series.replace('June ', 'Jun ').replace('November ', 'Nov ')} ${q.level === 'AS' ? 'AS ' : ''}${q.paper.replace('Paper ', 'P')} Q${q.question}`;
+---
+<Base title="AQA A-level Physics required practicals: all 12, with every past-paper question" description="The twelve AQA A-level Physics required practicals (RP1 to RP12): what each involves, what the written papers ask about it, and every past-paper question tagged to it, with mark schemes. Plus the planning, uncertainty and evaluation questions." context="practicals" leadLine="Practical questions are at least 15% of the marks and most of Paper 3 Section A. A tutor can take you through each required practical.">
+  <h1>Required practicals</h1>
+  <p>AQA A-level Physics has twelve required practicals (six at AS). At least 15% of the marks on the written papers are for practical skills, and most of Paper 3 Section A (45 marks) is practical and data analysis. Below is what each practical involves, what the papers ask about it, and every past-paper question tagged to it. There are {prac.length} practical question parts in total; <a href="/questions/type/practical-questions/">see them all with their mark schemes</a>.</p>
+  <h2>The twelve required practicals</h2>
+  <div class="table-wrap"><table><thead><tr><th>RP</th><th>Practical</th><th>What the papers ask</th><th>Questions</th></tr></thead>
+  <tbody>{Object.keys(how).map((c) => <tr><td>{codes[c] ? <a href={`#${c}`}>{c}</a> : c}</td><td>{how[c][0]}{Number(c.slice(2)) <= 6 ? ' (AS)' : ''}</td><td>{how[c][1]}</td><td>{codes[c]?.qs.length || 0}</td></tr>)}</tbody></table></div>
+  <p class="muted">Descriptions written by the site from the specification and the mark schemes; being checked by our tutor. The Practical Endorsement is assessed by your teacher and reported separately as a pass.</p>
+  {Object.keys(how).filter((c) => codes[c]).map((c) => <section id={c}><h2>{c}: {how[c][0]}</h2><p class="muted">{codes[c].text}</p>
+    <ul class="qlinks">{codes[c].qs.sort((a, b) => b.year - a.year).map((q) => <li><a href={`/questions/${q.topics[0]}/#${q.id}`}>{ref(q)}</a> <span class="muted">{q.marks} mark{q.marks === 1 ? '' : 's'} · {topicByslug.get(q.topics[0])?.name}</span></li>)}</ul></section>)}
+  <section id="skills"><h2>Planning, analysis and evaluation</h2><p class="muted">Questions on experimental design, variables, uncertainties, graphs and improvements that are not tied to one required practical.</p>
+    <details class="spec-fold"><summary>{skillsOnly.length} questions</summary><ul class="qlinks">{skillsOnly.sort((a, b) => b.year - a.year).map((q) => <li><a href={`/questions/${q.topics[0]}/#${q.id}`}>{ref(q)}</a> <span class="muted">{q.marks} mark{q.marks === 1 ? '' : 's'} · {topicByslug.get(q.topics[0])?.name}</span></li>)}</ul></details></section>
+</Base>

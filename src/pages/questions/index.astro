@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allTopics } from '../../lib/data';
+import { GROUPS, badgeClass, badgeText } from '../../lib/groups';
+---
+<Base title="AQA A-level Physics questions by topic (every paper since 2016)" description={`Every AQA Physics past-paper question since 2016 sorted into ${allTopics.length} topics, from measurements to the Paper 3 options, each with mark schemes and examiners' comments.`} context="questions-index">
+  <h1>Questions by topic</h1>
+  <p>Every AQA AS and A-level Physics past-paper question since June 2016, sorted into {allTopics.length} topics in the order of the specification. Each topic page shows every question with its mark scheme and the examiner's comment, with filters by paper, year and question type. Paper 3 Section A (practical skills and data analysis) questions appear under whichever topic they are about; the five options of Paper 3 Section B have their own topics at the end.</p>
+  {GROUPS.map((g) => (
+    <>
+      <h2 class="strand-head">{g.heading}</h2>
+      <ul class="topic-list">
+        {allTopics.filter((t) => t.group === g.key).map((t) => <li><a href={`/questions/${t.slug}/`}><span>{t.name}</span><span class="strand"><span class={badgeClass(t.group)}>{badgeText(t.group)}</span> {t.parts} parts</span></a></li>)}
+      </ul>
+    </>
+  ))}
+  <h2>By question type</h2>
+  <p>Or work on a kind of question across every topic: <a href="/questions/type/multiple-choice/">multiple choice</a>, <a href="/questions/type/calculations/">calculations</a>, <a href="/questions/type/show-that/">show that</a>, <a href="/questions/type/explanations/">explain and describe</a>, <a href="/questions/type/graphs-and-diagrams/">graphs and diagrams</a>, <a href="/questions/type/six-mark-questions/">six-mark extended responses</a>, <a href="/questions/type/practical-questions/">practical questions</a>, <a href="/questions/type/short-answer/">short answers</a>.</p>
+</Base>

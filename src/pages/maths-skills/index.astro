@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allQuestions, topicByslug } from '../../lib/data';
+const tagged = allQuestions.filter((q) => (q.skills || []).some((s) => s.code.startsWith('MS ')) && !q.notCurrentSpec);
+const codes = {};
+for (const q of tagged) for (const s of q.skills) { if (!s.code.startsWith('MS ')) continue; if (!codes[s.code]) codes[s.code] = { text: s.text, qs: [] }; codes[s.code].qs.push(q); }
+const order = Object.keys(codes).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+const calcs = allQuestions.filter((q) => q.format === 'Calculation' && !q.notCurrentSpec);
+// How each skill is examined, in the site's words. To be checked by a tutor.
+const how = {
+  'MS 0.1': 'Units inside a calculation: converting prefixes (mm, μm, nm, MeV, kWh) before substituting, and giving the unit of the answer. A missing or wrong unit often costs the final mark.',
+  'MS 0.2': 'Standard form: the Planck constant, the charge on the electron, wavelengths and decay constants. Keep the powers of ten straight when dividing.',
+  'MS 0.3': 'Ratios, fractions and percentages: efficiency, percentage difference, ratio of two intensities, fraction of nuclei remaining.',
+  'MS 0.4': 'Estimates: the order of a quantity from everyday values, such as the mass of a car or the energy of a sneeze.',
+  'MS 0.5': 'Calculator powers, exponentials and logs: radioactive decay N = N₀e^(−λt), capacitor discharge, ln graphs.',
+  'MS 0.6': 'sin, cos and tan in degrees or radians: resolving vectors, projectiles, diffraction gratings, circular motion and SHM (radians).',
+  'MS 1.1': 'Significant figures: give the answer to the same number as the least precise data, usually 2 or 3. "Show that" answers need one more figure than shown.',
+  'MS 1.2': 'Arithmetic means from repeat readings, leaving out anomalies.',
+  'MS 1.4': 'Orders of magnitude: answers given as 10ⁿ, or checking that an answer is sensible.',
+  'MS 1.5': 'Uncertainties: half the range of repeats, percentage uncertainty, combining them (add percentages for products, double for a square).',
+  'MS 2.2': 'Changing the subject: from F = GMm/r² to r, from T = 2π√(l/g) to g, from E = hf to f.',
+  'MS 2.3': 'Substituting with consistent units: the step the method marks reward. Write the equation, then the numbers.',
+  'MS 2.4': 'Solving equations, including quadratics: kinematics with s = ut + ½at², internal resistance problems.',
+  'MS 2.5': 'Logarithms for quantities over many orders of magnitude: decibels, absolute magnitude (astrophysics option), log–log graphs.',
+  'MS 3.1': 'Moving between a graph, a table and an equation: reading values, recognising the shape (linear, inverse, exponential).',
+  'MS 3.2': 'Plotting: sensible scales using over half the grid, points to within half a square, a line of best fit.',
+  'MS 3.3': 'y = mx + c: choosing what to plot to get a straight line and naming the gradient and intercept.',
+  'MS 3.4': 'Slope and intercept of a straight line: use a large triangle, read the intercept or calculate it.',
+  'MS 3.5': 'Rate of change from a straight line: velocity from displacement–time, acceleration from velocity–time.',
+  'MS 3.6': 'Tangent to a curve: instantaneous velocity or decay rate at a point.',
+  'MS 3.7': 'Instantaneous against average rate of change.',
+  'MS 3.8': 'Area under a graph: displacement from v–t, work from F–x, charge from I–t, energy stored from Q–V.',
+  'MS 3.11': 'Log plots: ln y against x for an exponential, log y against log x for a power law; the gradient gives the power.',
+  'MS 4.1': 'Angles in 2D and 3D shapes: crystal structures, prisms and optical fibres.',
+  'MS 4.2': 'Representing 3D forms in 2D: field patterns, ray diagrams.',
+  'MS 4.3': 'Areas and volumes: cross-sectional area πd²/4 for wires (use the diameter, not the radius), volume of a sphere for a nucleus.',
+  'MS 4.4': "Pythagoras' theorem and angle sums: resultant of perpendicular vectors.",
+  'MS 4.5': 'sin, cos and tan in physical problems: resolving forces on slopes, projectiles, Snell\'s law.',
+  'MS 4.6': 'Small-angle approximations: the simple pendulum, fringe spacing, angular resolution.',
+  'MS 4.7': 'Degrees and radians: angular velocity ω in rad s⁻¹, arc length, SHM.',
+};
+const ref = (q) => `${q.series.replace('June ', 'Jun ').replace('November ', 'Nov ')} ${q.level === 'AS' ? 'AS ' : ''}${q.paper.replace('Paper ', 'P')} Q${q.question}`;
+---
+<Base title="AQA A-level Physics calculations and maths skills: every question by skill" description="Every AQA Physics past-paper question that uses one of the mathematical skills in the specification (MS 0.1 to MS 4.7): units, standard form, significant figures, rearranging equations, logs, graphs, gradients and areas, with how each skill is examined." context="maths-skills" leadLine="Losing marks on the calculations? A tutor can show you how to set them out so the method marks are safe.">
+  <h1>Calculations and maths skills</h1>
+  <p>At least 40% of the marks in A-level Physics are for mathematical skills. The specification lists them as MS 0.1 to MS 4.7; below is how each one is examined, and every past-paper question tagged to it ({tagged.length} question parts, {calcs.length} of them straight calculations). Set out the working: AQA's mark schemes give marks for each step and allow an error carried forward, and a bare wrong answer earns nothing.</p>
+  <p><a class="btn" href="/questions/type/calculations/">All calculation questions with mark schemes</a> <a class="btn" href="/formula-sheet/">The A-level Physics formula sheet</a></p>
+  <h2>The skills</h2>
+  <div class="table-wrap"><table><thead><tr><th>Skill</th><th>In the specification</th><th>How it is examined</th><th>Questions</th></tr></thead>
+  <tbody>{order.map((c) => <tr><td><a href={`#${c.replace(' ', '').replace('.', '-')}`}>{c}</a></td><td>{codes[c].text}</td><td>{how[c] || ''}</td><td>{codes[c].qs.length}</td></tr>)}</tbody></table></div>
+  <p class="muted">Explanations written by the site from the specification's mathematical requirements and the mark schemes; being checked by our tutor.</p>
+  {order.map((c) => <section id={c.replace(' ', '').replace('.', '-')}><h2>{c}: {codes[c].text}</h2><p class="muted">{how[c]}</p>
+    <details class="spec-fold"><summary>{codes[c].qs.length} questions</summary><ul class="qlinks">{codes[c].qs.sort((a, b) => b.year - a.year).map((q) => <li><a href={`/questions/${q.topics[0]}/#${q.id}`}>{ref(q)}</a> <span class="muted">{q.marks} mark{q.marks === 1 ? '' : 's'} · {topicByslug.get(q.topics[0])?.name}</span></li>)}</ul></details></section>)}
+</Base>

@@ -1,0 +1,20 @@
+[
+ {
+  "name": "Rosey",
+  "slug": "rosey",
+  "title": "A-level Physics teacher · AQA specialist · online one-to-one",
+  "photo": null,
+  "fee": "£100 per hour",
+  "bio": [
+   "Rosey teaches A-level Physics at a very highly regarded sixth-form college and has been teaching for several years. She is extremely popular with her students and highly regarded by her fellow teachers.",
+   "Because she teaches the AQA specification every week, her lessons are built around what earns marks on the AQA papers: setting out multi-step calculations so the method marks are safe, the required practicals and the Paper 3 data-analysis questions, the definitions AQA asks for word for word, and the six-mark extended responses."
+  ],
+  "offers": [
+   "One-to-one online lessons for Year 12 (AS) and Year 13 (A level), at a regular weekly slot",
+   "Topic-by-topic teaching of anything that hasn't clicked in class, from particles and waves to fields and the Paper 3 options",
+   "Past-paper questions marked against the AQA mark schemes, with feedback on where the marks went",
+   "Mock-paper walk-throughs before the May and June exams"
+  ],
+  "reviews": []
+ }
+]

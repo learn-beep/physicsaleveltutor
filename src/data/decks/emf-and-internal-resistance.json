@@ -1,0 +1,23 @@
+{
+ "topic": "emf-and-internal-resistance",
+ "name": "Emf and internal resistance",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Electromotive force (emf)",
+   "definition": "The energy transferred to electrical energy per unit charge passing through the source, ε = E/Q.",
+   "examiner": "Equal to the terminal pd when no current flows."
+  },
+  {
+   "term": "Internal resistance",
+   "definition": "The resistance of the source itself, which causes energy to be wasted inside it when current flows.",
+   "examiner": "ε = I(R + r); the 'lost volts' are Ir."
+  },
+  {
+   "term": "Terminal potential difference",
+   "definition": "The pd across the terminals of a source when it supplies current, V = ε − Ir.",
+   "examiner": "From a V–I graph: intercept = emf, gradient = −r."
+  }
+ ]
+}

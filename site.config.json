@@ -1,0 +1,167 @@
+{
+ "site": {
+  "name": "A-level Physics Tutor",
+  "domain": "https://www.physicsaleveltutor.com",
+  "whatsapp": "447888786687",
+  "email": "enquiries@physicsaleveltutor.com",
+  "company": "aleveltutors.online Limited",
+  "companyNumber": "14401016",
+  "registeredOffice": "5 Northbrook Court, Northbrook Avenue, Winchester SO23 0JP",
+  "spec": "AQA A-level Physics (7408) and AS (7407), specification version 1.4.",
+  "examYear": 2027
+ },
+ "whatsappMessage": "Hi, I'm looking for an AQA Physics Tutor. The student is in Year ..... Their name is ..................... we would like ........ lessons per week, the best two times for tutoring are ................. and ......................",
+ "faviconLetter": "P",
+ "ogTitle": [
+  "AQA A-level Physics",
+  "past papers, by topic"
+ ],
+ "ogSubtitle": "Mark schemes, examiner comments, practice and tutors · physicsaleveltutor.com",
+ "paperNames": {
+  "7408-1": "Paper 1",
+  "7408-2": "Paper 2",
+  "7408-3A": "Paper 3 Section A",
+  "7408-3BA": "Paper 3B Astrophysics",
+  "7408-3BB": "Paper 3B Medical physics",
+  "7408-3BC": "Paper 3B Engineering physics",
+  "7408-3BD": "Paper 3B Turning points",
+  "7408-3BE": "Paper 3B Electronics",
+  "7407-1": "Paper 1",
+  "7407-2": "Paper 2"
+ },
+ "oldSpecFlag": "not_current_spec",
+ "exams": {
+  "series": "Summer 2027",
+  "source": "AQA exam timetable May/June 2027 (final)",
+  "alevel": [
+   {
+    "code": "7408/1",
+    "name": "Paper 1: sections 3.1 to 3.5 and 3.6.1 periodic motion",
+    "date": "2027-05-21",
+    "session": "Morning",
+    "length": "2 hours",
+    "marks": 85
+   },
+   {
+    "code": "7408/2",
+    "name": "Paper 2: sections 3.6.2 to 3.8, with assumed knowledge of 3.1 to 3.6.1",
+    "date": "2027-05-27",
+    "session": "Afternoon",
+    "length": "2 hours",
+    "marks": 85
+   },
+   {
+    "code": "7408/3",
+    "name": "Paper 3: practical skills and data analysis (Section A) and your option (Section B)",
+    "date": "2027-06-08",
+    "session": "Morning",
+    "length": "2 hours",
+    "marks": 80
+   }
+  ],
+  "as": [
+   {
+    "code": "7407/1",
+    "name": "AS Paper 1",
+    "date": "2027-05-12",
+    "session": "Morning",
+    "length": "1 hour 30 minutes",
+    "marks": 70
+   },
+   {
+    "code": "7407/2",
+    "name": "AS Paper 2",
+    "date": "2027-05-18",
+    "session": "Afternoon",
+    "length": "1 hour 30 minutes",
+    "marks": 70
+   }
+  ],
+  "asNote": ""
+ },
+ "boundaries": {
+  "source": "AQA's published subject grade boundaries (June series). The A-level total is 85 + 85 + 80 = 250 raw marks, with no weighting. AQA sets a separate A-level boundary for each Paper 3 option; the figures here are the indicative subject boundaries as summarised by tutor2u from AQA's data, so your option's boundary may differ by a few marks. The AS total is 140 (two 70-mark papers), straight from AQA. The June 2026 papers themselves are not yet public.",
+  "alevel": [
+   {
+    "series": "June 2026",
+    "max": 250,
+    "A*": 188,
+    "A": 159,
+    "B": 134,
+    "C": 109,
+    "D": 84,
+    "E": 59
+   },
+   {
+    "series": "June 2025",
+    "max": 250,
+    "A*": 184,
+    "A": 152,
+    "B": 126,
+    "C": 101,
+    "D": 76,
+    "E": 51
+   },
+   {
+    "series": "June 2024",
+    "max": 250,
+    "A*": 173,
+    "A": 138,
+    "B": 114,
+    "C": 91,
+    "D": 68,
+    "E": 45
+   },
+   {
+    "series": "June 2023",
+    "max": 250,
+    "A*": 165,
+    "A": 131,
+    "B": 109,
+    "C": 86,
+    "D": 64,
+    "E": 43
+   },
+   {
+    "series": "June 2022",
+    "max": 250,
+    "A*": 168,
+    "A": 138,
+    "B": 114,
+    "C": 90,
+    "D": 67,
+    "E": 44
+   }
+  ],
+  "as": [
+   {
+    "series": "June 2026",
+    "max": 140,
+    "A": 89,
+    "B": 78,
+    "C": 67,
+    "D": 56,
+    "E": 46
+   },
+   {
+    "series": "June 2025",
+    "max": 140,
+    "A": 81,
+    "B": 70,
+    "C": 59,
+    "D": 48,
+    "E": 38
+   },
+   {
+    "series": "June 2024",
+    "max": 140,
+    "A": 79,
+    "B": 69,
+    "C": 59,
+    "D": 49,
+    "E": 40
+   }
+  ]
+ },
+ "tutors": []
+}

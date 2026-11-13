@@ -1,0 +1,33 @@
+{
+ "topic": "gravitational-fields",
+ "name": "Gravitational fields",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Gravitational field strength",
+   "definition": "The force per unit mass on a small mass placed in the field, g = F/m.",
+   "examiner": "Unit N kg⁻¹. 'Small' (test) mass so it does not change the field."
+  },
+  {
+   "term": "Gravitational potential",
+   "definition": "The work done per unit mass in moving a small mass from infinity to that point.",
+   "examiner": "Always negative; zero at infinity. V = −GM/r."
+  },
+  {
+   "term": "Equipotential",
+   "definition": "A surface on which every point has the same gravitational potential.",
+   "examiner": "No work is done moving along it; it is perpendicular to the field lines."
+  },
+  {
+   "term": "Escape velocity",
+   "definition": "The minimum speed an object must have at the surface to escape the gravitational field.",
+   "examiner": "½mv² = GMm/R gives v = √(2GM/R)."
+  },
+  {
+   "term": "Geostationary orbit",
+   "definition": "An orbit with a period of 24 hours, above the equator, moving in the same direction as the Earth rotates.",
+   "examiner": "So the satellite stays above the same point on the surface."
+  }
+ ]
+}
