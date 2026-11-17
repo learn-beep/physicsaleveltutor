@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.physicsaleveltutor.com/sitemap-index.xml
