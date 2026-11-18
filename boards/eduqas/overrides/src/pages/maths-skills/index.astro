@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allQuestions, topicByslug } from '../../lib/data';
+// Eduqas mark schemes have a Maths column; the question bank also tags the maths skill each part uses.
+const SK = ['Units and conversions', 'Algebra', 'Graph skills', 'Uncertainties', 'Trigonometry and vectors'];
+const live = allQuestions.filter((q) => !q.notCurrentSpec && q.topics.length);
+const codes = Object.fromEntries(SK.map((c) => [c, { text: '', qs: [] }]));
+for (const q of live) for (const s of q.skills || []) { if (codes[s.code]) { codes[s.code].text = s.text; codes[s.code].qs.push(q); } }
+const mathsMarked = live.filter((q) => (q.skills || []).some((s) => s.code === 'Maths marks'));
+const calcs = live.filter((q) => q.format === 'Calculation');
+const showThat = live.filter((q) => q.format === 'Show that');
+// How each skill is examined, in the site's words. To be checked by a tutor.
+const how = {
+  'Units and conversions': 'Converting prefixes (mm, μm, nm, MeV, kWh) before substituting, deriving or checking base units (often asked as "show that the units of ... are ..."), and giving the unit of the answer. A missing or wrong unit often costs the final mark.',
+  'Algebra': 'Rearranging and combining the Data Booklet equations, and derivations such as v = ωr from first principles or pV = ⅓Nmc² steps. Write each line of working.',
+  'Graph skills': 'Plotting with sensible scales, lines of best fit, gradients with a large triangle, intercepts, the area under a graph (work, charge, displacement), and log graphs to find a power or a time constant.',
+  'Uncertainties': 'Absolute and percentage uncertainties, combining them (add percentages for products and quotients, double for a square), error bars and the steepest and shallowest lines. Component 1 and 2 practical questions almost always include one.',
+  'Trigonometry and vectors': 'Resolving forces and velocities, adding vectors with Pythagoras, projectiles, inclined planes and moments at an angle.',
+};
+const ref = (q) => `${q.series.replace('June ', 'Jun ').replace('October ', 'Oct ')} ${q.level === 'AS' ? 'AS ' : ''}${q.paper.replace('Component ', 'C')} Q${q.question}`;
+const anchor = (c) => c.toLowerCase().replace(/[^a-z]+/g, '-');
+---
+<Base title="Eduqas A-level Physics calculations and maths skills: every question by skill" description="Every Eduqas Physics past-paper question that tests units, algebra, graphs, uncertainties or trigonometry, with how each is examined, plus every calculation and show that question." context="maths-skills" leadLine="Losing marks on the calculations? A tutor can show you how to set them out so the method marks are safe.">
+  <h1>Calculations and maths skills</h1>
+  <p>At least 40% of the marks in A-level Physics are for mathematical skills. Eduqas mark schemes show them in a Maths column: {mathsMarked.length} past-paper parts carry at least one maths mark. Below is how each kind of maths is examined and every question tagged to it ({calcs.length} straight calculations and {showThat.length} show that questions in all). Set out the working: the mark schemes give marks for each step and allow an error carried forward, and a bare wrong answer earns nothing.</p>
+  <p><a class="btn" href="/questions/type/calculations/">All calculation questions with mark schemes</a> <a class="btn" href="/data-booklet/">What the Data Booklet gives you</a></p>
+  <h2>The skills</h2>
+  <div class="table-wrap"><table><thead><tr><th>Skill</th><th>How it is examined</th><th>Questions</th></tr></thead>
+  <tbody>{SK.map((c) => <tr><td><a href={`#${anchor(c)}`}>{c}</a></td><td>{how[c]}</td><td>{codes[c].qs.length}</td></tr>)}</tbody></table></div>
+  <p class="muted">Explanations written by the site from the specification's mathematical requirements and the mark schemes; being checked by our tutor.</p>
+  {SK.map((c) => <section id={anchor(c)}><h2>{c}</h2><p class="muted">{how[c]}</p>
+    <details class="spec-fold"><summary>{codes[c].qs.length} questions</summary><ul class="qlinks">{codes[c].qs.sort((a, b) => b.year - a.year).map((q) => <li><a href={`/questions/${q.topics[0]}/#${q.id}`}>{ref(q)}</a> <span class="muted">{q.marks} mark{q.marks === 1 ? '' : 's'} · {topicByslug.get(q.topics[0])?.name}</span></li>)}</ul></details></section>)}
+</Base>

@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import { OCR_MATERIALS } from '../../lib/data';
+// From the Eduqas A-level Physics Data Booklet (as issued with the June 2025 papers). Retyped by the site; being checked by our tutor.
+const sheet = [
+  ['Values and conversions', ['Avogadro constant N_A = 6.02 × 10²³ mol⁻¹', 'fundamental electronic charge e = 1.60 × 10⁻¹⁹ C', 'mass of an electron mₑ = 9.11 × 10⁻³¹ kg', 'molar gas constant R = 8.31 J mol⁻¹ K⁻¹', 'g = 9.81 m s⁻² (9.81 N kg⁻¹) at sea level', 'G = 6.67 × 10⁻¹¹ N m² kg⁻²', 'Planck constant h = 6.63 × 10⁻³⁴ J s', 'Boltzmann constant k = 1.38 × 10⁻²³ J K⁻¹', 'speed of light c = 3.00 × 10⁸ m s⁻¹', 'ε₀ = 8.85 × 10⁻¹² F m⁻¹; μ₀ = 4π × 10⁻⁷ H m⁻¹', 'Stefan constant σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴; Wien constant W = 2.90 × 10⁻³ m K', 'Hubble constant H₀ = 2.20 × 10⁻¹⁸ s⁻¹', 'T/K = θ/°C + 273.15; 1 parsec = 3.09 × 10¹⁶ m; 1 u = 1.66 × 10⁻²⁷ kg; 1 eV = 1.60 × 10⁻¹⁹ J; 1/4πε₀ ≈ 9.0 × 10⁹ F⁻¹ m']],
+  ['Component 1: Newtonian physics', ['ρ = m/V', 'v = u + at; x = ½(u + v)t; x = ut + ½at²; v² = u² + 2ax', 'ΣF = ma; p = mv', 'W = Fx cos θ; ΔE = mgΔh; E = ½kx²; E = ½mv²; Fx = ½mv² − ½mu²', 'P = W/t = ΔE/t; efficiency = useful energy transfer ÷ total energy input × 100%', 'ω = θ/t; v = ωr; a = ω²r = v²/r; F = mv²/r = mω²r', 'a = −ω²x; x = A cos(ωt + ε); v = −Aω sin(ωt + ε); T = 2π/ω', 'T = 2π√(m/k); T = 2π√(l/g)', 'pV = nRT; pV = NkT; p = ⅓ρ⟨c²⟩ = ⅓(N/V)m⟨c²⟩', 'M/kg = Mᵣ/1000; n = total mass ÷ molar mass; k = R/N_A', 'U = 3/2 nRT = 3/2 NkT; W = pΔV; ΔU = Q − W; Q = mcΔθ']],
+  ['Component 2: Electricity and the universe', ['I = ΔQ/Δt; I = nAve; R = V/I; P = IV = I²R = V²/R; R = ρl/A', 'V = E − Ir; potential divider V/V_total = R/R_total', 'C = Q/V; C = ε₀A/d; E = V/d; U = ½QV', 'Q = Q₀(1 − e^(−t/RC)); Q = Q₀e^(−t/RC)', 'F = kx; σ = F/A; ε = Δl/l; E = σ/ε; W = ½Fx', 'F = (1/4πε₀)Q₁Q₂/r²; F = GM₁M₂/r²', 'E = (1/4πε₀)Q/r²; g = GM/r²; V_E = (1/4πε₀)Q/r; V_g = −GM/r', 'potential energies and W = qΔV_E; W = mΔV_g', 'λ_max = W/T; P = AσT⁴; Δλ/λ = v/c; v = H₀D; ρ_c = 3H₀²/8πG', 'binary orbits: r₁ = M₂d/(M₁ + M₂); T = 2π√(d³/G(M₁ + M₂))']],
+  ['Component 3: Light, nuclei and options', ['T = 1/f; c = fλ', 'Young\'s slits λ = aΔy/D; grating d sin θ = nλ', 'n = c/v; n₁v₁ = n₂v₂; n₁ sin θ₁ = n₂ sin θ₂; n₁ sin θ_c = n₂', 'E_k max = hf − φ; p = h/λ', 'A = λN; N = N₀e^(−λt); A = A₀e^(−λt); N = N₀/2ˣ; A = A₀/2ˣ; λ = ln 2/T½', 'table of charge and lepton number for the electron, electron neutrino, up and down quarks', 'E = mc²', 'F = BIl sin θ; F = Bqv sin θ; B = μ₀I/2πa; B = μ₀nI', 'Φ = AB cos θ; flux linkage = NΦ']],
+  ['Options (Component 3 Section B)', ['Option A (Alternating currents): flux linkage and emf in a rotating coil; I_rms = I₀/√2, V_rms = V₀/√2; X_L = ωL; X_C = 1/ωC; Z = √(X² + R²); Q factor', 'Option B (Medical physics): I = I₀e^(−μx); Z = cρ; Doppler shift Δf/f₀ = (2v/c) cos θ; f = 42.6 × 10⁶ B; H = DW_R; E = HW_T', 'Option C (The physics of sports): Ft = mv − mu; coefficient of restitution; moments of inertia 2/5 mr² and 2/3 mr²; angular acceleration, τ = Iα; L = Iω; KE = ½Iω²; p = p₀ − ½ρv²; F_D = ½ρv²AC_D', 'Option D (Energy and the environment): I = P/A; P = ½Aρv³; ΔQ/Δt = −AKΔθ/Δx; P = UAΔθ']],
+  ['Mathematical information', ['SI multipliers from atto (10⁻¹⁸) to zetta (10²¹)', 'areas and volumes: circle, triangle, rectangular block, cylinder, sphere', 'trigonometry: sin, cos, tan, Pythagoras', 'logarithms: log(ab), log(a/b), log xⁿ, ln e^(kx) = kx, ln 2 = 0.693']],
+];
+const learn = [
+  ['Definitions', 'Eduqas publishes a Terms and definitions document. Definition questions are marked against its wording, so learn the definitions word for word (they are not in the booklet).'],
+  ['Uncertainties', 'Percentage uncertainty = uncertainty ÷ value × 100. Add percentage uncertainties when multiplying or dividing, add absolute uncertainties when adding or subtracting, and multiply by n for a power.'],
+  ['Weight and impulse', 'W = mg is not printed on its own; nor is impulse = FΔt (Option C gives Ft = mv − mu).'],
+  ['Series and parallel resistors', 'R = R₁ + R₂ + … and 1/R = 1/R₁ + 1/R₂ + … are not in the booklet; neither are Kirchhoff\'s laws.'],
+  ['Kinetic energy of a gas', 'The link ½m⟨c²⟩ = 3/2 kT has to be put together from p = ⅓ρ⟨c²⟩ and pV = NkT.'],
+  ['Photon energy', 'E = hf and E = hc/λ are not printed separately from the photoelectric equation; learn them.'],
+];
+---
+<Base title="Eduqas A-level Physics Data Booklet: what is given and what to learn" description="What is in the Eduqas A-level Physics Data Booklet (values and conversions, every equation by component, the four options and the maths information) and what is not in it and has to be learnt." context="data-booklet" leadLine="Not sure which equations you are expected to know? A tutor can go through the booklet with you.">
+  <h1>The Eduqas Data Booklet: what is given, and what to learn</h1>
+  <p>Every Eduqas A-level and AS Physics paper comes with a <strong>Data Booklet</strong>: constants and conversions, the equations for each component, the option equations and a page of maths. From 2024 it is printed as a separate insert with each paper. The past-paper questions on this site do not include it, so have a copy beside you when you practise.</p>
+  <p><a class="btn" href={OCR_MATERIALS} rel="noopener">Get the papers and booklets from Eduqas</a></p>
+  <h2>What the booklet gives you</h2>
+  {sheet.map(([h, items]) => <><h3>{h}</h3><ul>{items.map((x) => <li>{x}</li>)}</ul></>)}
+  <h2>Not in the booklet: learn these</h2>
+  <div class="table-wrap"><table><thead><tr><th>Area</th><th>What to know</th></tr></thead><tbody>{learn.map(([a, b]) => <tr><td>{a}</td><td>{b}</td></tr>)}</tbody></table></div>
+  <p class="muted">Both lists were retyped by the site from Eduqas's booklet and specification and are being checked by our tutor. If something here differs from the booklet in front of you, the booklet is right: please <a href="/report/">tell us</a>. The AS booklet is a shorter version covering the AS content.</p>
+  <h2>Using it in the exam</h2>
+  <ul>
+    <li>Find the equation, write it down, then substitute. The equation line often earns a mark even if the arithmetic goes wrong.</li>
+    <li>Note the symbols: the booklet uses x for displacement in the equations of motion, W for the Wien constant and ε for strain and the phase constant.</li>
+    <li>Use the constants to the figures printed. Mark schemes are written from those values.</li>
+    <li>Convert to SI units first: eV to J (× 1.60 × 10⁻¹⁹), mm to m, μF to F.</li>
+  </ul>
+  <p><a href="/maths-skills/">Calculations and maths skills</a> · <a href="/questions/type/calculations/">Every calculation question</a> · <a href="/questions/type/definitions/">Definition questions</a></p>
+</Base>

@@ -1,0 +1,4852 @@
+[
+{
+"code": "1",
+"title": "Component 1: Newtonian Physics",
+"paper": 1,
+"option": null,
+"area": null,
+"theme": null,
+"module": 1,
+"aLevelOnly": false,
+"topic": null,
+"statements": []
+},
+{
+"code": "1.1",
+"title": "Basic Physics",
+"paper": 1,
+"option": null,
+"area": null,
+"theme": null,
+"module": 1,
+"aLevelOnly": false,
+"topic": "basic-physics",
+"statements": [
+{
+"id": "1.1-a",
+"short": "",
+"text": "the 6 essential base SI units (kg, m, s, A, mol, K)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-b",
+"short": "",
+"text": "representing units in terms of the 6 base SI units and their prefixes",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-c",
+"short": "",
+"text": "checking equations for homogeneity using units",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-d",
+"short": "",
+"text": "the difference between scalar and vector quantities and to give examples of each – displacement, velocity, acceleration, force, speed, time, density, pressure etc",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-e",
+"short": "",
+"text": "the addition and subtraction of coplanar vectors, and perform mathematical calculations limited to two perpendicular vectors",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-f",
+"short": "",
+"text": "how to resolve a vector into two perpendicular components",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-g",
+"short": "",
+"text": "the concept of density and how to use the equation ρ = m/V to calculate mass, density and volume",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-h",
+"short": "",
+"text": "what is meant by the turning effect of a force",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-i",
+"short": "",
+"text": "the use of the principle of moments",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-j",
+"short": "",
+"text": "the use of centre of gravity, for example in problems including stability: identify its position in a cylinder, sphere and cuboid (beam) of uniform density",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-k",
+"short": "",
+"text": "when a body is in equilibrium the resultant force is zero and the net moment is zero, and be able to perform simple calculations",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-P1",
+"short": "",
+"text": "Specified practical: Measurement of the density of solids",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+},
+{
+"id": "1.1-P2",
+"short": "",
+"text": "Specified practical: Determination of unknown masses by using the principle of moments",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"basic-physics"
+]
+}
+]
+},
+{
+"code": "1.2",
+"title": "Kinematics",
+"paper": 1,
+"option": null,
+"area": null,
+"theme": null,
+"module": 1,
+"aLevelOnly": false,
+"topic": "kinematics",
+"statements": [
+{
+"id": "1.2-a",
+"short": "",
+"text": "what is meant by displacement, mean and instantaneous values of speed, velocity and acceleration",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"kinematics"
+]
+},
+{
+"id": "1.2-b",
+"short": "",
+"text": "the representation of displacement, speed, velocity and acceleration by graphical methods",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"kinematics"
+]
+},
+{
+"id": "1.2-c",
+"short": "",
+"text": "the properties of displacement-time graphs, velocity-time graphs, and interpret speed and displacement-time graphs for non-uniform acceleration",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"kinematics"
+]
+},
+{
+"id": "1.2-d",
+"short": "",
+"text": "how to derive and use equations which represent uniformly accelerated motion in a straight line",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"kinematics"
+]
+},
+{
+"id": "1.2-e",
+"short": "",
+"text": "how to describe the motion of bodies falling in a gravitational field with and without air resistance - terminal velocity",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"kinematics"
+]
+},
+{
+"id": "1.2-f",
+"short": "",
+"text": "the independence of vertical and horizontal motion of a body moving freely under gravity",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"kinematics"
+]
+},
+{
+"id": "1.2-g",
+"short": "",
+"text": "the explanation of the motion due to a uniform velocity in one direction and uniform acceleration in a perpendicular direction, and perform simple calculations",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"kinematics"
+]
+},
+{
+"id": "1.2-P1",
+"short": "",
+"text": "Specified practical: Measurement of g by freefall",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"kinematics"
+]
+}
+]
+},
+{
+"code": "1.3",
+"title": "Dynamics",
+"paper": 1,
+"option": null,
+"area": null,
+"theme": null,
+"module": 1,
+"aLevelOnly": false,
+"topic": "dynamics",
+"statements": [
+{
+"id": "1.3-a",
+"short": "",
+"text": "the concept of force and Newton's 3rd law of motion",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dynamics"
+]
+},
+{
+"id": "1.3-b",
+"short": "",
+"text": "how free body diagrams can be used to represent forces on a particle or body",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dynamics"
+]
+},
+{
+"id": "1.3-c",
+"short": "",
+"text": "the use of the relationship F = ma in situations where mass is constant",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dynamics"
+]
+},
+{
+"id": "1.3-d",
+"short": "",
+"text": "the idea that linear momentum is the product of mass and velocity",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dynamics"
+]
+},
+{
+"id": "1.3-e",
+"short": "",
+"text": "the concept that force is the rate of change of momentum, applying this in situations where mass is constant",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dynamics"
+]
+},
+{
+"id": "1.3-f",
+"short": "",
+"text": "the principle of conservation of momentum and use it to solve problems in one dimension involving elastic collisions (where there is no loss of kinetic energy) and inelastic collisions (where there is a loss of kinetic energy)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dynamics"
+]
+},
+{
+"id": "1.3-P1",
+"short": "",
+"text": "Specified practical: Investigation of Newton’s 2nd law",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dynamics"
+]
+}
+]
+},
+{
+"code": "1.4",
+"title": "Energy Concepts",
+"paper": 1,
+"option": null,
+"area": null,
+"theme": null,
+"module": 1,
+"aLevelOnly": false,
+"topic": "energy-concepts",
+"statements": [
+{
+"id": "1.4-a",
+"short": "",
+"text": "the idea that work is the product of a force and distance moved in the direction of the force when the force is constant",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"energy-concepts"
+]
+},
+{
+"id": "1.4-b",
+"short": "",
+"text": "the calculation of the work done for constant forces, when the force is not along the line of motion (work done = Fx cos θ)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"energy-concepts"
+]
+},
+{
+"id": "1.4-c",
+"short": "",
+"text": "the principle of conservation of energy including knowledge of gravitational potential energy (mgΔh), elastic potential energy (½kx²) and kinetic energy (½mv²)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"energy-concepts"
+]
+},
+{
+"id": "1.4-d",
+"short": "",
+"text": "the work-energy relationship: Fx = ½mv² − ½mu²",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"energy-concepts"
+]
+},
+{
+"id": "1.4-e",
+"short": "",
+"text": "power being the rate of energy transfer",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"energy-concepts"
+]
+},
+{
+"id": "1.4-f",
+"short": "",
+"text": "dissipative forces for example, friction and drag cause energy to be transferred from a system and reduce the overall efficiency of the system",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"energy-concepts"
+]
+},
+{
+"id": "1.4-g",
+"short": "",
+"text": "the equation efficiency = (useful energy transfer / total energy input) × 100%",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"energy-concepts"
+]
+}
+]
+},
+{
+"code": "1.5",
+"title": "Circular Motion",
+"paper": 1,
+"option": null,
+"area": null,
+"theme": null,
+"module": 1,
+"aLevelOnly": true,
+"topic": "circular-motion",
+"statements": [
+{
+"id": "1.5-a",
+"short": "",
+"text": "the terms period of rotation, frequency",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"circular-motion"
+]
+},
+{
+"id": "1.5-b",
+"short": "",
+"text": "the definition of the unit radian as a measure of angle",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"circular-motion"
+]
+},
+{
+"id": "1.5-c",
+"short": "",
+"text": "the use of the radian as a measure of angle",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"circular-motion"
+]
+},
+{
+"id": "1.5-d",
+"short": "",
+"text": "the definition of angular velocity, ω, for an object performing circular motion and performing simple harmonic motion",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"circular-motion"
+]
+},
+{
+"id": "1.5-e",
+"short": "",
+"text": "the idea that the centripetal force is the resultant force acting on a body moving at constant speed in a circle",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"circular-motion"
+]
+},
+{
+"id": "1.5-f",
+"short": "",
+"text": "the centripetal force and acceleration are directed towards the centre of the circular motion",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"circular-motion"
+]
+},
+{
+"id": "1.5-g",
+"short": "",
+"text": "the use of the following equations relating to circular motion v = ωr, a = ω²r, a = v²/r, F = mv²/r, F = mω²r",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"circular-motion"
+]
+}
+]
+},
+{
+"code": "1.6",
+"title": "Vibrations",
+"paper": 1,
+"option": null,
+"area": null,
+"theme": null,
+"module": 1,
+"aLevelOnly": true,
+"topic": "vibrations",
+"statements": [
+{
+"id": "1.6-a",
+"short": "",
+"text": "the definition of simple harmonic motion as a statement in words",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-b",
+"short": "",
+"text": "a = −ω²x as a mathematical defining equation of simple harmonic motion",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-c",
+"short": "",
+"text": "the graphical representation of the variation of acceleration with displacement during simple harmonic motion",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-d",
+"short": "",
+"text": "x = A cos(ωt + ε) as a solution to a = −ω²x",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-e",
+"short": "",
+"text": "the terms frequency, period, amplitude and phase",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-f",
+"short": "",
+"text": "period as 1/f or 2π/ω",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-g",
+"short": "",
+"text": "v = −Aω sin(ωt + ε) for the velocity during simple harmonic motion",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-h",
+"short": "",
+"text": "the graphical representation of the changes in displacement and velocity with time during simple harmonic motion",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-i",
+"short": "",
+"text": "the equation T = 2π√(m/k) for the period of a system having stiffness (force per unit extension) k and mass m",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-j",
+"short": "",
+"text": "the equation T = 2π√(l/g) for the period of a simple pendulum",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-k",
+"short": "",
+"text": "the graphical representation of the interchange between kinetic energy and potential energy during undamped simple harmonic motion, and perform simple calculations on energy changes",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-l",
+"short": "",
+"text": "free oscillations and the effect of damping in real systems",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-m",
+"short": "",
+"text": "practical examples of damped oscillations",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-n",
+"short": "",
+"text": "the importance of critical damping in appropriate cases such as vehicle suspensions",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-o",
+"short": "",
+"text": "forced oscillations and resonance, and to describe practical examples",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-p",
+"short": "",
+"text": "the variation of the amplitude of a forced oscillation with driving frequency and that increased damping broadens the resonance curve",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-q",
+"short": "",
+"text": "circumstances when resonance is useful for example, circuit tuning, microwave cooking and other circumstances in which it should be avoided for example, bridge design",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-P1",
+"short": "",
+"text": "Specified practical: Measurement of g with a pendulum",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+},
+{
+"id": "1.6-P2",
+"short": "",
+"text": "Specified practical: Investigation of the damping of a spring",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"vibrations"
+]
+}
+]
+},
+{
+"code": "1.7",
+"title": "Kinetic Theory",
+"paper": 1,
+"option": null,
+"area": null,
+"theme": null,
+"module": 1,
+"aLevelOnly": true,
+"topic": "kinetic-theory",
+"statements": [
+{
+"id": "1.7-a",
+"short": "",
+"text": "the equation of state for an ideal gas expressed as pV = nRT where R is the molar gas constant and pV = NkT where k is the Boltzmann constant",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"kinetic-theory"
+]
+},
+{
+"id": "1.7-b",
+"short": "",
+"text": "the assumptions of the kinetic theory of gases which includes the random distribution of energy among the molecules",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"kinetic-theory"
+]
+},
+{
+"id": "1.7-c",
+"short": "",
+"text": "the idea that molecular movement causes the pressure exerted by a gas, and use p = ⅓ρ<c²> = ⅓(N/V)m<c²> where N is the number of molecules (<c²> = mean square speed)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"kinetic-theory"
+]
+},
+{
+"id": "1.7-d",
+"short": "",
+"text": "the definition of Avogadro constant NA and hence the mole",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"kinetic-theory"
+]
+},
+{
+"id": "1.7-e",
+"short": "",
+"text": "the idea that the molar mass M is related to the relative molecular mass Mr by M / kg = Mr/1000, and that the number of moles n is given by total mass / molar mass",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"kinetic-theory"
+]
+},
+{
+"id": "1.7-f",
+"short": "",
+"text": "how to combine pV = ⅓Nm<c²> with pV = nRT and show that the total translational kinetic energy of a mole of a monatomic gas is given by (3/2)RT and the mean kinetic energy of a molecule is (3/2)kT where k = R/NA is the Boltzmann constant, and that T is proportional to the mean kinetic energy",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"kinetic-theory"
+]
+}
+]
+},
+{
+"code": "1.8",
+"title": "Thermal Physics",
+"paper": 1,
+"option": null,
+"area": null,
+"theme": null,
+"module": 1,
+"aLevelOnly": true,
+"topic": "thermal-physics",
+"statements": [
+{
+"id": "1.8-a",
+"short": "",
+"text": "the idea that the internal energy of a system is the sum of the potential and kinetic energies of its molecules",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-b",
+"short": "",
+"text": "absolute zero being the temperature of a system when it has minimum internal energy",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-c",
+"short": "",
+"text": "the internal energy of an ideal monatomic gas being wholly kinetic so it is given by U = (3/2)nRT",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-d",
+"short": "",
+"text": "the idea that heat enters or leaves a system through its boundary or container wall, according to whether the system's temperature is lower or higher than that of its surroundings, so heat is energy in transit and not contained within the system",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-e",
+"short": "",
+"text": "the idea that if no heat flows between systems in contact, then they are said to be in thermal equilibrium, and are at the same temperature",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-f",
+"short": "",
+"text": "the idea that energy can enter or leave a system by means of work, so work is also energy in transit",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-g",
+"short": "",
+"text": "the equation W = pΔV can be used to calculate the work done by a gas under constant pressure",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-h",
+"short": "",
+"text": "the idea that even if p changes, W is given by the area under the p – V graph",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-i",
+"short": "",
+"text": "the use of the first law of thermodynamics, in the form ΔU = Q − W and know how to interpret negative values of ΔU, Q, and W",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-j",
+"short": "",
+"text": "the idea that for a solid (or liquid), W is usually negligible, so Q = ΔU",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-k",
+"short": "",
+"text": "Q = mcΔθ, for a solid or liquid, and this is the defining equation for specific heat capacity, c",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-P1",
+"short": "",
+"text": "Specified practical: Estimation of absolute zero by use of the gas laws",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+},
+{
+"id": "1.8-P2",
+"short": "",
+"text": "Specified practical: Measurement of the specific heat capacity for a solid",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"thermal-physics"
+]
+}
+]
+},
+{
+"code": "2",
+"title": "Component 2: Electricity and the Universe",
+"paper": 2,
+"option": null,
+"area": null,
+"theme": null,
+"module": 2,
+"aLevelOnly": false,
+"topic": null,
+"statements": []
+},
+{
+"code": "2.1",
+"title": "Conduction of Electricity",
+"paper": 2,
+"option": null,
+"area": null,
+"theme": null,
+"module": 2,
+"aLevelOnly": false,
+"topic": "conduction-of-electricity",
+"statements": [
+{
+"id": "2.1-a",
+"short": "",
+"text": "the fact that the unit of charge is the coulomb (C), and an electron's charge, e, is a very small fraction of a coulomb",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"conduction-of-electricity"
+]
+},
+{
+"id": "2.1-b",
+"short": "",
+"text": "the fact that charge can flow through certain materials, called conductors",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"conduction-of-electricity"
+]
+},
+{
+"id": "2.1-c",
+"short": "",
+"text": "electric current being the rate of flow of charge",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"conduction-of-electricity"
+]
+},
+{
+"id": "2.1-d",
+"short": "",
+"text": "the use of the equation I = ΔQ/Δt",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"conduction-of-electricity"
+]
+},
+{
+"id": "2.1-e",
+"short": "",
+"text": "current being measured in ampères (A), where A = C s⁻¹",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"conduction-of-electricity"
+]
+},
+{
+"id": "2.1-f",
+"short": "",
+"text": "the mechanism of conduction in metals as the drift of free electrons",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"conduction-of-electricity"
+]
+},
+{
+"id": "2.1-g",
+"short": "",
+"text": "the derivation and use of the equation I = nAve for free electrons",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"conduction-of-electricity"
+]
+}
+]
+},
+{
+"code": "2.2",
+"title": "Resistance",
+"paper": 2,
+"option": null,
+"area": null,
+"theme": null,
+"module": 2,
+"aLevelOnly": false,
+"topic": "resistance",
+"statements": [
+{
+"id": "2.2-a",
+"short": "",
+"text": "the definition of potential difference",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-b",
+"short": "",
+"text": "the idea that potential difference is measured in volts (V) where V = J C⁻¹",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-c",
+"short": "",
+"text": "the characteristics of I – V graphs for the filament of a lamp, and a metal wire at constant temperature",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-d",
+"short": "",
+"text": "Ohm's law, the equation V = IR and the definition of resistance",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-e",
+"short": "",
+"text": "resistance being measured in ohms (Ω), where Ω = V A⁻¹",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-f",
+"short": "",
+"text": "the application of P = IV = I²R = V²/R",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-g",
+"short": "",
+"text": "collisions between free electrons and ions gives rise to electrical resistance, and electrical resistance increases with temperature",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-h",
+"short": "",
+"text": "the application of R = ρl/A, the equation for resistivity",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-i",
+"short": "",
+"text": "the idea that the resistance of metals varies almost linearly with temperature over a wide range",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-j",
+"short": "",
+"text": "the idea that ordinarily, collisions between free electrons and ions in metals increase the random vibration energy of the ions, so the temperature of the metal increases",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-k",
+"short": "",
+"text": "what is meant by superconductivity, and superconducting transition temperature",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-l",
+"short": "",
+"text": "the fact that most metals show superconductivity, and have transition temperatures a few degrees above absolute zero (–273 °C)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-m",
+"short": "",
+"text": "certain materials (high temperature superconductors) having transition temperatures above the boiling point of nitrogen (–196 °C)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-n",
+"short": "",
+"text": "some uses of superconductors for example, MRI scanners and particle accelerators",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-P1",
+"short": "",
+"text": "Specified practical: Investigation of the I-V characteristics of the filament of a lamp and a metal wire at constant temperature",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-P2",
+"short": "",
+"text": "Specified practical: Determination of resistivity of a metal",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+},
+{
+"id": "2.2-P3",
+"short": "",
+"text": "Specified practical: Investigation of the variation of resistance with temperature for a metal wire",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"resistance"
+]
+}
+]
+},
+{
+"code": "2.3",
+"title": "d.c. Circuits",
+"paper": 2,
+"option": null,
+"area": null,
+"theme": null,
+"module": 2,
+"aLevelOnly": false,
+"topic": "dc-circuits",
+"statements": [
+{
+"id": "2.3-a",
+"short": "",
+"text": "the idea that the current from a source is equal to the sum of the currents in the separate branches of a parallel circuit, and that this is a consequence of conservation of charge",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+},
+{
+"id": "2.3-b",
+"short": "",
+"text": "the sum of the potential differences across components in a series circuit is equal to the potential difference across the supply, and that this is a consequence of conservation of energy",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+},
+{
+"id": "2.3-c",
+"short": "",
+"text": "potential differences across components in parallel are equal",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+},
+{
+"id": "2.3-d",
+"short": "",
+"text": "the application of equations for the combined resistance of resistors in series and parallel",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+},
+{
+"id": "2.3-e",
+"short": "",
+"text": "the use of a potential divider in circuits (including circuits which contain LDRs and thermistors)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+},
+{
+"id": "2.3-f",
+"short": "",
+"text": "what is meant by the emf of a source",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+},
+{
+"id": "2.3-g",
+"short": "",
+"text": "the unit of emf is the volt (V), which is the same as that of potential difference",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+},
+{
+"id": "2.3-h",
+"short": "",
+"text": "the idea that sources have internal resistance and to use the equation V = E − Ir",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+},
+{
+"id": "2.3-i",
+"short": "",
+"text": "how to calculate current and potential difference in a circuit containing one cell or cells in series",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+},
+{
+"id": "2.3-P1",
+"short": "",
+"text": "Specified practical: Determination of the internal resistance of a cell",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"dc-circuits"
+]
+}
+]
+},
+{
+"code": "2.4",
+"title": "Capacitance",
+"paper": 2,
+"option": null,
+"area": null,
+"theme": null,
+"module": 2,
+"aLevelOnly": true,
+"topic": "capacitance",
+"statements": [
+{
+"id": "2.4-a",
+"short": "",
+"text": "the idea that a simple parallel plate capacitor consists of a pair of equal parallel metal plates separated by a vacuum or air",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-b",
+"short": "",
+"text": "a capacitor storing energy by transferring charge from one plate to the other, so that the plates carry equal but opposite charges (the net charge being zero)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-c",
+"short": "",
+"text": "the definition of capacitance as C = Q/V",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-d",
+"short": "",
+"text": "the use of C = ε₀A/d for a parallel plate capacitor, with no dielectric",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-e",
+"short": "",
+"text": "the idea that a dielectric increases the capacitance of a vacuum-spaced capacitor",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-f",
+"short": "",
+"text": "the E field within a parallel plate capacitor being uniform and the use of the equation E = V/d",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-g",
+"short": "",
+"text": "the equation U = ½QV for the energy stored in a capacitor",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-h",
+"short": "",
+"text": "the equations for capacitors in series and in parallel",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-i",
+"short": "",
+"text": "the process by which a capacitor charges and discharges through a resistor",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-j",
+"short": "",
+"text": "the equations: Q = Q₀(1 − e^(−t/RC)) and Q = Q₀e^(−t/RC) where RC is the time constant",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-P1",
+"short": "",
+"text": "Specified practical: Investigation of the charging and discharging of a capacitor to determine the time constant",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+},
+{
+"id": "2.4-P2",
+"short": "",
+"text": "Specified practical: Investigation of the energy stored in a capacitor",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"capacitance"
+]
+}
+]
+},
+{
+"code": "2.5",
+"title": "Solids under Stress",
+"paper": 2,
+"option": null,
+"area": null,
+"theme": null,
+"module": 2,
+"aLevelOnly": false,
+"topic": "solids-under-stress",
+"statements": [
+{
+"id": "2.5-a",
+"short": "",
+"text": "Hooke’s law and use F = kx where the spring constant k is the force per unit extension",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"solids-under-stress"
+]
+},
+{
+"id": "2.5-b",
+"short": "",
+"text": "the ideas that for materials the tensile stress, σ = F/A and the tensile strain, ε = Δl/l and the Young modulus, E = σ/ε when Hooke’s law applies",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"solids-under-stress"
+]
+},
+{
+"id": "2.5-c",
+"short": "",
+"text": "the work done in deforming a solid being equal to the area under a force-extension graph, which is ½Fx if Hooke’s law is obeyed",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"solids-under-stress"
+]
+},
+{
+"id": "2.5-d",
+"short": "",
+"text": "the classification of solids as crystalline, amorphous (to include glasses and ceramics) and polymeric",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"solids-under-stress"
+]
+},
+{
+"id": "2.5-e",
+"short": "",
+"text": "the features of a force-extension (or stress-strain) graph for a metal such as copper, to include • elastic and plastic strain • the effects of dislocations, and the strengthening of metals by introducing barriers to dislocation movement, such as foreign atoms, other dislocations, and more grain boundaries • necking and ductile fracture",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"solids-under-stress"
+]
+},
+{
+"id": "2.5-f",
+"short": "",
+"text": "the features of a force-extension (or stress-strain) graph for a brittle material such as glass, to include • elastic strain and obeying Hooke’s law up to fracture • brittle fracture by crack propagation, the effect of surface imperfections on breaking stress, and how breaking stress can be increased by reducing surface imperfections (as in thin fibres) or by putting surface under compression (as in toughened glass or pre-stressed concrete)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"solids-under-stress"
+]
+},
+{
+"id": "2.5-g",
+"short": "",
+"text": "the features of a force-extension (or stress-strain) graph for rubber, to include • Hooke’s law only approximately obeyed, low Young modulus and the extension due to straightening of chain molecules against thermal opposition • hysteresis",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"solids-under-stress"
+]
+},
+{
+"id": "2.5-P1",
+"short": "",
+"text": "Specified practical: Determination of Young modulus of a metal in the form of a wire",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"solids-under-stress"
+]
+},
+{
+"id": "2.5-P2",
+"short": "",
+"text": "Specified practical: Investigation of the force-extension relationship for rubber",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"solids-under-stress"
+]
+}
+]
+},
+{
+"code": "2.6",
+"title": "Electrostatic and Gravitational Fields of Force",
+"paper": 2,
+"option": null,
+"area": null,
+"theme": null,
+"module": 2,
+"aLevelOnly": true,
+"topic": "electrostatic-and-gravitational-fields",
+"statements": [
+{
+"id": "2.6-a",
+"short": "",
+"text": "the features of electric and gravitational fields as specified in the table on page 30 [Table, two columns, ELECTRIC FIELDS | GRAVITATIONAL FIELDS: Electric field strength, E, is the force per unit charge on a small positive test charge placed at the point | Gravitational field strength, g, is the force per unit mass on a small test mass placed at the point; Inverse square law for the force between two electric charges in the form F = (1/(4πε₀)) Q₁Q₂/r² (Coulomb's law) | Inverse square law for the force between two masses in the form F = GM₁M₂/r² (Newton's law of gravitation); F can be attractive or repulsive | F is attractive only; E = (1/(4πε₀)) Q/r² for the field strength due to a point charge in free space or air | g = GM/r² for the field strength due to a point mass; Potential at a point due to a point charge in terms of the work done in bringing a unit positive charge from infinity to that point | Potential at a point due to a point mass in terms of the work done in bringing a unit mass from infinity to that point; VE = (1/(4πε₀)) Q/r and PE = (1/(4πε₀)) Q₁Q₂/r | Vg = −GM/r and PE = −GM₁M₂/r; Change in potential energy of a point charge moving in any electric field = qΔVE | Change in potential energy of a point mass moving in any gravitational field = mΔVg; Field strength at a point is given by E = − slope of the VE – r graph at that point | Field strength at a point is given by g = − slope of the Vg – r graph at that point; Note that 1/(4πε₀) ≈ 9 × 10⁹ F⁻¹ m is an acceptable approximation | (blank)]",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electrostatic-and-gravitational-fields"
+]
+},
+{
+"id": "2.6-b",
+"short": "",
+"text": "the idea that the gravitational field outside spherical bodies such as the Earth is essentially the same as if the whole mass were concentrated at the centre",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electrostatic-and-gravitational-fields"
+]
+},
+{
+"id": "2.6-c",
+"short": "",
+"text": "field lines (or lines of force) giving the direction of the field at a point, thus, for a positive point charge, the field lines are radially outward",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electrostatic-and-gravitational-fields"
+]
+},
+{
+"id": "2.6-d",
+"short": "",
+"text": "equipotential surfaces joining points of equal potential and are therefore spherical for a point charge",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electrostatic-and-gravitational-fields"
+]
+},
+{
+"id": "2.6-e",
+"short": "",
+"text": "how to calculate the net potential and resultant field strength for a number of point charges or point masses",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electrostatic-and-gravitational-fields"
+]
+},
+{
+"id": "2.6-f",
+"short": "",
+"text": "the equation ΔUP = mgΔh for distances over which the variation of g is negligible",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electrostatic-and-gravitational-fields"
+]
+}
+]
+},
+{
+"code": "2.7",
+"title": "Using Radiation to Investigate Stars",
+"paper": 2,
+"option": null,
+"area": null,
+"theme": null,
+"module": 2,
+"aLevelOnly": false,
+"topic": "radiation-and-stars",
+"statements": [
+{
+"id": "2.7-a",
+"short": "",
+"text": "the idea that the stellar spectrum consists of a continuous emission spectrum, from the dense gas of the surface of the star, and a line absorption spectrum arising from the passage of the emitted electromagnetic radiation through the tenuous atmosphere of the star",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"radiation-and-stars"
+]
+},
+{
+"id": "2.7-b",
+"short": "",
+"text": "the idea that bodies which absorb all incident radiation are known as black bodies and that stars are very good approximations to black bodies",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"radiation-and-stars"
+]
+},
+{
+"id": "2.7-c",
+"short": "",
+"text": "the shape of the black body spectrum and that the peak wavelength is inversely proportional to the absolute temperature (defined by: T (K) = θ (°C) + 273.15)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"radiation-and-stars"
+]
+},
+{
+"id": "2.7-d",
+"short": "",
+"text": "Wien's displacement law, Stefan's law and the inverse square law to investigate the properties of stars – luminosity, size, temperature and distance [N.B. stellar brightness in magnitudes will not be required]",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"radiation-and-stars"
+]
+},
+{
+"id": "2.7-e",
+"short": "",
+"text": "the meaning of multiwavelength astronomy and that by studying a region of space at different wavelengths (different photon energies) the different processes which took place there can be revealed",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"radiation-and-stars"
+]
+}
+]
+},
+{
+"code": "2.8",
+"title": "Orbits and the Wider Universe",
+"paper": 2,
+"option": null,
+"area": null,
+"theme": null,
+"module": 2,
+"aLevelOnly": true,
+"topic": "orbits-and-the-wider-universe",
+"statements": [
+{
+"id": "2.8-a",
+"short": "",
+"text": "Kepler's three laws of planetary motion",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-b",
+"short": "",
+"text": "Newton's law of gravitation F = GM₁M₂/r² in simple examples, including the motion of planets and satellites",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-c",
+"short": "",
+"text": "how to derive Kepler's 3rd law, for the case of a circular orbit from Newton's law of gravity and the formula for centripetal acceleration",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-d",
+"short": "",
+"text": "how to use data on orbital motion, such as period or orbital speed, to calculate the mass of the central object",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-e",
+"short": "",
+"text": "how the orbital speeds of objects in spiral galaxies implies the existence of dark matter",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-f",
+"short": "",
+"text": "how the recently discovered Higgs boson may be related to dark matter",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-g",
+"short": "",
+"text": "how to determine the position of the centre of mass of two spherically symmetric objects, given their masses and separation, and calculate their mutual orbital period in the case of circular orbits",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-h",
+"short": "",
+"text": "the Doppler relationship in the form Δλ/λ = v/c",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-i",
+"short": "",
+"text": "how to determine a star's radial velocity (i.e. the component of its velocity along the line joining it and an observer on the Earth) from data about the Doppler shift of spectral lines",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-j",
+"short": "",
+"text": "the use of data on the variation of the radial velocities of the bodies in a double system (for example, a star and orbiting exo-planet) and their orbital period to determine the masses of the bodies for the case of a circular orbit edge on as viewed from the Earth",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-k",
+"short": "",
+"text": "how the Hubble constant (H₀) relates galactic radial velocity (v) to distance (D) and it is defined by v = H₀D",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-l",
+"short": "",
+"text": "why 1/H₀ approximates the age of the universe",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+},
+{
+"id": "2.8-m",
+"short": "",
+"text": "how the equation ρc = 3H₀²/(8πG) for the critical density of a 'flat' universe can be derived very simply using conservation of energy",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"orbits-and-the-wider-universe"
+]
+}
+]
+},
+{
+"code": "3",
+"title": "Component 3: Light, Nuclei and Options",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": false,
+"topic": null,
+"statements": []
+},
+{
+"code": "3.1",
+"title": "The Nature of Waves",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": false,
+"topic": "nature-of-waves",
+"statements": [
+{
+"id": "3.1-a",
+"short": "",
+"text": "the idea that a progressive wave transfers energy without any transfer of matter",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"nature-of-waves"
+]
+},
+{
+"id": "3.1-b",
+"short": "",
+"text": "the difference between transverse and longitudinal waves",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"nature-of-waves"
+]
+},
+{
+"id": "3.1-c",
+"short": "",
+"text": "the term polarisation",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"nature-of-waves"
+]
+},
+{
+"id": "3.1-d",
+"short": "",
+"text": "the terms in phase and in antiphase",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"nature-of-waves"
+]
+},
+{
+"id": "3.1-e",
+"short": "",
+"text": "the terms displacement, amplitude, wavelength, frequency, period and velocity of a wave",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"nature-of-waves"
+]
+},
+{
+"id": "3.1-f",
+"short": "",
+"text": "graphs of displacement against time, and displacement against position for transverse waves only",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"nature-of-waves"
+]
+},
+{
+"id": "3.1-g",
+"short": "",
+"text": "the equation c = fλ",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"nature-of-waves"
+]
+},
+{
+"id": "3.1-h",
+"short": "",
+"text": "the idea that all points on wavefronts oscillate in phase, and that wave propagation directions (rays) are at right angles to wavefronts",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"nature-of-waves"
+]
+},
+{
+"id": "3.1-P1",
+"short": "",
+"text": "Specified practical: Measurement of the intensity variations for polarisation",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"nature-of-waves"
+]
+}
+]
+},
+{
+"code": "3.2",
+"title": "Wave Properties",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": false,
+"topic": "wave-properties",
+"statements": [
+{
+"id": "3.2-a",
+"short": "",
+"text": "diffraction occuring when waves encounter slits or obstacles",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-b",
+"short": "",
+"text": "the idea that there is little diffraction when λ is much smaller than the dimensions of the obstacle or slit",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-c",
+"short": "",
+"text": "the idea that if λ is equal to or greater than the width of a slit, waves spread as roughly semicircular wavefronts, but if λ is less than the slit width the main beam spreads through less than 180°",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-d",
+"short": "",
+"text": "how two source interference occurs",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-e",
+"short": "",
+"text": "the historical importance of Young’s experiment",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-f",
+"short": "",
+"text": "the principle of superposition, giving appropriate sketch graphs",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-g",
+"short": "",
+"text": "the path difference rules for constructive and destructive interference between waves from in phase sources",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-h",
+"short": "",
+"text": "the use of λ = aΔy/D",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-i",
+"short": "",
+"text": "the derivation and use of d sin θ = nλ for a diffraction grating",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-j",
+"short": "",
+"text": "the idea that for a diffraction grating a very small d makes beams (“orders”) much further apart than in Young’s experiment, and that the large number of slits makes the bright beams much sharper",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-k",
+"short": "",
+"text": "the idea that coherent sources are monochromatic with wavefronts continuous across the width of the beam and, (when comparing more than one source) with a constant phase relationship",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-l",
+"short": "",
+"text": "examples of coherent and incoherent sources",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-m",
+"short": "",
+"text": "the idea that for two source interference to be observed, the sources must have a zero or constant phase difference and have oscillations in the same direction",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-n",
+"short": "",
+"text": "the differences between stationary and progressive waves",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-o",
+"short": "",
+"text": "the idea that a stationary wave can be regarded as a superposition of two progressive waves of equal amplitude and frequency, travelling in opposite directions, and that the internodal distance is λ/2",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-P1",
+"short": "",
+"text": "Specified practical: Determination of wavelength using Young’s double slits",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-P2",
+"short": "",
+"text": "Specified practical: Determination of wavelength using a diffraction grating",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+},
+{
+"id": "3.2-P3",
+"short": "",
+"text": "Specified practical: Determination of the speed of sound using stationary waves",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"wave-properties"
+]
+}
+]
+},
+{
+"code": "3.3",
+"title": "Refraction of Light",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": false,
+"topic": "refraction-of-light",
+"statements": [
+{
+"id": "3.3-a",
+"short": "",
+"text": "the refractive index, n, of a medium being defined as c/v, in which v is the speed of light in the medium and c is the speed of light in a vacuum",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"refraction-of-light"
+]
+},
+{
+"id": "3.3-b",
+"short": "",
+"text": "the use of the equations: n₁v₁ = n₂v₂ and n₁ sin θ₁ = n₂ sin θ₂ (regarded as Snell’s law)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"refraction-of-light"
+]
+},
+{
+"id": "3.3-c",
+"short": "",
+"text": "how Snell's law relates to the wave model of light propagation and for diagrams of plane waves approaching a plane boundary obliquely, and being refracted",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"refraction-of-light"
+]
+},
+{
+"id": "3.3-d",
+"short": "",
+"text": "the conditions for total internal reflection",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"refraction-of-light"
+]
+},
+{
+"id": "3.3-e",
+"short": "",
+"text": "the derivation and use of the equation for the critical angle n₁ sin θC = n₂",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"refraction-of-light"
+]
+},
+{
+"id": "3.3-f",
+"short": "",
+"text": "how to apply the concept of total internal reflection to multimode optical fibres",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"refraction-of-light"
+]
+},
+{
+"id": "3.3-g",
+"short": "",
+"text": "the problem of multimode dispersion with optical fibres in terms of limiting the rate of data transfer and transmission distance",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"refraction-of-light"
+]
+},
+{
+"id": "3.3-h",
+"short": "",
+"text": "how the introduction of monomode optical fibres has allowed for much greater transmission rates and distances",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"refraction-of-light"
+]
+},
+{
+"id": "3.3-P1",
+"short": "",
+"text": "Specified practical: Measurement of the refractive index of a material",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"refraction-of-light"
+]
+}
+]
+},
+{
+"code": "3.4",
+"title": "Photons",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": false,
+"topic": "photons",
+"statements": [
+{
+"id": "3.4-a",
+"short": "",
+"text": "the fact that light can be shown to consist of discrete packets (photons) of energy",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-b",
+"short": "",
+"text": "how the photoelectric effect can be demonstrated",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-c",
+"short": "",
+"text": "how a vacuum photocell can be used to measure the maximum kinetic energy, Ek max, of emitted electrons in eV and hence in J",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-d",
+"short": "",
+"text": "the graph of Ek max against frequency of illuminating radiation",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-e",
+"short": "",
+"text": "how a photon picture of light leads to Einstein's equation, Ek max = hf − φ, and how this equation correlates with the graph of Ek max against frequency",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-f",
+"short": "",
+"text": "the fact that the visible spectrum runs approximately from 700 nm (red end) to 400 nm (violet end) and the orders of magnitude of the wavelengths of the other named regions of the electromagnetic spectrum",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-g",
+"short": "",
+"text": "typical photon energies for these radiations",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-h",
+"short": "",
+"text": "how to produce line emission and line absorption spectra from atoms",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-i",
+"short": "",
+"text": "the appearance of such spectra as seen in a diffraction grating",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-j",
+"short": "",
+"text": "simple atomic energy level diagrams, together with the photon hypothesis, line emission and line absorption spectra",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-k",
+"short": "",
+"text": "how to determine ionisation energies from an energy level diagram",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-l",
+"short": "",
+"text": "the demonstration of electron diffraction and that particles have a wave-like aspect",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-m",
+"short": "",
+"text": "the use of the relationship p = h/λ for both particles of matter and photons",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-n",
+"short": "",
+"text": "the calculation of radiation pressure on a surface absorbing or reflecting photons",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+},
+{
+"id": "3.4-P1",
+"short": "",
+"text": "Specified practical: Determination of h using LEDs",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"photons"
+]
+}
+]
+},
+{
+"code": "3.5",
+"title": "Lasers",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": false,
+"topic": "lasers",
+"statements": [
+{
+"id": "3.5-a",
+"short": "",
+"text": "the process of stimulated emission and how this process leads to light emission that is coherent",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"lasers"
+]
+},
+{
+"id": "3.5-b",
+"short": "",
+"text": "the idea that a population inversion (N₂ > N₁) is necessary for a laser to operate",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"lasers"
+]
+},
+{
+"id": "3.5-c",
+"short": "",
+"text": "the idea that a population inversion is not (usually) possible with a 2-level energy system",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"lasers"
+]
+},
+{
+"id": "3.5-d",
+"short": "",
+"text": "how a population inversion is attained in 3 and 4-level energy systems",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"lasers"
+]
+},
+{
+"id": "3.5-e",
+"short": "",
+"text": "the process of pumping and its purpose",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"lasers"
+]
+},
+{
+"id": "3.5-f",
+"short": "",
+"text": "the structure of a typical laser i.e. an amplifying medium between two mirrors, one of which partially transmits light",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"lasers"
+]
+},
+{
+"id": "3.5-g",
+"short": "",
+"text": "the advantages and uses of a semiconductor laser i.e. small, cheap, far more efficient than other types of laser, and it is used for CDs, DVDs, telecommunication etc",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"lasers"
+]
+}
+]
+},
+{
+"code": "3.6",
+"title": "Nuclear Decay",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": true,
+"topic": "nuclear-decay",
+"statements": [
+{
+"id": "3.6-a",
+"short": "",
+"text": "the spontaneous nature of nuclear decay; the nature of α, β and γ radiation, and equations to represent the nuclear transformations using the ^A_Z X notation",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+},
+{
+"id": "3.6-b",
+"short": "",
+"text": "different methods used to distinguish between α, β and γ radiation and the connections between the nature, penetration and range for ionising particles",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+},
+{
+"id": "3.6-c",
+"short": "",
+"text": "how to make allowance for background radiation in experimental measurements",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+},
+{
+"id": "3.6-d",
+"short": "",
+"text": "the concept of the half-life, T½",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+},
+{
+"id": "3.6-e",
+"short": "",
+"text": "the definition of the activity, A, and the Becquerel",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+},
+{
+"id": "3.6-f",
+"short": "",
+"text": "the decay constant, λ, and the equation A = λ N",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+},
+{
+"id": "3.6-g",
+"short": "",
+"text": "the exponential law of decay in graphical and algebraic form, N = N₀e^(−λt) and A = A₀e^(−λt) or N = N₀/2^x and A = A₀/2^x where x is the number of half-lives elapsed – not necessarily an integer",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+},
+{
+"id": "3.6-h",
+"short": "",
+"text": "the derivation and use of λ = ln 2 / T½",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+},
+{
+"id": "3.6-P1",
+"short": "",
+"text": "Specified practical: Investigation of radioactive decay – a dice analogy",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+},
+{
+"id": "3.6-P2",
+"short": "",
+"text": "Specified practical: Investigation of the variation of intensity of gamma radiation with distance",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-decay"
+]
+}
+]
+},
+{
+"code": "3.7",
+"title": "Particles and Nuclear Structure",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": false,
+"topic": "particles-and-nuclear-structure",
+"statements": [
+{
+"id": "3.7-a",
+"short": "",
+"text": "the significance of the results of the Rutherford alpha particle scattering experiment",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-b",
+"short": "",
+"text": "how to approximate the maximum size of the Coulomb repulsion force between an alpha particle and a gold atom / nucleus for both the plum pudding model and the Rutherford model",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-c",
+"short": "",
+"text": "the idea that matter is composed of quarks and leptons and that there are three generations of quarks and leptons, although no questions will be set involving second or third generations [Table: leptons – electron (e⁻), charge (e) 1; electron neutrino (νe), charge 0; quarks – up (u), charge +2/3; down (d), charge −1/3]",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-d",
+"short": "",
+"text": "the idea that antiparticles exist for the particles given in the table above, that the properties of an antiparticle are identical to those of its corresponding particle apart from having opposite charge, and that particles and antiparticles annihilate",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-e",
+"short": "",
+"text": "symbols for a positron and for antiparticles of quarks and hadrons",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-f",
+"short": "",
+"text": "the idea that quarks and antiquarks are never observed in isolation, but are bound into composite particles called hadrons, or three types of baryon (combinations of 3 quarks), or antibaryons (combinations of 3 antiquarks) or mesons (quark-antiquark pairs)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-g",
+"short": "",
+"text": "the quark compositions of the neutron and proton",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-h",
+"short": "",
+"text": "how to use data in the table on page 45 to suggest the quark make-up of less well known first generation baryons and of charged pions",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-i",
+"short": "",
+"text": "the properties of the four forces or interactions experienced by particles as summarized in the table below [Table columns: Interaction | Experienced by | Range | Comments. gravitational | all matter | infinite | very weak – negligible except between large objects such as planets; weak | all leptons, all quarks, so all hadrons | very short | only significant when the e-m and strong interactions do not operate; electromagnetic (e-m) | all charged particles | infinite | also experienced by neutral hadrons, as these are composed of quarks; strong | all quarks, so all hadrons | short | (no comment)]",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-j",
+"short": "",
+"text": "how to apply conservation of charge, lepton number and baryon number (or quark number) to given simple reactions",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"particles-and-nuclear-structure"
+]
+},
+{
+"id": "3.7-k",
+"short": "",
+"text": "the idea that neutrino involvement and quark flavour changes are exclusive to weak interactions",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": true,
+"topics": [
+"particles-and-nuclear-structure"
+]
+}
+]
+},
+{
+"code": "3.8",
+"title": "Nuclear Energy",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": true,
+"topic": "nuclear-energy",
+"statements": [
+{
+"id": "3.8-a",
+"short": "",
+"text": "the association between mass and energy and that E = mc²",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-energy"
+]
+},
+{
+"id": "3.8-b",
+"short": "",
+"text": "the binding energy for a nucleus and hence the binding energy per nucleon, making use, where necessary, of the unified atomic mass unit (u)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-energy"
+]
+},
+{
+"id": "3.8-c",
+"short": "",
+"text": "how to calculate binding energy and binding energy per nucleon from given masses of nuclei",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-energy"
+]
+},
+{
+"id": "3.8-d",
+"short": "",
+"text": "the conservation of mass / energy to particle interactions – for example: fission, fusion",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-energy"
+]
+},
+{
+"id": "3.8-e",
+"short": "",
+"text": "the relevance of binding energy per nucleon to nuclear fission and fusion making reference when appropriate to the binding energy per nucleon versus nucleon number curve",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"nuclear-energy"
+]
+}
+]
+},
+{
+"code": "3.9",
+"title": "Magnetic Fields",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": true,
+"topic": "magnetic-fields",
+"statements": [
+{
+"id": "3.9-a",
+"short": "",
+"text": "how to determine the direction of the force on a current carrying conductor in a magnetic field",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-b",
+"short": "",
+"text": "how to calculate the magnetic field, B, by considering the force on a current carrying conductor in a magnetic field i.e. understand how to use F = BIl sin θ",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-c",
+"short": "",
+"text": "how to use F = Bqv sin θ for a moving charge in a magnetic field",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-d",
+"short": "",
+"text": "the processes involved in the production of a Hall voltage and understand that VH ∝ B for constant I",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-e",
+"short": "",
+"text": "the shapes of the magnetic fields due to a current in a long straight wire and a long solenoid",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-f",
+"short": "",
+"text": "the equations B = μ₀I/(2πa) and B = μ₀nI for the field strengths due to a long straight wire and in a long solenoid",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-g",
+"short": "",
+"text": "the fact that adding an iron core increases the field strength in a solenoid",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-h",
+"short": "",
+"text": "the idea that current carrying conductors exert a force on each other and to predict the directions of the forces",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-i",
+"short": "",
+"text": "quantitatively, how ion beams of charged particles, are deflected in uniform electric and magnetic fields",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-j",
+"short": "",
+"text": "the motion of charged particles in magnetic and electric fields in linear accelerators, cyclotrons and synchrotrons",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-P1",
+"short": "",
+"text": "Specified practical: Investigation of the force on a current in a magnetic field",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+},
+{
+"id": "3.9-P2",
+"short": "",
+"text": "Specified practical: Investigation of magnetic flux density using a Hall probe",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"magnetic-fields"
+]
+}
+]
+},
+{
+"code": "3.10",
+"title": "Electromagnetic Induction",
+"paper": 3,
+"option": null,
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": true,
+"topic": "electromagnetic-induction",
+"statements": [
+{
+"id": "3.10-a",
+"short": "",
+"text": "the definition of magnetic flux as φ = AB cos θ and flux linkage = Nφ",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electromagnetic-induction"
+]
+},
+{
+"id": "3.10-b",
+"short": "",
+"text": "the laws of Faraday and Lenz",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electromagnetic-induction"
+]
+},
+{
+"id": "3.10-c",
+"short": "",
+"text": "how to apply the laws of Faraday and Lenz (i.e. emf = - rate of change of flux linkage)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electromagnetic-induction"
+]
+},
+{
+"id": "3.10-d",
+"short": "",
+"text": "the idea that an emf is induced in a linear conductor moving at right angles to a uniform magnetic field",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electromagnetic-induction"
+]
+},
+{
+"id": "3.10-e",
+"short": "",
+"text": "qualitatively, how the instantaneous emf induced in a coil rotating at right angles to a magnetic field is related to the position of the coil, flux density, coil area and angular velocity",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"electromagnetic-induction"
+]
+}
+]
+},
+{
+"code": "3.A",
+"title": "Alternating Currents",
+"paper": 3,
+"option": "Option A",
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": true,
+"topic": "alternating-currents",
+"statements": [
+{
+"id": "3.A-a",
+"short": "",
+"text": "using Faraday's law, the principle of electromagnetic induction applied to a rotating coil in a magnetic field",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-b",
+"short": "",
+"text": "the idea that the flux linkage of a rotating flat coil in a uniform magnetic B-field is BAN cos ωt because the angle between the coil normal and the field can be expressed as θ = ωt",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-c",
+"short": "",
+"text": "the equation V = ωBAN sin ωt for the induced emf in a rotating flat coil in a uniform B-field",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-d",
+"short": "",
+"text": "the terms frequency, period, peak value and rms value when applied to alternating potential differences and currents",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-e",
+"short": "",
+"text": "the idea that the rms value is related to the energy dissipated per cycle, and use the relationships I = I₀/√2 and V = V₀/√2, (including Vrms = ωBAN/√2)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-f",
+"short": "",
+"text": "the idea that the mean power dissipated in a resistor is given by P = IV = I²R = V²/R where V and I are the rms values",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-g",
+"short": "",
+"text": "the use of an oscilloscope (CRO or PC based via USB or sound card) to measure • a.c. and d.c. voltages and currents • frequencies",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-h",
+"short": "",
+"text": "the 90° phase lag of current behind potential difference for an inductor in a sinusoidal a.c. circuit",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-i",
+"short": "",
+"text": "the idea that XL = Vrms/Irms is called the reactance, XL, of the inductor, and to use the equation XL = ωL",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-j",
+"short": "",
+"text": "the 90° phase lead of current ahead of potential difference for a capacitor in a sinusoidal a.c. circuit, and to use the equation XC = Vrms/Irms, where XC = 1/(ωC)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-k",
+"short": "",
+"text": "the idea that the mean power dissipation in an inductor or a capacitor is zero",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-l",
+"short": "",
+"text": "how to add potential differences across series RC, RL and RCL combinations using phasors",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-m",
+"short": "",
+"text": "how to calculate phase angle and impedance, Z, (defined as Z = Vrms/Irms for such circuits)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-n",
+"short": "",
+"text": "how to derive an expression for the resonance frequency of an RCL series circuit",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-o",
+"short": "",
+"text": "the idea that the Q factor of a RCL circuit is the ratio VL/VR (= VC/VR) at resonance",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+},
+{
+"id": "3.A-p",
+"short": "",
+"text": "the idea that the sharpness of the resonance curve is determined by the Q factor of the circuit",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"alternating-currents"
+]
+}
+]
+},
+{
+"code": "3.B",
+"title": "Medical Physics",
+"paper": 3,
+"option": "Option B",
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": true,
+"topic": "medical-physics",
+"statements": [
+{
+"id": "3.B-a",
+"short": "",
+"text": "the nature and properties of X-rays",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-b",
+"short": "",
+"text": "the production of X-ray spectra including methods of controlling the beam intensity and photon energy",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-c",
+"short": "",
+"text": "the use of high energy X-rays in the treatment of patients (therapy) and low energy X-rays in diagnosis",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-d",
+"short": "",
+"text": "the equation I = I₀ exp(−μx) for the attenuation of X-rays",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-e",
+"short": "",
+"text": "the use of X-rays in imaging soft tissue, and fluoroscopy to produce real time X-rays using image intensifiers",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-f",
+"short": "",
+"text": "techniques of radiography including using digital image receptors",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-g",
+"short": "",
+"text": "the use of a rotating beam X-ray computed tomography (CT) scanner",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-h",
+"short": "",
+"text": "the generation and detection of ultrasound using piezoelectric transducers",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-i",
+"short": "",
+"text": "scanning with ultrasound for diagnosis including A-scans and B-scans incorporating examples and applications",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-j",
+"short": "",
+"text": "the significance of acoustic impedance, defined by Z = cρ for the reflection and transmission of sound waves at tissue boundaries, including the need for a coupling medium",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-k",
+"short": "",
+"text": "the use of the Doppler equation Δf/f₀ = (2v/c) cos θ to study blood flow using an ultrasound probe",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-l",
+"short": "",
+"text": "the principles of magnetic resonance with reference to precession nuclei, resonance and relaxation time, and to apply the equation f = 42.6 × 10⁶ B for the Lamour frequency",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-m",
+"short": "",
+"text": "the use of MRI in obtaining diagnostic information about internal structures",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-n",
+"short": "",
+"text": "the advantages and disadvantages of ultrasound imaging, X-ray imaging and MRI in examining internal structures",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-o",
+"short": "",
+"text": "the effects of α, β, and γ radiation on living matter",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-p",
+"short": "",
+"text": "the Gray (Gy) as the unit of absorbed dose and the Sievert (Sv) as the unit of equivalent dose and effective dose. Define absorbed dose as energy per kilogram",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-q",
+"short": "",
+"text": "the use of the equations • equivalent dose = absorbed dose × (radiation) weighting factor H = DWR and • effective dose = equivalent dose × tissue weighting factor E = HWT",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-r",
+"short": "",
+"text": "the uses of radionuclides as tracers to image body parts with particular reference to technetium-99m (Tc-99m)",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-s",
+"short": "",
+"text": "the use of the gamma camera including the principles of the collimator, scintillation counter and photomultiplier / CCD",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+},
+{
+"id": "3.B-t",
+"short": "",
+"text": "positron emission tomography (PET) scanning and its use in detecting tumours",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"medical-physics"
+]
+}
+]
+},
+{
+"code": "3.C",
+"title": "The Physics of Sports",
+"paper": 3,
+"option": "Option C",
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": true,
+"topic": "physics-of-sports",
+"statements": [
+{
+"id": "3.C-a",
+"short": "",
+"text": "how to use the centre of gravity to explain how stability and toppling is achieved in various sporting contexts",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-b",
+"short": "",
+"text": "how to use the principle of moments to determine forces within • various muscle systems in the human body and • other sporting contexts, for example, sailing",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-c",
+"short": "",
+"text": "how to use Newton’s 2nd law in the form Ft = mv − mu in various sporting contexts",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-d",
+"short": "",
+"text": "the coefficient of restitution as e = (Relative speed after collision)/(Relative speed before collision) and also use it in the form e = √(h/H) where h is the bounce height and H is the drop height",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-e",
+"short": "",
+"text": "what is meant by the moment of inertia of a body",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-f",
+"short": "",
+"text": "how to use equations to determine the moment of inertia, I, for example • a solid sphere I = (2/5)mr² • a thin spherical shell I = (2/3)mr² where m is the mass and r is the radius",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-g",
+"short": "",
+"text": "the idea that angular acceleration, α, is defined as the rate of change of angular velocity, ω, and how to use the equation α = (ω₂ − ω₁)/t",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-h",
+"short": "",
+"text": "the idea that torque, τ, is given as τ = Iα",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-i",
+"short": "",
+"text": "angular momentum, L, is given as L = Iω where ω is the angular velocity",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-j",
+"short": "",
+"text": "the principle of conservation of angular momentum and use it to solve problems in sporting contexts",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-k",
+"short": "",
+"text": "how to use the equation for the rotational kinetic energy, rotational KE = ½Iω²",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-l",
+"short": "",
+"text": "how to use the principle of conservation of energy including the use of linear and rotational kinetic energy as well as gravitational and elastic potential energy in various sporting contexts",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-m",
+"short": "",
+"text": "how to use projectile motion theory in sporting contexts",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-n",
+"short": "",
+"text": "how to use Bernoulli’s equation p = p₀ − ½ρv² in sporting contexts",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+},
+{
+"id": "3.C-o",
+"short": "",
+"text": "how to determine the magnitude of the drag force using FD = ½ρv²ACD where CD is the drag coefficient",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"physics-of-sports"
+]
+}
+]
+},
+{
+"code": "3.D",
+"title": "Energy and the Environment",
+"paper": 3,
+"option": "Option D",
+"area": null,
+"theme": null,
+"module": 3,
+"aLevelOnly": true,
+"topic": "energy-and-the-environment",
+"statements": [
+{
+"id": "3.D-a",
+"short": "",
+"text": "how the following affect the rate at which the temperature of the Earth rises including: (i) the need for thermal equilibrium: that is the balance between energy inflow from the Sun and energy re-radiated from the Earth in the context of global energy demand and the effect of CO₂ levels in the atmosphere (ii) the origin and means of transmission of solar energy and the form of the Sun’s power spectrum including the idea that wavelengths are converted into the near infrared in the atmosphere (iii) the use of Wien’s law (λmax T = constant) and Stefan-Boltzman T⁴ law in the context of solar power (iv) use of the density equation and Archimedes’ principle to explain why rising sea levels are due to melting ice caps and that the melting of ice on land increases sea levels but melting icebergs do not",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"energy-and-the-environment"
+]
+},
+{
+"id": "3.D-b",
+"short": "",
+"text": "the common sources of renewable and non-renewable energy and be able to compare their development and use both in the UK and internationally (i) solar power: • the idea that the main branch of the proton-proton chain is the main energy production mechanism in the Sun • the intensity of power from the Sun I = P/A and the inverse square law for a point source • how to perform energy conversions using photovoltaic cells (including efficiency calculations) (ii) wind power: • the power available from a flowing fluid = ½Aρv³ • the factors affecting the efficiency of wind turbines (iii) tidal barrages, hydroelectric power and pumped storage: • the principles of energy conversion (Ep to Ek) in tidal barrage, hydroelectric and pumped storage schemes and be able to carry out energy and power calculations related to these schemes and compare with the energy produced from wind (iv) nuclear fission and fusion: • the principles underlying breeding and enrichment in nuclear fission applications • the difficulties in producing sustained fusion power - fusion triple product",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"energy-and-the-environment"
+]
+},
+{
+"id": "3.D-c",
+"short": "",
+"text": "the principles of fuel cell operation and the benefits of fuel cells particularly regarding greenhouse gas emissions",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"energy-and-the-environment"
+]
+},
+{
+"id": "3.D-d",
+"short": "",
+"text": "the thermal conduction equation in the form ΔQ/Δt = −AK Δθ/Δx",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"energy-and-the-environment"
+]
+},
+{
+"id": "3.D-e",
+"short": "",
+"text": "the effect of insulation on thermal energy loss and be able to calculate the heat loss for parallel surfaces using the rate of energy transfer = UAΔθ including cases where different materials are in contact",
+"guidance": "",
+"level": "",
+"points": [],
+"page": null,
+"aLevelPart": "",
+"as": false,
+"topics": [
+"energy-and-the-environment"
+]
+}
+]
+}
+]

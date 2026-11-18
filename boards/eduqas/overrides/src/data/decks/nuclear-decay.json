@@ -1,0 +1,38 @@
+{
+ "topic": "nuclear-decay",
+ "name": "Radioactive decay",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Activity",
+   "definition": "The number of nuclei that decay per second, A = λN, in becquerels.",
+   "examiner": "1 Bq = one decay per second."
+  },
+  {
+   "term": "Decay constant",
+   "definition": "The probability per unit time that a nucleus will decay.",
+   "examiner": "λ = ln 2 / T½. Unit s⁻¹ (or any time unit consistently)."
+  },
+  {
+   "term": "Half-life",
+   "definition": "The average time taken for the number of undecayed nuclei (or the activity) to halve.",
+   "examiner": "Use 'average' or 'mean': decay is random."
+  },
+  {
+   "term": "Random decay",
+   "definition": "It is impossible to predict when a particular nucleus will decay.",
+   "examiner": "Shown by fluctuations in count rate."
+  },
+  {
+   "term": "Spontaneous decay",
+   "definition": "Decay is not affected by external conditions such as temperature or pressure.",
+   "examiner": ""
+  },
+  {
+   "term": "Background radiation",
+   "definition": "Radiation that is always present from natural and artificial sources.",
+   "examiner": "Subtract the background count before using count rates."
+  }
+ ]
+}

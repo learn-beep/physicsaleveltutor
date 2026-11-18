@@ -1,0 +1,161 @@
+{
+ "site": {
+  "name": "A-level Physics Tutor",
+  "domain": "https://www.physicsaleveltutor.com",
+  "whatsapp": "447888786687",
+  "email": "enquiries@physicsaleveltutor.com",
+  "company": "aleveltutors.online Limited",
+  "companyNumber": "14401016",
+  "registeredOffice": "5 Northbrook Court, Northbrook Avenue, Winchester SO23 0JP",
+  "spec": "WJEC Eduqas A-level Physics (A420QS) and AS (B420QS), specification version 3 (October 2024).",
+  "examYear": 2027,
+  "board": "eduqas",
+  "boardName": "Eduqas"
+ },
+ "whatsappMessage": "Hi, I'm looking for an Eduqas Physics Tutor. The student is in Year ..... Their name is ..................... we would like ........ lessons per week, the best two times for tutoring are ................. and ......................",
+ "faviconLetter": "P",
+ "ogTitle": [
+  "AQA A-level Physics",
+  "past papers, by topic"
+ ],
+ "ogSubtitle": "Mark schemes, examiner comments, practice and tutors · physicsaleveltutor.com",
+ "paperNames": {
+  "A420QS-C1": "Component 1",
+  "A420QS-C2": "Component 2",
+  "A420QS-C3": "Component 3",
+  "B420QS-C1": "Component 1",
+  "B420QS-C2": "Component 2"
+ },
+ "oldSpecFlag": "not_current_spec",
+ "exams": {
+  "series": "Summer 2027",
+  "source": "WJEC and Eduqas Summer 2027 final examination timetable (AS and A level)",
+  "alevel": [
+   {
+    "code": "A420U10-1",
+    "name": "Component 1: Newtonian physics",
+    "date": "2027-05-21",
+    "session": "Morning",
+    "length": "2 hours 15 minutes",
+    "marks": 100
+   },
+   {
+    "code": "A420U20-1",
+    "name": "Component 2: Electricity and the universe",
+    "date": "2027-05-27",
+    "session": "Morning",
+    "length": "2 hours",
+    "marks": 100
+   },
+   {
+    "code": "A420U30-1",
+    "name": "Component 3: Light, nuclei and options",
+    "date": "2027-06-08",
+    "session": "Morning",
+    "length": "2 hours 15 minutes",
+    "marks": 120
+   }
+  ],
+  "as": [
+   {
+    "code": "B420U10-1",
+    "name": "AS Component 1: Motion, energy and matter",
+    "date": "2027-05-12",
+    "session": "Morning",
+    "length": "1 hour 30 minutes",
+    "marks": 75
+   },
+   {
+    "code": "B420U20-1",
+    "name": "AS Component 2: Electricity and light",
+    "date": "2027-05-18",
+    "session": "Morning",
+    "length": "1 hour 30 minutes",
+    "marks": 75
+   }
+  ],
+  "asNote": ""
+ },
+ "boundaries": {
+  "source": "Eduqas publishes overall grade points: the component marks at each boundary added together. The A-level total is 100 + 100 + 120 = 320 raw marks (Component 3 is 100 marks of core plus 20 marks on your option). Figures 2022–2026 from tutor2u's summary of Eduqas data; AS (out of 150, two 75-mark components) from Eduqas's June 2025 grade points. The June 2026 papers themselves are not yet public.",
+  "alevel": [
+   {
+    "series": "June 2026",
+    "max": 320,
+    "A*": 265,
+    "A": 237,
+    "B": 199,
+    "C": 161,
+    "D": 123,
+    "E": 85
+   },
+   {
+    "series": "June 2025",
+    "max": 320,
+    "A*": 262,
+    "A": 234,
+    "B": 196,
+    "C": 158,
+    "D": 120,
+    "E": 82
+   },
+   {
+    "series": "June 2024",
+    "max": 320,
+    "A*": 258,
+    "A": 226,
+    "B": 187,
+    "C": 148,
+    "D": 109,
+    "E": 71
+   },
+   {
+    "series": "June 2023",
+    "max": 320,
+    "A*": 255,
+    "A": 221,
+    "B": 181,
+    "C": 141,
+    "D": 102,
+    "E": 63
+   },
+   {
+    "series": "June 2022",
+    "max": 320,
+    "A*": 249,
+    "A": 214,
+    "B": 172,
+    "C": 130,
+    "D": 89,
+    "E": 48
+   }
+  ],
+  "as": [
+   {
+    "series": "June 2025",
+    "max": 150,
+    "A": 106,
+    "B": 95,
+    "C": 84,
+    "D": 73,
+    "E": 62
+   }
+  ]
+ },
+ "tutors": [],
+ "moduleFrom": "component",
+ "skillCodes": [
+  "Uncertainties",
+  "Experimental method",
+  "Graph skills",
+  "Units and conversions",
+  "Algebra",
+  "Trigonometry and vectors",
+  "Synoptic",
+  "Issues",
+  "Comprehension",
+  "QER",
+  "Maths marks",
+  "Practical marks"
+ ]
+}

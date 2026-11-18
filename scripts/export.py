@@ -98,7 +98,7 @@ def main():
             for s in stmt_to_slugs.get(sid, []): (A if role == "A" else C).append(s)
         slugs = list(dict.fromkeys(A or C))
         for fl, slug in flag_to_slug.items():
-            if q.get(fl) or fl in (q.get("fl") or []): slugs.append(slug)
+            if q.get(fl) or fl in (q.get("fl") or []) or fl in (q.get("sk") or []): slugs.append(slug)
         slugs = list(dict.fromkeys(slugs))
         flags = q.get("fl") or []
         level = "AS" if p["qual"] == "AS" else "A level"
@@ -106,9 +106,10 @@ def main():
         stem = stems.get(q.get("sid") or "")
         sk = q.get("sk") or []
         features = list(dict.fromkeys(flags + [s[2:].lower() for s in sk if s.startswith("F ")]))
-        qs = [s for s in sk if s.startswith(("QS", "M ", "PAG", "MS ", "PS ", "AT ", "RP"))]
+        qs = [s for s in sk if s.startswith(("QS", "M ", "PAG", "MS ", "PS ", "AT ", "RP"))] or [s for s in sk if s in cfg.get("skillCodes", [])]
         if any(s.startswith(("PAG", "RP", "PS ", "AT ")) for s in sk) or fmt == "Practical and data analysis" \
-                or (str(p["spec"]).startswith("H4") and any(i.startswith("1.") for i, r in q.get("st", []) if r == "A")): features.append("practical")
+                or (str(p["spec"]).startswith("H4") and any(i.startswith("1.") for i, r in q.get("st", []) if r == "A")) \
+                or "Practical marks" in sk or any("-P" in i for i, r in q.get("st", []) if r == "A"): features.append("practical")
         features = list(dict.fromkeys(features))
         ctx_crops = [f"/img/{bundle}/{pathlib.Path(byid[c]['qi']).stem}.webp" for c in (q.get("cp") or []) if c in byid and byid[c].get("qi")]
         rec = {"id": q["id"], "paperId": p["id"], "bundle": bundle, "series": p["series"], "year": p["year"], "spec": p["spec"],
@@ -162,11 +163,11 @@ def main():
     (out / "topics.json").write_text(json.dumps(topic_recs, ensure_ascii=False, indent=0), encoding="utf-8")
 
     spec_recs = [{"code": s["code"], "title": s["title"], "paper": s.get("paper"), "option": s.get("opt"), "area": s.get("area"),
-                  "theme": s.get("theme"), "module": (int(str(s["code"]).split(".")[1]) if str(s["code"]).startswith("3.") else int(str(s["code"])[0])) if str(s["code"])[:1].isdigit() else None, "aLevelOnly": bool(s.get("al")),
+                  "theme": s.get("theme"), "module": (int(str(s["code"]).split(".")[1]) if cfg.get("moduleFrom") == "section" and str(s["code"]).startswith("3.") else int(str(s["code"])[0])) if str(s["code"])[:1].isdigit() else None, "aLevelOnly": bool(s.get("al")),
                   "topic": next((t["slug"] for t in topics_def if any(st["id"] in t.get("statements", []) for st in s["st"])), None),
                   "statements": [{"id": st["id"], "short": st.get("sh") or "", "text": st["t"], "guidance": st.get("g") or "", "level": st.get("lv") or "",
                                   "points": st.get("pts") or [], "page": st.get("pg"),
-                                  "aLevelPart": st.get("ap") or "", "as": bool(st.get("a")) or (st.get("lv") or "").startswith("AS") or (str(s["code"])[:1] in "1234" and "." in str(s["code"]) and not str(s["code"]).startswith("3.")), "topics": stmt_to_slugs.get(st["id"], [])} for st in s["st"]]} for s in QB["spec"]]
+                                  "aLevelPart": st.get("ap") or "", "as": bool(st.get("a")) or (st.get("lv") or "").startswith("AS") or (cfg.get("asFromCode", False) and str(s["code"])[:1] in "1234" and "." in str(s["code"])), "topics": stmt_to_slugs.get(st["id"], [])} for st in s["st"]]} for s in QB["spec"]]
     (out / "spec.json").write_text(json.dumps(spec_recs, ensure_ascii=False, indent=0), encoding="utf-8")
     (out / "weighting.json").write_text(json.dumps({"areas": {s["code"]: s["title"] for s in QB["spec"] if s["st"]}, "byPaper": {k: dict(v) for k, v in weighting.items()}}, ensure_ascii=False), encoding="utf-8")
     unmapped = sum(1 for x in questions if not x["topics"])

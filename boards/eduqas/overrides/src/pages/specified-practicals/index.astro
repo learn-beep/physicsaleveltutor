@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allQuestions, topicByslug } from '../../lib/data';
+import spec from '../../data/spec.json';
+// The 26 specified practicals, from the specification (ids like 1.2-P1), with every past-paper part that assesses one.
+const prac = spec.flatMap((s) => s.statements.filter((st) => /-P\d+$/.test(st.id)).map((st) => ({ id: st.id, topic: s.topic, as: st.as, name: st.text.replace(/^Specified practical:\s*/i, '') })));
+const live = allQuestions.filter((q) => !q.notCurrentSpec && q.topics.length);
+const byP = Object.fromEntries(prac.map((p) => [p.id, live.filter((q) => q.statements.includes(p.id))]));
+const practical = live.filter((q) => (q.features || []).includes('practical'));
+const other = practical.filter((q) => !q.statements.some((s) => /-P\d+$/.test(s)));
+// What the papers ask about each, in the site's words. To be checked by a tutor.
+const how = {
+  '1.1-P1': 'Mass on a balance, dimensions with vernier callipers or a micrometer (or volume by displacement); ρ = m/V with a percentage uncertainty from each reading.',
+  '1.1-P2': 'Balance a metre rule on a pivot with a known mass and the unknown; take moments. Papers ask why the rule\'s own weight must be included and how to find its centre of mass.',
+  '1.2-P1': 'Light gates or an electromagnet and trapdoor timer; plot h against t² (or 2h against t²) and g is from the gradient. Papers ask about reaction time, air resistance and the intercept.',
+  '1.3-P1': 'Trolley or glider pulled by hanging masses, acceleration from light gates; keep the total mass constant by moving masses from trolley to hanger.',
+  '1.6-P1': 'Time many oscillations from the centre of the swing with a fiducial marker; plot T² against l. Small amplitude only.',
+  '1.6-P2': 'Mass–spring with a card damper; record the amplitude after each oscillation and test for exponential decay (constant ratio, or ln A against time).',
+  '1.8-P1': 'Pressure or volume of a fixed mass of gas at several temperatures in a water bath; extrapolate the straight line to zero to find absolute zero.',
+  '1.8-P2': 'Heater in a lagged metal block, energy from VIt, temperature rise from a thermometer; c from the gradient of θ against time. Papers ask about heat losses and lagging.',
+  '2.2-P1': 'V and I for a filament lamp and a metal wire in a water bath; explain the curve for the lamp from the temperature rise.',
+  '2.2-P2': 'Resistance at several lengths, diameter with a micrometer at several points; ρ = gradient of R against l × A. Papers ask about contact resistance and heating.',
+  '2.2-P3': 'Wire in a water bath, resistance at several temperatures; graph of R against θ.',
+  '2.3-P1': 'Terminal pd and current for several loads; V = E − Ir, so E is the intercept and r the negative gradient.',
+  '2.4-P1': 'Capacitor discharging through a resistor, pd or current against time; ln V against t gives −1/RC, or find the time to fall to 37%.',
+  '2.4-P2': 'Charge a capacitor to different pds and discharge it through a joulemeter, or compare energy with ½CV².',
+  '2.5-P1': 'Long wire, masses on the end, extension with a vernier against a reference wire, diameter with a micrometer; E from the gradient of stress against strain.',
+  '2.5-P2': 'Load and unload a rubber band; the hysteresis loop and the energy given as heat (area between the curves).',
+  '3.1-P1': 'Intensity through two polarising filters at different angles with a light sensor; compare with cos²θ.',
+  '3.2-P1': 'Laser and double slit; measure across several fringes, then λ = aΔy/D. Papers ask about laser safety and which length has the largest uncertainty.',
+  '3.2-P2': 'Laser and grating; angles to several orders, d sin θ = nλ. Papers ask why using higher orders reduces the percentage uncertainty.',
+  '3.2-P3': 'Stationary waves in a tube or between a speaker and a reflector; node-to-node distance is half a wavelength, then v = fλ.',
+  '3.3-P1': 'Ray box and glass block, angles of incidence and refraction; n from the gradient of sin i against sin r.',
+  '3.4-P1': 'Striking pd of LEDs of known wavelength; eV = hc/λ, so h from the gradient of V against 1/λ.',
+  '3.6-P1': 'Dice as nuclei: remove the sixes each throw and plot the number left; half-life and decay constant from the graph.',
+  '3.6-P2': 'Gamma source and GM tube at several distances, background subtracted; test the inverse-square law allowing for the unknown source position.',
+  '3.9-P1': 'Current balance: wire between magnets on a top-pan balance; F = BIl, so B from the gradient of F against I.',
+  '3.9-P2': 'Hall probe in a solenoid or near a wire; vary current or distance and compare with the equations in the Data Booklet.',
+};
+const ref = (q) => `${q.series.replace('June ', 'Jun ').replace('October ', 'Oct ')} ${q.level === 'AS' ? 'AS ' : ''}${q.paper.replace('Component ', 'C')} Q${q.question}`;
+---
+<Base title="Eduqas A-level Physics specified practicals: all 26, with every past-paper question" description="The 26 Eduqas A-level Physics specified practicals: what each involves, what the written papers ask about it, and every past-paper question on it, with mark schemes. Plus the other practical-skills questions." context="practicals" leadLine="Practical questions carry a large share of the marks on every component. A tutor can take you through each specified practical.">
+  <h1>Specified practicals</h1>
+  <p>The Eduqas specification lists 26 specified practicals (16 of them in the AS). The written papers test them directly and through the practical marks shown in each mark scheme's Prac column. Below is what each involves, what the papers ask, and every past-paper question on it. There are {practical.length} practical question parts in total; <a href="/questions/type/practical-questions/">see them all with their mark schemes</a>.</p>
+  <h2>The 26 specified practicals</h2>
+  <div class="table-wrap"><table><thead><tr><th>Practical</th><th>What the papers ask</th><th>Questions</th></tr></thead>
+  <tbody>{prac.map((p) => <tr><td><a href={`#${p.id}`}>{p.id}</a> {p.name}{p.as ? ' (AS)' : ''}</td><td>{how[p.id] || ''}</td><td>{byP[p.id].length}</td></tr>)}</tbody></table></div>
+  <p class="muted">Descriptions written by the site from the specification and the mark schemes; being checked by our tutor. The practical endorsement is assessed by your teacher and reported separately as a pass.</p>
+  {prac.filter((p) => byP[p.id].length).map((p) => <section id={p.id}><h2>{p.id}: {p.name}</h2><p class="muted">{how[p.id]}</p>
+    <ul class="qlinks">{byP[p.id].sort((a, b) => b.year - a.year).map((q) => <li><a href={`/questions/${q.topics[0]}/#${q.id}`}>{ref(q)}</a> <span class="muted">{q.marks} mark{q.marks === 1 ? '' : 's'} · {topicByslug.get(q.topics[0])?.name}</span></li>)}</ul></section>)}
+  <section id="skills"><h2>Other practical-skills questions</h2><p class="muted">Questions with practical marks or on experimental method, uncertainties and evaluation that are not tied to one specified practical.</p>
+    <details class="spec-fold"><summary>{other.length} questions</summary><ul class="qlinks">{other.sort((a, b) => b.year - a.year).map((q) => <li><a href={`/questions/${q.topics[0]}/#${q.id}`}>{ref(q)}</a> <span class="muted">{q.marks} mark{q.marks === 1 ? '' : 's'} · {topicByslug.get(q.topics[0])?.name}</span></li>)}</ul></details></section>
+</Base>

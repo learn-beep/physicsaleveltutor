@@ -1,0 +1,66 @@
+{
+  "source": "Eduqas publishes overall grade points: the component marks at each boundary added together. The A-level total is 100 + 100 + 120 = 320 raw marks (Component 3 is 100 marks of core plus 20 marks on your option). Figures 2022–2026 from tutor2u's summary of Eduqas data; AS (out of 150, two 75-mark components) from Eduqas's June 2025 grade points. The June 2026 papers themselves are not yet public.",
+  "alevel": [
+    {
+      "series": "June 2026",
+      "max": 320,
+      "A*": 265,
+      "A": 237,
+      "B": 199,
+      "C": 161,
+      "D": 123,
+      "E": 85
+    },
+    {
+      "series": "June 2025",
+      "max": 320,
+      "A*": 262,
+      "A": 234,
+      "B": 196,
+      "C": 158,
+      "D": 120,
+      "E": 82
+    },
+    {
+      "series": "June 2024",
+      "max": 320,
+      "A*": 258,
+      "A": 226,
+      "B": 187,
+      "C": 148,
+      "D": 109,
+      "E": 71
+    },
+    {
+      "series": "June 2023",
+      "max": 320,
+      "A*": 255,
+      "A": 221,
+      "B": 181,
+      "C": 141,
+      "D": 102,
+      "E": 63
+    },
+    {
+      "series": "June 2022",
+      "max": 320,
+      "A*": 249,
+      "A": 214,
+      "B": 172,
+      "C": 130,
+      "D": 89,
+      "E": 48
+    }
+  ],
+  "as": [
+    {
+      "series": "June 2025",
+      "max": 150,
+      "A": 106,
+      "B": 95,
+      "C": 84,
+      "D": 73,
+      "E": 62
+    }
+  ]
+}

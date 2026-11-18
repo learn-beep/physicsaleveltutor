@@ -1,6 +1,6 @@
 # physicsaleveltutor.com
 
-Static Astro site for AQA A-level Physics (7408) and AS (7407), deployed on Netlify. Built from the chemistryaleveltutor.com template with the `subject-revision-site` skill on 12 November 2026. Tutor: Rosey.
+Static Astro site for AQA A-level Physics (7408) and AS (7407) at the root, with an Eduqas section (A420QS / B420QS) under `/eduqas/` (added 18 November 2026), deployed on Netlify. Built from the chemistryaleveltutor.com template with the `subject-revision-site` skill on 12 November 2026. Tutor: Rosey.
 
 ## Run locally
     npm install
@@ -37,3 +37,9 @@ Set `CROPS=off` in Netlify's environment to replace every AQA crop with a link t
 
 ## Upkeep
 New papers (AQA publishes each summer's papers the following summer): run the bank pipeline, then `export.py --images`, commit `src/data` and `public/img`. Grade boundaries (`site.config.json` → `src/data/boundaries.json`) in August; exam dates (`src/data/exams.json`) when AQA publishes the final timetable.
+
+## Eduqas section (/eduqas/)
+- `npm run build` runs `scripts/build.mjs`: the AQA build as before, then a copy of the repo in `.build/eduqas` with the Eduqas data, the string replacements in `boards/eduqas/replace.json` (AQA → Eduqas wording, Data Booklet, specified practicals, storage keys `malt-edq-`) and the whole-page overrides in `boards/eduqas/overrides/` (home, topic index, question types, Data Booklet, specified practicals, maths skills, QER, mock builder, past papers, grade boundaries, spec checklist, practice, search, header, `lib/groups.ts`, decks). That build is moved under `dist/eduqas/` with its internal links prefixed; the tutors, about, legal and form pages come from the AQA build only. One sitemap is written for the whole site.
+- Data: `python3 scripts/export.py --bank "<Dropbox>/Physics/Eduqas/Question Bank" --topics boards/eduqas/topics.json --config boards/eduqas/site.config.json --out boards/eduqas/data`, then `python3 scripts/webp_all.py "<Dropbox>/Physics/Eduqas/Question Bank"` for the crops (public/img/<bundle>, lossless WebP for text crops). Exam dates and boundaries: `boards/eduqas/exams.json`, `boards/eduqas/boundaries.json` (copied from `site.config.json`).
+- 31 topics: one per specification topic (1.1 to 3.10, options 3.A to 3.D) plus Component 1 comprehension. Mock shapes: C1 80 + 20 comprehension; C2 100; C3 100 + 20 option; AS 75 each. Boundaries out of 320 (100 + 100 + 120), AS out of 150.
+- To change an Eduqas page, edit its override (or add a replacement); pages without an override are the AQA page with the replacements applied.

@@ -1,0 +1,49 @@
+{
+  "series": "Summer 2027",
+  "source": "WJEC and Eduqas Summer 2027 final examination timetable (AS and A level)",
+  "alevel": [
+    {
+      "code": "A420U10-1",
+      "name": "Component 1: Newtonian physics",
+      "date": "2027-05-21",
+      "session": "Morning",
+      "length": "2 hours 15 minutes",
+      "marks": 100
+    },
+    {
+      "code": "A420U20-1",
+      "name": "Component 2: Electricity and the universe",
+      "date": "2027-05-27",
+      "session": "Morning",
+      "length": "2 hours",
+      "marks": 100
+    },
+    {
+      "code": "A420U30-1",
+      "name": "Component 3: Light, nuclei and options",
+      "date": "2027-06-08",
+      "session": "Morning",
+      "length": "2 hours 15 minutes",
+      "marks": 120
+    }
+  ],
+  "as": [
+    {
+      "code": "B420U10-1",
+      "name": "AS Component 1: Motion, energy and matter",
+      "date": "2027-05-12",
+      "session": "Morning",
+      "length": "1 hour 30 minutes",
+      "marks": 75
+    },
+    {
+      "code": "B420U20-1",
+      "name": "AS Component 2: Electricity and light",
+      "date": "2027-05-18",
+      "session": "Morning",
+      "length": "1 hour 30 minutes",
+      "marks": 75
+    }
+  ],
+  "asNote": ""
+}

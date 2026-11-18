@@ -1,0 +1,33 @@
+{
+ "topic": "particles-and-nuclear-structure",
+ "name": "Particles, quarks and conservation laws",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Hadron",
+   "definition": "A particle that feels the strong nuclear force; made of quarks.",
+   "examiner": "Baryons (three quarks) and mesons (quark and antiquark) are both hadrons."
+  },
+  {
+   "term": "Baryon",
+   "definition": "A hadron made of three quarks, such as the proton (uud) and neutron (udd).",
+   "examiner": "Baryon number +1 for baryons, −1 for antibaryons; it is always conserved."
+  },
+  {
+   "term": "Meson",
+   "definition": "A hadron made of a quark and an antiquark, such as the pion and kaon.",
+   "examiner": "Mesons have baryon number 0."
+  },
+  {
+   "term": "Lepton",
+   "definition": "A fundamental particle that does not feel the strong force: electron, muon, neutrinos.",
+   "examiner": "Electron lepton number and muon lepton number are conserved separately."
+  },
+  {
+   "term": "Antiparticle",
+   "definition": "A particle with the same mass and rest energy as its particle but the opposite charge and quantum numbers.",
+   "examiner": "Pair production needs a photon energy of at least twice the rest energy of the particle."
+  }
+ ]
+}

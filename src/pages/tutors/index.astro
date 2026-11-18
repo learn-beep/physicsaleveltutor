@@ -2,8 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import tutors from '../../data/tutors.json';
 const tutor = tutors[0];
-const title = tutor ? `AQA A-level physics tutor: ${tutor.name}, online one-to-one` : 'AQA A-level physics tutor: online one-to-one lessons';
-const desc = tutor ? tutor.bio[0] : 'Online one-to-one A-level Physics tutoring for the AQA specification, from an experienced specialist tutor. Paid trial lesson, no packages, lesson by lesson.';
+const title = tutor ? `A-level physics tutor (AQA and Eduqas): ${tutor.name}, online one-to-one` : 'A-level physics tutor (AQA and Eduqas): online one-to-one lessons';
+const desc = tutor ? tutor.bio[0] : 'Online one-to-one A-level Physics tutoring for the AQA and Eduqas specifications, from an experienced specialist tutor. Paid trial lesson, no packages, lesson by lesson.';
 ---
 <Base title={title} description={desc} context="tutors" leadLine="Tell us the year group, target grade and availability, and we will arrange a trial session.">
   {tutor ? <>
@@ -15,12 +15,12 @@ const desc = tutor ? tutor.bio[0] : 'Online one-to-one A-level Physics tutoring 
     <h2>What {tutor.name} offers</h2>
     <ul>{tutor.offers.map((o) => <li>{o}</li>)}</ul>
   </> : <>
-    <h1>Your AQA Physics tutor</h1>
-    <p>Online one-to-one lessons for AS and A-level Physics on the AQA specification, from an experienced specialist who teaches it every week. Lessons are built around what earns marks: setting out multi-step calculations so the method marks are safe, the required practicals and Paper 3 data analysis, and the six-mark extended responses.</p>
+    <h1>Your A-level Physics tutor</h1>
+    <p>Online one-to-one lessons for AS and A-level Physics on the AQA and Eduqas specifications, from an experienced specialist. Lessons are built around what earns marks: setting out multi-step calculations so the method marks are safe, the required practicals and Paper 3 data analysis, and the six-mark extended responses.</p>
     <h2>What the lessons cover</h2>
     <ul>
       <li>One-to-one online sessions for Year 12 and Year 13, at a regular weekly slot</li>
-      <li>Past-paper questions marked against the AQA mark schemes, with written feedback</li>
+      <li>Past-paper questions marked against the AQA or Eduqas mark schemes, with written feedback</li>
       <li>Mock-paper walk-throughs before the May and June exams</li>
     </ul>
   </>}

@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hint from '../../components/Hint.astro';
+import spec from '../../data/spec.json';
+const sections = spec.filter((s) => s.statements.length);
+const total = sections.reduce((n, s) => n + s.statements.length, 0);
+const papers = [[1, 'Component 1: Newtonian physics'], [2, 'Component 2: Electricity and the universe'], [3, 'Component 3: Light, nuclei and options (options 3.A to 3.D at the end; you study one)']];
+---
+<Base title={`Eduqas A-level Physics specification checklist (A420QS): all ${total} statements, tickable`} description={`All ${total} content statements of the Eduqas A-level Physics specification (A420QS), including the specified practicals and the four options, as a tickable checklist with the AS content marked and links to the past-paper questions for each topic.`} context="specification" leadLine="Big gaps on the checklist? A tutor can plan the order to close them.">
+  <h1>Specification checklist</h1>
+  <p>Every content statement in the Eduqas A-level Physics specification (A420QS, version 3, October 2024), under the specification's topic numbers; we label the statements by topic and letter (1.3-a is statement (a) of topic 1.3) and the specified practicals as P1, P2 (1.6-P1). Tick what you're confident with; ticks are saved in this browser only. Statements marked AS are also in the AS (B420QS).</p>
+  <Hint id="ticks" text="Ticks are saved in this browser only. The revision planner uses them to pick your weak topics." />
+  <p class="muted"><span id="done">0</span> of {total} ticked · <button class="chip" type="button" id="clear">Clear my ticks</button></p>
+  {papers.map(([n, h]) => (
+    <>
+      <h2 class="strand-head">{h}</h2>
+      {sections.filter((s) => s.module === n).map((s) => (
+        <section>
+          <h3>{s.code} {s.title} <span class="muted small-text">{s.area}</span> {s.topic && <a class="small-text" href={`/questions/${s.topic}/`}>questions</a>}</h3>
+          <ul class="spec-list">
+            {s.statements.map((st) => (
+              <li><label><input type="checkbox" data-spec={st.id} /><span><strong>{st.id}</strong> {st.text}{st.as && <> <span class="asb">AS</span></>}{st.guidance && <><br /><span class="muted small-text">{st.guidance}</span></>}</span></label></li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </>
+  ))}
+  <script>
+    const KEY = 'malt-edq-spec';
+    const boxes = document.querySelectorAll('input[data-spec]');
+    const done = document.getElementById('done');
+    let state = {};
+    try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch {}
+    const paint = () => { let n = 0; boxes.forEach((b) => { b.checked = !!state[b.dataset.spec]; if (b.checked) n++; }); done.textContent = String(n); };
+    boxes.forEach((b) => b.addEventListener('change', () => { state[b.dataset.spec] = b.checked; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} paint(); }));
+    document.getElementById('clear').addEventListener('click', () => { state = {}; try { localStorage.removeItem(KEY); } catch {} paint(); });
+    paint();
+  </script>
+</Base>

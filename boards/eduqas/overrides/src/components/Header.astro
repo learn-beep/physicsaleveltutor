@@ -1,0 +1,21 @@
+---
+import site from '../data/site.json';
+import Icon from './Icon.astro';
+import Search from './Search.astro';
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href={site.board === 'eduqas' ? '/eduqas/' : '/'}><span>{site.name}</span></a>
+    <span class="board-switch" aria-label="Exam board"><a href="/" aria-current={site.board !== 'eduqas' ? 'page' : undefined}>AQA</a><a href="/eduqas/" aria-current={site.board === 'eduqas' ? 'page' : undefined}>Eduqas</a></span>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/questions/"><Icon name="book" />Questions</a>
+      <a href="/past-papers/"><Icon name="file" />Past papers</a>
+      <a href="/practice/"><Icon name="target" />Practice</a>
+      <a href="/data-booklet/"><Icon name="book" />Data Booklet</a>
+      <a href="/specified-practicals/"><Icon name="checklist" />Practicals</a>
+      <a href="/tutors/"><Icon name="users" />Tutor</a>
+    </nav>
+    <button class="search-toggle" type="button" id="search-toggle" aria-expanded="false" aria-controls="search-panel"><Icon name="target" />Search</button>
+  </div>
+  <Search />
+</header>

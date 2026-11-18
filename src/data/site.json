@@ -7,5 +7,7 @@
   "companyNumber": "14401016",
   "registeredOffice": "5 Northbrook Court, Northbrook Avenue, Winchester SO23 0JP",
   "spec": "AQA A-level Physics (7408) and AS (7407), specification version 1.4.",
-  "examYear": 2027
+  "examYear": 2027,
+  "board": "aqa",
+  "boardName": "AQA"
 }

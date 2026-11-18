@@ -8,7 +8,9 @@
   "companyNumber": "14401016",
   "registeredOffice": "5 Northbrook Court, Northbrook Avenue, Winchester SO23 0JP",
   "spec": "AQA A-level Physics (7408) and AS (7407), specification version 1.4.",
-  "examYear": 2027
+  "examYear": 2027,
+  "board": "aqa",
+  "boardName": "AQA"
  },
  "whatsappMessage": "Hi, I'm looking for an AQA Physics Tutor. The student is in Year ..... Their name is ..................... we would like ........ lessons per week, the best two times for tutoring are ................. and ......................",
  "faviconLetter": "P",
@@ -163,5 +165,6 @@
    }
   ]
  },
- "tutors": []
+ "tutors": [],
+ "moduleFrom": "section"
 }

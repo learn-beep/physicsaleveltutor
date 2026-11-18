@@ -1,0 +1,157 @@
+{
+ "all": [
+  [
+   "Level 1 is 1–2 marks, Level 2 is 3–4, Level 3 is 5–6. Pick the level from the descriptors first",
+   "The bottom band is 1–2 marks, the middle band 3–4, the top band 5–6. Pick the band from the indicative content first"
+  ],
+  [
+   "{paper.total} marks · {qs.length} question parts",
+   "{paper.spec === 'A420QS' && paper.paperNo === 'C3' ? '120 marks for each student (100 in Section A plus one 20-mark option; all four options are here)' : paper.total + ' marks'} · {qs.length} question parts"
+  ],
+  [
+   "<span class=\"muted\">({p.total} marks)</span>",
+   "<span class=\"muted\">({p.spec === 'A420QS' && p.paperNo === 'C3' ? '120' : p.total} marks)</span>"
+  ],
+  [
+   "{current.length} question parts: {topic.mcq} multiple choice, {calcs.length} calculations, {essays.length} six-mark extended response",
+   "{current.length} question parts: {calcs.length} calculations, {current.filter((q) => q.format === 'Definition').length} definitions, {essays.length} six-mark QER"
+  ],
+  [
+   "<button class=\"chip\" type=\"button\" aria-pressed=\"false\" data-filter=\"format:Multiple choice\">Multiple choice</button>",
+   "<button class=\"chip\" type=\"button\" aria-pressed=\"false\" data-filter=\"format:Definition\">Definitions</button>"
+  ],
+  [
+   "Six-mark extended response questions on this topic",
+   "Six-mark QER questions on this topic"
+  ],
+  [
+   "(see the formula sheet page)",
+   "(see the Data Booklet page)"
+  ],
+  [
+   "Section {topic.code}, {topic.statements.length} statement",
+   "Topic {topic.code}, {topic.statements.length} statement"
+  ],
+  [
+   "Past-paper questions, mark schemes and examiner reports are © AQA",
+   "Past-paper questions, mark schemes and examiners' reports are © WJEC CBAC Ltd (Eduqas)"
+  ],
+  [
+   "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/assessment-resources",
+   "https://www.eduqas.co.uk/qualifications/physics-as-a-level/#tab_pastpapers"
+  ],
+  [
+   "data and formulae booklet",
+   "Data Booklet"
+  ],
+  [
+   "/formula-sheet/",
+   "/data-booklet/"
+  ],
+  [
+   ">Formula sheet<",
+   ">Data Booklet<"
+  ],
+  [
+   "/required-practicals/",
+   "/specified-practicals/"
+  ],
+  [
+   "'malt-",
+   "'malt-edq-"
+  ],
+  [
+   "\"malt-",
+   "\"malt-edq-"
+  ],
+  [
+   "required practicals or the six-markers",
+   "specified practicals or the six-mark QER questions"
+  ],
+  [
+   "revision plan to AQA Physics Paper 1",
+   "revision plan to Eduqas Physics Component 1"
+  ],
+  [
+   "week-by-week plan to Paper 1",
+   "week-by-week plan to Component 1"
+  ],
+  [
+   "over the weeks to Paper 1 on",
+   "over the weeks to Component 1 on"
+  ],
+  [
+   "across the three A-level papers in each series",
+   "across the three A-level components in each series"
+  ],
+  [
+   "more than the 270 marks on the papers",
+   "more than the marks on the papers"
+  ],
+  [
+   "June 2025 is the most recent series AQA has published. AQA keeps each summer's papers for teachers only for about a year, so the data here runs to the latest public series. November 2020 and November 2021 were the autumn series sat in place of the cancelled summer exams.",
+   "June 2025 is the most recent series Eduqas has published. October 2020 and October 2021 were the autumn series sat in place of the cancelled summer exams."
+  ],
+  [
+   "and which were examined only through multiple choice; the",
+   "and which carried the practical marks; the"
+  ],
+  [
+   "AQA's examiner reports occasionally give the proportion of marks scored nationally on a question. These are the {hard.length} parts on current content where it was under 35%",
+   "Eduqas's examiners' reports occasionally give the mean mark scored nationally on a question. These are the {hard.length} parts on current content where it was under 35%"
+  ],
+  [
+   "<p class=\"muted\">Papers 1 and 2 at A level are 85 marks each (60 marks of structured questions then 25 multiple-choice questions); Paper 3 is 80 marks: 45 on practical skills and data analysis and 35 on your option. AS Paper 1 is 70 marks of structured questions; AS Paper 2 is 40 marks of structured questions and 30 multiple-choice questions. The Practical Endorsement is reported separately and does not count towards the grade.</p>",
+   "<p class=\"muted\">At A level, Components 1 and 2 are 100 marks each and Component 3 is 120 marks (100 on light, nuclei and the core, 20 on your option). Component 1 Section B is a 20-mark comprehension of a printed article. At AS each component is 75 marks. There are no multiple-choice questions. The practical endorsement is reported separately and does not count towards the grade.</p>"
+  ],
+  [
+   "data-v=\"Paper 1\">Paper 1</button><button class=\"chip\" type=\"button\" data-v=\"Paper 2\">Paper 2</button><button class=\"chip\" type=\"button\" data-v=\"Paper 3\">Paper 3</button>",
+   "data-v=\"Component 1\">Component 1</button><button class=\"chip\" type=\"button\" data-v=\"Component 2\">Component 2</button><button class=\"chip\" type=\"button\" data-v=\"Component 3\">Component 3</button>"
+  ],
+  [
+   "The thin blocks at the end of Papers 1 and 2 (and AS Paper 2) are the multiple-choice questions of Section B; Paper 3 has none.",
+   "The last block of each Component 1 strip is the Section B comprehension; the end of each Component 3 strip is the four options (you answer one)."
+  ],
+  [
+   "Paper 1, 2 and 3 dates",
+   "Component 1, 2 and 3 dates"
+  ],
+  [
+   "AQA sets the session",
+   "Eduqas sets the session"
+  ],
+  [
+   "mark-scheme bar",
+   "mark-scheme bar"
+  ],
+  [
+   "(7408)",
+   "(A420QS)"
+  ],
+  [
+   "7408",
+   "A420QS"
+  ],
+  [
+   "(7407)",
+   "(B420QS)"
+  ],
+  [
+   "7407",
+   "B420QS"
+  ],
+  [
+   "AQA's",
+   "Eduqas's"
+  ],
+  [
+   "AQA",
+   "Eduqas"
+  ]
+ ],
+ "delete": [
+  "src/pages/formula-sheet",
+  "src/pages/required-practicals",
+  "src/data/decks"
+ ]
+}

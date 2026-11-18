@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allPapers, OCR_MATERIALS } from '../../lib/data';
+const seriesList = [...new Set(allPapers.map((p) => p.series))];
+const cell = (series, spec, code) => allPapers.find((p) => p.series === series && p.spec === spec && p.paperNo === code);
+---
+<Base title="Eduqas A-level Physics past papers (A420QS and AS B420QS) 2016–2025 with question-by-question tables" description="Every Eduqas A-level and AS Physics component since 2016 with a question-by-question table of topics, marks and question types, mark schemes and examiners' comments." context="past-papers">
+  <h1>Eduqas A-level Physics past papers</h1>
+  <p>Every A420QS and B420QS series since 2016, from Eduqas's own downloads. Each paper page lists every question with its topic, marks and type, and shows the questions with their mark schemes and the examiners' comments.</p>
+  <p><a class="btn" href={OCR_MATERIALS} rel="noopener">Eduqas past papers and mark schemes</a></p>
+  <h2>A level (A420QS)</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Series</th><th>Component 1</th><th>Component 2</th><th>Component 3</th></tr></thead>
+    <tbody>{seriesList.filter((s) => allPapers.some((p) => p.series === s && p.spec === 'A420QS')).map((s) => <tr><td>{s}</td>{['C1', 'C2', 'C3'].map((n) => { const p = cell(s, 'A420QS', n); return <td>{p ? <a href={`/past-papers/${p.slug}/`}>{p.paper}</a> : '—'}</td>; })}</tr>)}</tbody>
+  </table></div>
+  <h2 id="as">AS (B420QS)</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Series</th><th>Component 1</th><th>Component 2</th></tr></thead>
+    <tbody>{seriesList.filter((s) => allPapers.some((p) => p.series === s && p.spec === 'B420QS')).map((s) => <tr><td>{s}</td>{['C1', 'C2'].map((n) => { const p = cell(s, 'B420QS', n); return <td>{p ? <a href={`/past-papers/${p.slug}/`}>{p.paper}</a> : '—'}</td>; })}</tr>)}</tbody>
+  </table></div>
+  <p class="muted">There were no summer exams in 2020 or 2021; the October 2020 and October 2021 A-level papers are the autumn series Eduqas ran instead. AS papers start in June 2016 and A-level papers in June 2017. Component 3 papers contain all four options; you answer the one you studied. The June 2026 papers will be added when Eduqas makes them public.</p>
+</Base>
