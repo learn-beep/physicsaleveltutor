@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hint from '../../components/Hint.astro';
+import spec from '../../data/spec.json';
+const sections = spec.filter((s) => s.statements.length);
+const total = sections.reduce((n, s) => n + s.statements.length, 0);
+const papers = [[1, 'Module 1: Development of practical skills in physics'], [2, 'Module 2: Foundations of physics'], [3, 'Module 3: Forces and motion'], [4, 'Module 4: Electrons, waves and photons'], [5, 'Module 5: Newtonian world and astrophysics (A level only)'], [6, 'Module 6: Particles and medical physics (A level only)']];
+---
+<Base title={`OCR A-level Physics specification checklist (H556): all ${total} learning outcomes, tickable`} description={`All ${total} learning outcomes of the OCR A-level Physics A specification (H556) as a tickable checklist, Module 1 to Module 6, with the AS content marked and links to the past-paper questions for each topic.`} context="specification" leadLine="Big gaps on the checklist? A tutor can plan the order to close them.">
+  <h1>Specification checklist</h1>
+  <p>Every learning outcome in the OCR Physics A specification (H556, version 3.0, March 2026), under OCR's own numbers (3.2.1(a) is outcome (a) of section 3.2.1). Tick what you're confident with; ticks are saved in this browser only. Outcomes marked AS are also in the AS (H156): that is Modules 1 to 4, apart from the practical endorsement (1.2). Paper 1 covers Modules 1, 2, 3 and 5; Paper 2 covers Modules 1, 2, 4 and 6; Paper 3 covers all six.</p>
+  <Hint id="ticks" text="Ticks are saved in this browser only. The revision planner uses them to pick your weak topics." />
+  <p class="muted"><span id="done">0</span> of {total} ticked · <button class="chip" type="button" id="clear">Clear my ticks</button></p>
+  {papers.map(([n, h]) => (
+    <>
+      <h2 class="strand-head">{h}</h2>
+      {sections.filter((s) => s.module === n).map((s) => (
+        <section>
+          <h3>{s.code} {s.title} <span class="muted small-text">{s.area}</span> {s.topic && <a class="small-text" href={`/questions/${s.topic}/`}>questions</a>}</h3>
+          <ul class="spec-list">
+            {s.statements.map((st) => (
+              <li><label><input type="checkbox" data-spec={st.id} /><span><strong>{st.id}</strong> {st.text}{st.as && <> <span class="asb">AS</span></>}{st.guidance && <><br /><span class="muted small-text">{st.guidance}</span></>}</span></label></li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </>
+  ))}
+  <script>
+    const KEY = 'malt-ocr-spec';
+    const boxes = document.querySelectorAll('input[data-spec]');
+    const done = document.getElementById('done');
+    let state = {};
+    try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch {}
+    const paint = () => { let n = 0; boxes.forEach((b) => { b.checked = !!state[b.dataset.spec]; if (b.checked) n++; }); done.textContent = String(n); };
+    boxes.forEach((b) => b.addEventListener('change', () => { state[b.dataset.spec] = b.checked; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {} paint(); }));
+    document.getElementById('clear').addEventListener('click', () => { state = {}; try { localStorage.removeItem(KEY); } catch {} paint(); });
+    paint();
+  </script>
+</Base>

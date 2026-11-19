@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import { OCR_MATERIALS } from '../../lib/data';
+// From OCR's "Data, Formulae and Relationships Booklet" for Physics A (H156/H556). Retyped by the site; being checked by our tutor.
+const sheet = [
+  ['Physical constants', ['acceleration of free fall g = 9.81 m s⁻²', 'elementary charge e = 1.60 × 10⁻¹⁹ C', 'speed of light in a vacuum c = 3.00 × 10⁸ m s⁻¹', 'Planck constant h = 6.63 × 10⁻³⁴ J s', 'Avogadro constant N_A = 6.02 × 10²³ mol⁻¹', 'molar gas constant R = 8.31 J mol⁻¹ K⁻¹', 'Boltzmann constant k = 1.38 × 10⁻²³ J K⁻¹', 'gravitational constant G = 6.67 × 10⁻¹¹ N m² kg⁻²', 'permittivity of free space ε₀ = 8.85 × 10⁻¹² F m⁻¹', 'electron rest mass mₑ = 9.11 × 10⁻³¹ kg', 'proton rest mass 1.673 × 10⁻²⁷ kg; neutron rest mass 1.675 × 10⁻²⁷ kg; alpha particle rest mass 6.646 × 10⁻²⁷ kg', 'Stefan constant σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴', 'quark charges: up +⅔e, down −⅓e, strange −⅓e']],
+  ['Conversion factors', ['1 u = 1.661 × 10⁻²⁷ kg', '1 eV = 1.60 × 10⁻¹⁹ J', '1 day = 8.64 × 10⁴ s; 1 year ≈ 3.16 × 10⁷ s', '1 light year ≈ 9.5 × 10¹⁵ m; 1 parsec ≈ 3.1 × 10¹⁶ m']],
+  ['Mathematical equations', ['arc length = rθ; circumference 2πr; area of circle πr²', 'curved surface area of cylinder 2πrh; surface area of sphere 4πr²; area of trapezium ½(a + b)h', 'volume of cylinder πr²h; volume of sphere 4/3 πr³', "Pythagoras' theorem, the cosine rule and the sine rule", 'sin θ ≈ tan θ ≈ θ and cos θ ≈ 1 for small angles', 'log(AB) = log A + log B; log(A/B) = log A − log B; log(xⁿ) = n log x; ln(e^(kx)) = kx']],
+  ['Module 2: Foundations of physics', ['components of a vector: F_x = F cos θ; F_y = F sin θ']],
+  ['Module 3: Forces and motion', ['v = u + at; s = ½(u + v)t; s = ut + ½at²; v² = u² + 2as', 'F = Δp/Δt; p = mv', 'moment = Fx; torque of a couple = Fd', 'ρ = m/V; p = F/A; p = hρg', 'W = Fx cos θ; efficiency = useful energy output ÷ total energy input × 100%; P = W/t; P = Fv', 'F = kx; E = ½Fx; E = ½kx²', 'σ = F/A; ε = x/L; E = σ/ε']],
+  ['Module 4: Electrons, waves and photons', ['ΔQ = IΔt; I = Anev', 'W = VQ; W = ℰQ; W = VIt', 'R = ρL/A; series R = R₁ + R₂ + …; parallel 1/R = 1/R₁ + 1/R₂ + …', 'P = VI; P = I²R; P = V²/R', 'ℰ = I(R + r); ℰ = V + Ir', 'potential divider V_out = V_in × R₂/(R₁ + R₂); V₁/V₂ = R₁/R₂', 'v = fλ; f = 1/T; I = P/A; double slit λ = ax/D', 'n = c/v; n sin θ = constant; sin C = 1/n', 'E = hf; E = hc/λ; hf = φ + KE_max; λ = h/p']],
+  ['Module 5: Newtonian world and astrophysics', ['E = mcΔθ; E = mL', 'pV = NkT; pV = nRT; pV = ⅓Nm(mean c²); ½m(mean c²) = 3/2 kT; E = 3/2 kT', 'ω = 2π/T; ω = 2πf; v = ωr; a = v²/r = ω²r; F = mv²/r = mω²r', 'a = −ω²x; x = A cos ωt; x = A sin ωt; v = ±ω√(A² − x²)', 'g = F/m; F = −GMm/r²; g = −GM/r²; T² = (4π²/GM)r³; V_g = −GM/r; energy = −GMm/r', 'hf = ΔE; hc/λ = ΔE; d sin θ = nλ; λ_max ∝ 1/T; L = 4πr²σT⁴', 'Δλ/λ ≈ Δf/f ≈ v/c; p = 1/d; v = H₀d; t = H₀⁻¹']],
+  ['Module 6: Particles and medical physics', ['C = Q/V; C = ε₀A/d; isolated sphere C = 4πε₀R', 'parallel C = C₁ + C₂ + …; series 1/C = 1/C₁ + 1/C₂ + …', 'W = ½QV = ½Q²/C = ½V²C; τ = CR; x = x₀e^(−t/CR); x = x₀(1 − e^(−t/CR))', 'E = F/Q; F = Qq/4πε₀r²; E = Q/4πε₀r²; E = V/d; V = Q/4πε₀r; energy = Qq/4πε₀r', 'F = BIL sin θ; F = BQv', 'Φ = BA cos θ; ℰ = −Δ(NΦ)/Δt; transformer N_s/N_p = V_s/V_p = I_p/I_s', 'R = r₀A^(1/3)', 'A = λN; ΔN/Δt = −λN; λt½ = ln 2; A = A₀e^(−λt); N = N₀e^(−λt)', 'ΔE = Δmc²', 'I = I₀e^(−μx)', 'Z = ρc; I_r/I₀ = (Z₂ − Z₁)²/(Z₂ + Z₁)²; Δf/f = 2v cos θ/c']],
+];
+const learn = [
+  ['Definitions', 'Definitions are not in the booklet: the volt, the ohm, e.m.f., the Young modulus, the newton, gravitational and electric field strength, magnetic flux density, the decay constant, the farad. Learn them word for word.'],
+  ['Uncertainties', 'Percentage uncertainty = absolute uncertainty ÷ value × 100. Add absolute uncertainties when adding or subtracting, add percentage uncertainties when multiplying or dividing, and multiply the percentage by n for a power.'],
+  ['Kinetic and potential energy', 'E_k = ½mv² and E_p = mgh are not printed; nor is W = mg or F = ma (the booklet gives F = Δp/Δt).'],
+  ['Kirchhoff’s laws and Ohm’s law', 'V = IR is not printed on its own, and neither are Kirchhoff’s first and second laws.'],
+  ['Waves', 'The path-difference conditions for constructive and destructive interference, phase difference in degrees or radians, and intensity ∝ amplitude².'],
+  ['Photoelectric effect', 'The threshold frequency f₀ = φ/h follows from hf = φ + KE_max but is not given.'],
+  ['SHM', 'v_max = ωA follows from v = ±ω√(A² − x²) at x = 0; it is not printed separately.'],
+  ['Temperature', 'T (K) ≈ θ (°C) + 273. The gas equations need kelvin.'],
+  ['Astrophysics', "Wien's law is given only as a proportionality (λ_max ∝ 1/T), so compare two stars by ratio. Convert the Hubble constant from km s⁻¹ Mpc⁻¹ to s⁻¹ before using t = H₀⁻¹."],
+  ['Particles', 'The quark composition of the proton (uud) and neutron (udd), and the changes in beta-minus and beta-plus decay.'],
+];
+---
+<Base title="OCR A-level Physics A data booklet: what is given and what to learn" description="What is in OCR's Data, Formulae and Relationships Booklet for A-level Physics A (constants, conversion factors, maths and every equation by module) and what is not in it and has to be learnt." context="data-booklet" leadLine="Not sure which equations you are expected to know? A tutor can go through the booklet with you.">
+  <h1>The OCR data booklet: what is given, and what to learn</h1>
+  <p>Every OCR A-level and AS Physics A paper comes with the <strong>Data, Formulae and Relationships Booklet</strong>: physical constants, conversion factors, a page of maths and the equations for Modules 2 to 6, module by module. The same booklet is used for the AS and the A level. The past-paper questions on this site do not include it, so have a copy beside you when you practise.</p>
+  <p><a class="btn" href={OCR_MATERIALS} rel="noopener">Get the booklet from OCR</a></p>
+  <h2>What the booklet gives you</h2>
+  {sheet.map(([h, items]) => <><h3>{h}</h3><ul>{items.map((x) => <li>{x}</li>)}</ul></>)}
+  <h2>Not in the booklet: learn these</h2>
+  <div class="table-wrap"><table><thead><tr><th>Area</th><th>What to know</th></tr></thead><tbody>{learn.map(([a, b]) => <tr><td>{a}</td><td>{b}</td></tr>)}</tbody></table></div>
+  <p class="muted">Both lists were retyped by the site from OCR's booklet and specification and are being checked by our tutor. If something here differs from the booklet in front of you, the booklet is right: please <a href="/report/">tell us</a>.</p>
+  <h2>Using it in the exam</h2>
+  <ul>
+    <li>Find the equation, write it down, then substitute. The substitution usually earns a method mark (C1) even if the arithmetic goes wrong.</li>
+    <li>Note the symbols: x is used for extension, displacement and fringe spacing; E for energy, the Young modulus and electric field strength; ℰ for e.m.f.</li>
+    <li>Use the constants to the figures printed. Mark schemes are written from those values.</li>
+    <li>Convert to SI units first: eV to J (× 1.60 × 10⁻¹⁹), mm to m, μF to F, light years and parsecs to metres.</li>
+  </ul>
+  <p><a href="/maths-skills/">Calculations and maths skills</a> · <a href="/questions/type/calculations/">Every calculation question</a> · <a href="/practice/define/">Define-it drill</a></p>
+</Base>

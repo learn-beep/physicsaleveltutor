@@ -1,0 +1,33 @@
+{
+ "topic": "radioactivity",
+ "name": "Radioactivity",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Activity",
+   "definition": "The number of nuclei that decay per unit time, A = λN, in becquerels.",
+   "examiner": "1 Bq = one decay per second."
+  },
+  {
+   "term": "Decay constant",
+   "definition": "The probability that a nucleus will decay per unit time.",
+   "examiner": "λt½ = ln 2. Unit s⁻¹ (or any time unit, used consistently)."
+  },
+  {
+   "term": "Half-life",
+   "definition": "The average time taken for half the active nuclei in a sample to decay (or for the activity to halve).",
+   "examiner": "Use \"average\" or \"mean\": decay is random."
+  },
+  {
+   "term": "Random decay",
+   "definition": "It is impossible to predict when a particular nucleus will decay.",
+   "examiner": "Shown by fluctuations in the count rate."
+  },
+  {
+   "term": "Spontaneous decay",
+   "definition": "Decay is not affected by external conditions such as temperature or pressure, or by the presence of other nuclei.",
+   "examiner": ""
+  }
+ ]
+}

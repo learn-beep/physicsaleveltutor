@@ -1,0 +1,28 @@
+{
+ "topic": "photoelectric-effect",
+ "name": "Photons and the photoelectric effect",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Photon",
+   "definition": "A quantum (packet) of electromagnetic energy, E = hf.",
+   "examiner": "One photon is absorbed by one electron: that is why intensity changes the number of electrons, not their maximum energy."
+  },
+  {
+   "term": "Electronvolt",
+   "definition": "The energy gained by an electron accelerated through a potential difference of one volt: 1.60 × 10⁻¹⁹ J.",
+   "examiner": "Convert eV to J before using E = hf."
+  },
+  {
+   "term": "Work function",
+   "definition": "The minimum energy needed to remove an electron from the surface of a metal.",
+   "examiner": "Symbol φ in the booklet: hf = φ + KE_max."
+  },
+  {
+   "term": "Threshold frequency",
+   "definition": "The minimum frequency of radiation that will release electrons from the metal surface.",
+   "examiner": "f₀ = φ/h. Below it no electrons are emitted, however intense the radiation."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "topic": "charge-and-current",
+ "name": "Charge and current",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Electric current",
+   "definition": "The rate of flow of charge, I = ΔQ/Δt.",
+   "examiner": "The coulomb is one ampere second."
+  },
+  {
+   "term": "Elementary charge",
+   "definition": "The charge on a proton, e = 1.60 × 10⁻¹⁹ C; the electron has charge −e.",
+   "examiner": "Net charge on a particle is quantised: a whole multiple of e."
+  },
+  {
+   "term": "Kirchhoff's first law",
+   "definition": "The sum of the currents into a junction equals the sum of the currents out of it.",
+   "examiner": "It follows from conservation of charge."
+  },
+  {
+   "term": "Mean drift velocity",
+   "definition": "The average velocity of the charge carriers along a conductor, from I = Anev.",
+   "examiner": "n is the number density of charge carriers: large for conductors, smaller for semiconductors."
+  }
+ ]
+}

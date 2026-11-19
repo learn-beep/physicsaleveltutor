@@ -1,0 +1,38 @@
+{
+ "topic": "measurements-and-uncertainties",
+ "name": "Measurements and uncertainties",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Random error",
+   "definition": "An error that makes repeat readings scatter unpredictably about the true value.",
+   "examiner": "Reduced by repeating and averaging; it affects precision, not accuracy."
+  },
+  {
+   "term": "Systematic error",
+   "definition": "An error that shifts every reading by the same amount or in the same direction, such as a zero error.",
+   "examiner": "Repeating does not remove it. Check zero readings and calibrate the instrument."
+  },
+  {
+   "term": "Precision",
+   "definition": "How close repeat measurements are to each other (how little they scatter).",
+   "examiner": "Do not confuse with accuracy. A precise set can still be inaccurate."
+  },
+  {
+   "term": "Accuracy",
+   "definition": "How close a measurement is to the true value.",
+   "examiner": "Mark schemes reject \"accurate\" used to mean \"precise\"."
+  },
+  {
+   "term": "Resolution",
+   "definition": "The smallest change in the quantity being measured that gives a recognisable change in the reading.",
+   "examiner": "A metre rule has a resolution of 1 mm; a micrometer 0.01 mm."
+  },
+  {
+   "term": "Percentage uncertainty",
+   "definition": "Absolute uncertainty ÷ measured value × 100.",
+   "examiner": "Add percentage uncertainties for products and quotients; double it for a squared quantity."
+  }
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "all": [
+  [
+   "data-filter=\"format:Practical and data analysis\">Practical</button>",
+   "data-filter=\"format:Explanation\">Explain</button>"
+  ],
+  [
+   "(see the formula sheet page)",
+   "(see the data booklet page)"
+  ],
+  [
+   "Past-paper questions, mark schemes and examiner reports are © AQA",
+   "Past-paper questions, mark schemes and examiners' reports are © OCR"
+  ],
+  [
+   "https://www.aqa.org.uk/subjects/physics/a-level/physics-7408/assessment-resources",
+   "https://www.ocr.org.uk/qualifications/as-and-a-level/physics-a-h156-h556-from-2015/assessment/"
+  ],
+  [
+   "data and formulae booklet",
+   "Data, Formulae and Relationships Booklet"
+  ],
+  [
+   "/formula-sheet/",
+   "/data-booklet/"
+  ],
+  [
+   ">Formula sheet<",
+   ">Data booklet<"
+  ],
+  [
+   "/required-practicals/",
+   "/pag-practicals/"
+  ],
+  [
+   "'malt-",
+   "'malt-ocr-"
+  ],
+  [
+   "\"malt-",
+   "\"malt-ocr-"
+  ],
+  [
+   "`malt-",
+   "`malt-ocr-"
+  ],
+  [
+   "required practicals or the six-markers",
+   "practical questions or the six-mark level of response questions"
+  ],
+  [
+   "{essays.length} six-mark extended response",
+   "{essays.length} six-mark level of response"
+  ],
+  [
+   "Six-mark extended response questions on this topic",
+   "Six-mark level of response questions on this topic"
+  ],
+  [
+   "Section {topic.code}, {topic.statements.length} statement",
+   "Section {topic.code}, {topic.statements.length} learning outcome"
+  ],
+  [
+   "Show the {topic.statements.length} statements from the specification",
+   "Show the {topic.statements.length} learning outcomes from the specification"
+  ],
+  [
+   "Hardest AQA A-level Physics questions (from the examiners' own figures)",
+   "Hardest OCR A-level Physics A questions (from the examiners' reports)"
+  ],
+  [
+   "AQA's examiner reports occasionally give the proportion of marks scored nationally on a question. These are the {hard.length} parts on current content where it was under 35%",
+   "OCR's examiners' reports say how candidates did on each question. These are the {hard.length} parts on current content that the reports describe as hard or poorly answered"
+  ],
+  [
+   "June 2025 is the most recent series AQA has published. AQA keeps each summer's papers for teachers only for about a year, so the data here runs to the latest public series. November 2020 and November 2021 were the autumn series sat in place of the cancelled summer exams.",
+   "June 2025 is the most recent series OCR has published. OCR keeps each summer's papers for teachers only for about a year, so the data here runs to the latest public series. November 2020 and November 2021 were the autumn series sat in place of the cancelled summer exams."
+  ],
+  [
+   "<p class=\"muted\">Papers 1 and 2 at A level are 85 marks each (60 marks of structured questions then 25 multiple-choice questions); Paper 3 is 80 marks: 45 on practical skills and data analysis and 35 on your option. AS Paper 1 is 70 marks of structured questions; AS Paper 2 is 40 marks of structured questions and 30 multiple-choice questions. The Practical Endorsement is reported separately and does not count towards the grade.</p>",
+   "<p class=\"muted\">Papers 1 and 2 at A level are 100 marks each (15 multiple-choice questions then 85 marks of structured questions); Paper 3 is 70 marks of structured questions on all six modules. AS Paper 1 is 20 multiple-choice questions and 50 marks of structured questions; AS Paper 2 is 70 marks of structured questions. The practical endorsement is reported separately and does not count towards the grade.</p>"
+  ],
+  [
+   "The thin blocks at the end of Papers 1 and 2 (and AS Paper 2) are the multiple-choice questions of Section B; Paper 3 has none.",
+   "The thin blocks at the start of Papers 1 and 2 (and AS Paper 1) are the multiple-choice questions of Section A; Paper 3 and AS Paper 2 have none."
+  ],
+  [
+   "(7408)",
+   "(H556)"
+  ],
+  [
+   "7408",
+   "H556"
+  ],
+  [
+   "(7407)",
+   "(H156)"
+  ],
+  [
+   "7407",
+   "H156"
+  ],
+  [
+   "AQA's",
+   "OCR's"
+  ],
+  [
+   "AQA A-level Physics",
+   "OCR A-level Physics A"
+  ],
+  [
+   "AQA",
+   "OCR"
+  ]
+ ],
+ "delete": [
+  "src/pages/formula-sheet",
+  "src/pages/required-practicals",
+  "src/data/decks"
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "topic": "internal-resistance",
+ "name": "Internal resistance",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Internal resistance",
+   "definition": "The resistance of the source itself, which causes energy to be transferred inside it when there is a current.",
+   "examiner": "ℰ = I(R + r); the \"lost volts\" are Ir."
+  },
+  {
+   "term": "Terminal potential difference",
+   "definition": "The p.d. across the terminals of a source when it supplies a current, V = ℰ − Ir.",
+   "examiner": "From a V–I graph: intercept = e.m.f., gradient = −r."
+  }
+ ]
+}

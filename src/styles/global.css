@@ -345,3 +345,5 @@ blockquote.review footer { color: var(--ink-2); font-size: .9rem; }
   .search-toggle { font-size: 0; padding: .4rem .5rem; }
   .search-toggle .ico { width: 1.15rem; height: 1.15rem; }
 }
+
+.asb { display: inline-block; font-size: .7rem; font-weight: 700; padding: 0 .35rem; border: 1px solid var(--rule); border-radius: .3rem; color: var(--ink-2); vertical-align: middle; }

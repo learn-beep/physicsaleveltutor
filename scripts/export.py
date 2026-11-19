@@ -19,8 +19,8 @@ def label(l):
     return n + rest
 
 def extract_mcq(mt):
-    m0 = re.match(r"^\s*(?:\d{1,2}\s+)?([A-D])\s+1\b", mt or "")          # OCR: '7 A 1 ALLOW ...'
-    if m0: return [m0.group(1)]
+    m0 = re.match(r"^\s*(?:Answer\s+Marks?\s+Guidance\s+)?(?:\d{1,2}\s+)?([A-D])(?:\s+or\s+([A-D]))?\s+1\b", mt or "")          # OCR: '7 A 1 ALLOW ...', '3 B or D 1'
+    if m0: return [g for g in m0.groups() if g]
     t = (mt or "").replace("\u2013", "-").replace("\u2014", "-")
     tail = t.split("Marks for this question")[-1]
     found = re.findall(r"marks?\s*[-:]\s*([A-F])\b", tail)
@@ -35,6 +35,14 @@ def extract_mcq(mt):
 def paper_code(p):
     parts = str(p["id"]).split("-")
     return parts[1] if len(parts) > 1 else str(p.get("paper"))
+
+FMT_MAP = {}
+ER_CLEAN = []
+
+def er_clean(t):
+    """Config erClean: [[regex, replacement], ...] tidies stray headings left in the examiner-report text."""
+    for a, b in ER_CLEAN: t = re.sub(a, b, t, flags=re.S)
+    return t
 
 def derive_format(q):
     """Question format. Psychology/Maths banks carry `fmt`; the Economics bank carries feature codes in `sk`
@@ -79,12 +87,15 @@ def main():
     sec_of = {st["id"]: s["code"] for s in QB["spec"] for st in s["st"]}
     old_flag = cfg.get("oldSpecFlag", "not_current_spec")
     paper_names = cfg.get("paperNames", {})
+    global FMT_MAP, ER_CLEAN
+    ER_CLEAN = cfg.get("erClean", [])
+    FMT_MAP = cfg.get("formatMap", {})
 
     def pname(p):
         return paper_names.get(f"{p['spec']}-{paper_code(p)}") or p.get("name") or f"Paper {p.get('paper')}"
 
     stems = QB.get("stems") or {}
-    skills = QB.get("skills") or {}
+    skills = dict(QB.get("skills") or {}); skills.update(cfg.get("skillText", {}))
     byid = {q["id"]: q for q in QB["q"]}
     questions, per_paper, weighting = [], defaultdict(list), defaultdict(lambda: defaultdict(int))
     tc = defaultdict(lambda: {"parts": 0, "marks": 0, "papers": set(), "levels": set(), "essays": 0, "mcq": 0})
@@ -102,13 +113,13 @@ def main():
         slugs = list(dict.fromkeys(slugs))
         flags = q.get("fl") or []
         level = "AS" if p["qual"] == "AS" else "A level"
-        fmt = derive_format(q)
+        fmt = FMT_MAP.get(derive_format(q), derive_format(q))
         stem = stems.get(q.get("sid") or "")
         sk = q.get("sk") or []
         features = list(dict.fromkeys(flags + [s[2:].lower() for s in sk if s.startswith("F ")]))
         qs = [s for s in sk if s.startswith(("QS", "M ", "PAG", "MS ", "PS ", "AT ", "RP"))] or [s for s in sk if s in cfg.get("skillCodes", [])]
         if any(s.startswith(("PAG", "RP", "PS ", "AT ")) for s in sk) or fmt == "Practical and data analysis" \
-                or (str(p["spec"]).startswith("H4") and any(i.startswith("1.") for i, r in q.get("st", []) if r == "A")) \
+                or (str(p["spec"]).startswith(("H4", "H5", "H1")) and any(i.startswith("1.") for i, r in q.get("st", []) if r == "A")) \
                 or "Practical marks" in sk or any("-P" in i for i, r in q.get("st", []) if r == "A"): features.append("practical")
         features = list(dict.fromkeys(features))
         ctx_crops = [f"/img/{bundle}/{pathlib.Path(byid[c]['qi']).stem}.webp" for c in (q.get("cp") or []) if c in byid and byid[c].get("qi")]
@@ -119,7 +130,7 @@ def main():
                "ao": q.get("ao"), "aoText": ao_text(q), "format": fmt, "commands": q.get("cmd", []), "features": features,
                "skills": [{"code": s, "text": skills.get(s, "")} for s in qs],
                "choice": q.get("ch"), "sourceLines": q.get("scr") or "",
-               "mistakes": q.get("mc", []), "text": q.get("qt", ""), "msText": q.get("mt", ""), "erText": q.get("et") or "",
+               "mistakes": q.get("mc", []), "text": q.get("qt", ""), "msText": q.get("mt", ""), "erText": er_clean(q.get("et") or ""),
                "stemId": q.get("sid"), "stemText": (stem or {}).get("t", ""),
                "stemCrop": f"/img/{bundle}/{pathlib.Path(stem['img']).stem}.webp" if stem and stem.get("img") else None,
                "contextCrops": ctx_crops, "familiar": q.get("ctx"),
@@ -157,7 +168,7 @@ def main():
             "code": t.get("code") or ", ".join(sorted({sec_of.get(i, "") for i in ids if sec_of.get(i)})), "option": t.get("option"),
             "statements": ids, "statementText": {i: stmt_text[i]["t"] for i in ids if i in stmt_text},
             "statementShort": {i: stmt_text[i].get("sh") or "" for i in ids if i in stmt_text},
-            "asStatements": [i for i in ids if stmt_text.get(i, {}).get("a")], "levels": {i: stmt_text.get(i, {}).get("lv") for i in ids},
+            "asStatements": [i for i in ids if stmt_text.get(i, {}).get("a") or (cfg.get("asFromCode", False) and i[:1] in "1234" and not i.startswith(cfg.get("asExclude", "~")))], "levels": {i: stmt_text.get(i, {}).get("lv") for i in ids},
             "parts": c["parts"], "marks": c["marks"], "essays": c["essays"], "mcq": c["mcq"], "papers": sorted(c["papers"]),
             "asOrA": "AS and A level" if "AS" in c["levels"] else "A level only"})
     (out / "topics.json").write_text(json.dumps(topic_recs, ensure_ascii=False, indent=0), encoding="utf-8")
@@ -167,7 +178,7 @@ def main():
                   "topic": next((t["slug"] for t in topics_def if any(st["id"] in t.get("statements", []) for st in s["st"])), None),
                   "statements": [{"id": st["id"], "short": st.get("sh") or "", "text": st["t"], "guidance": st.get("g") or "", "level": st.get("lv") or "",
                                   "points": st.get("pts") or [], "page": st.get("pg"),
-                                  "aLevelPart": st.get("ap") or "", "as": bool(st.get("a")) or (st.get("lv") or "").startswith("AS") or (cfg.get("asFromCode", False) and str(s["code"])[:1] in "1234" and "." in str(s["code"])), "topics": stmt_to_slugs.get(st["id"], [])} for st in s["st"]]} for s in QB["spec"]]
+                                  "aLevelPart": st.get("ap") or "", "as": bool(st.get("a")) or (st.get("lv") or "").startswith("AS") or (cfg.get("asFromCode", False) and str(s["code"])[:1] in "1234" and "." in str(s["code"]) and not str(s["code"]).startswith(cfg.get("asExclude", "~"))), "topics": stmt_to_slugs.get(st["id"], [])} for st in s["st"]]} for s in QB["spec"]]
     (out / "spec.json").write_text(json.dumps(spec_recs, ensure_ascii=False, indent=0), encoding="utf-8")
     (out / "weighting.json").write_text(json.dumps({"areas": {s["code"]: s["title"] for s in QB["spec"] if s["st"]}, "byPaper": {k: dict(v) for k, v in weighting.items()}}, ensure_ascii=False), encoding="utf-8")
     unmapped = sum(1 for x in questions if not x["topics"])

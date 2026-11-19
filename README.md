@@ -1,6 +1,6 @@
 # physicsaleveltutor.com
 
-Static Astro site for AQA A-level Physics (7408) and AS (7407) at the root, with an Eduqas section (A420QS / B420QS) under `/eduqas/` (added 18 November 2026), deployed on Netlify. Built from the chemistryaleveltutor.com template with the `subject-revision-site` skill on 12 November 2026. Tutor: Rosey.
+Static Astro site for AQA A-level Physics (7408) and AS (7407) at the root, with an Eduqas section (A420QS / B420QS) under `/eduqas/` (added 18 November 2026) and an OCR Physics A section (H556 / H156) under `/ocr/` (added 19 November 2026), deployed on Netlify. Built from the chemistryaleveltutor.com template with the `subject-revision-site` skill on 12 November 2026. Tutor: Rosey.
 
 ## Run locally
     npm install
@@ -37,6 +37,13 @@ Set `CROPS=off` in Netlify's environment to replace every AQA crop with a link t
 
 ## Upkeep
 New papers (AQA publishes each summer's papers the following summer): run the bank pipeline, then `export.py --images`, commit `src/data` and `public/img`. Grade boundaries (`site.config.json` → `src/data/boundaries.json`) in August; exam dates (`src/data/exams.json`) when AQA publishes the final timetable.
+
+## OCR section (/ocr/)
+- Built the same way as the Eduqas section: `scripts/build.mjs` loops over `['eduqas', 'ocr']`. OCR files are in `boards/ocr/`: `data/` (47 papers, 1,885 parts, 45 topics), `topics.json`, `site.config.json`, `exams.json`, `boundaries.json`, `replace.json` (AQA → OCR wording, H556/H156, data booklet, PAG practicals, storage keys `malt-ocr-`) and `overrides/`.
+- Overrides: `lib/groups.ts` (Modules 1–2, 3, 4, 5, 6), the header, `pag-practicals`, `data-booklet` and the decks are hand-written; the home page, topic index, question types, past papers, grade boundaries, spec checklist, search, practice, six-mark level of response, mock builder and maths skills are the AQA pages with edits, written by `python3 boards/ocr/gen_overrides.py` (re-run it after changing one of those AQA pages).
+- Data: `python3 scripts/export.py --bank "<Dropbox>/Physics/OCR/Question Bank" --topics boards/ocr/topics.json --config boards/ocr/site.config.json --out boards/ocr/data`, then `python3 scripts/webp_all.py "<Dropbox>/Physics/OCR/Question Bank"`. `site.config.json` carries OCR-only settings read by `export.py`: `formatMap` (bank question types → the site's), `skillText` (full wording of maths skills the bank holds shortened), `erClean`, `asFromCode`/`asExclude` (AS = Modules 1 to 4 except 1.2).
+- Paper shapes in the mock builder: A-level Papers 1 and 2 are 15 multiple choice + 85 structured (2 h 15), Paper 3 is 70 structured (1 h 30); AS Paper 1 is 20 multiple choice + 50, AS Paper 2 is 70. Totals 270 (A level) and 140 (AS), unweighted.
+- The header's board switch (AQA | OCR | Eduqas) is in `src/components/Header.astro` and in each board's header override; the board home's canonical is set in `build.mjs`.
 
 ## Eduqas section (/eduqas/)
 - `npm run build` runs `scripts/build.mjs`: the AQA build as before, then a copy of the repo in `.build/eduqas` with the Eduqas data, the string replacements in `boards/eduqas/replace.json` (AQA → Eduqas wording, Data Booklet, specified practicals, storage keys `malt-edq-`) and the whole-page overrides in `boards/eduqas/overrides/` (home, topic index, question types, Data Booklet, specified practicals, maths skills, QER, mock builder, past papers, grade boundaries, spec checklist, practice, search, header, `lib/groups.ts`, decks). That build is moved under `dist/eduqas/` with its internal links prefixed; the tutors, about, legal and form pages come from the AQA build only. One sitemap is written for the whole site.

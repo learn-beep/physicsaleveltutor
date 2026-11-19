@@ -1,0 +1,46 @@
+---
+import Base from '../../../layouts/Base.astro';
+import QuestionCard from '../../../components/QuestionCard.astro';
+import { allQuestions } from '../../../lib/data';
+export function getStaticPaths() {
+  // [slug, matcher, title, intro]. A matcher is a format name, or "feature:<name>" for a feature flag from the bank.
+  const T = [
+    ['multiple-choice', 'Multiple choice', 'Multiple-choice questions', 'Every multiple-choice question: Section A of A-level Papers 1 and 2 (15 each) and Section A of AS Paper 1 (20), with the answer behind the button. Allow about a minute and a quarter each.'],
+    ['calculations', 'Calculation', 'Calculation questions', 'Calculate and determine questions on every topic. Write the equation, substitute with units and give the answer to a sensible number of significant figures: OCR gives method marks (C marks) even when the final answer (the A mark) is wrong, and an error carried forward from an earlier part still scores.'],
+    ['show-that', 'Show that', 'Show that questions', 'You are given the answer, so the marks are all for the working: every step, and the final value to one more significant figure than the question shows.'],
+    ['explanations', 'Explanation', 'Explain and describe questions', 'Explain, describe and discuss questions worth two to four marks. Each mark is a separate physics point, so plan one point per mark.'],
+    ['graphs-and-diagrams', 'Diagram or graph', 'Graph and diagram questions', 'Draw, sketch, complete or label: graphs, ray diagrams, field lines, circuits and wave patterns.'],
+    ['six-mark-questions', 'Extended response', 'Six-mark level of response questions', 'The six-mark questions marked with an asterisk on the paper and marked by level. Level 3 needs the full set of physics points and a well-developed, logical line of reasoning.'],
+    ['practical-questions', 'feature:practical', 'Practical questions', 'Questions on the practical activity groups (PAGs), planning, measurements, uncertainties, graphs and evaluation. Practical skills are examined in every paper.'],
+    ['short-answer', 'Short answer', 'Short-answer questions', 'State, give, name and identify questions worth one or two marks.'],
+  ];
+
+  return T.map(([slug, matcher, title, intro]) => ({ params: { type: slug }, props: { slug, matcher, title, intro, others: T.filter((t) => t[0] !== slug) } }));
+}
+const { slug, matcher, title, intro, others } = Astro.props;
+const match = (q) => matcher.startsWith('feature:') ? (q.features || []).includes(matcher.slice(8)) && q.format !== 'Multiple choice' : q.format === matcher;
+const qs = allQuestions.filter((q) => match(q) && !q.notCurrentSpec).sort((a, b) => b.year - a.year);
+const papers = [...new Set(qs.map((q) => q.paper))].sort();
+---
+<Base title={`${title}: OCR A-level Physics past-paper questions`} description={`${qs.length} ${title.toLowerCase()} from OCR Physics papers since 2016, with mark schemes and examiners' comments.`} context={`type:${slug}`}>
+  <h1>{title}</h1>
+  <p>{intro} {qs.length} questions.</p>
+  <p class="muted">Other types: {others.map((t, i) => <>{i ? ' · ' : ''}<a href={`/questions/type/${t[0]}/`}>{t[2]}</a></>)}</p>
+  <div class="filterbar"><div class="chips" role="group" aria-label="Filter">
+    <button class="chip" type="button" aria-pressed="true" data-filter="">All</button>
+    {papers.map((p) => <button class="chip" type="button" aria-pressed="false" data-filter={`paper:${p}`}>{p}</button>)}
+    <button class="chip" type="button" aria-pressed="false" data-filter="level:AS">AS</button>
+    <button class="chip" type="button" aria-pressed="false" data-filter="level:A level">A level</button>
+  </div><div class="count" id="count"></div></div>
+  {qs.map((q) => <div data-paper={q.paper}><QuestionCard q={q} showTopics={true} /></div>)}
+  <script>
+    const chips = document.querySelectorAll('.chip[data-filter]');
+    const wraps = document.querySelectorAll('[data-paper]');
+    chips.forEach((c) => c.addEventListener('click', () => {
+      chips.forEach((x) => x.setAttribute('aria-pressed', 'false')); c.setAttribute('aria-pressed', 'true');
+      const [key, val] = (c.getAttribute('data-filter') || '').split(':');
+      wraps.forEach((w) => { const card = w.querySelector('.qcard'); const v = key === 'paper' ? w.dataset.paper : card.getAttribute('data-' + key); w.hidden = !!key && v !== val; });
+      document.getElementById('count').textContent = `Showing ${[...wraps].filter((w) => !w.hidden).length} of ${wraps.length}`;
+    }));
+  </script>
+</Base>

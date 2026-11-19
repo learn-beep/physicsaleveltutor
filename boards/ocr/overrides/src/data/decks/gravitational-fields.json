@@ -1,0 +1,28 @@
+{
+ "topic": "gravitational-fields",
+ "name": "Gravitational fields",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Gravitational field strength",
+   "definition": "The gravitational force per unit mass at a point, g = F/m.",
+   "examiner": "Unit N kg⁻¹."
+  },
+  {
+   "term": "Newton's law of gravitation",
+   "definition": "The force between two point masses is proportional to the product of the masses and inversely proportional to the square of their separation.",
+   "examiner": "F = −GMm/r²; the minus sign shows attraction."
+  },
+  {
+   "term": "Gravitational potential",
+   "definition": "The work done per unit mass in bringing a small mass from infinity to that point.",
+   "examiner": "Always negative; zero at infinity. V_g = −GM/r."
+  },
+  {
+   "term": "Escape velocity",
+   "definition": "The minimum speed an object needs at the surface to escape the gravitational field.",
+   "examiner": "½mv² = GMm/r gives v = √(2GM/r)."
+  }
+ ]
+}

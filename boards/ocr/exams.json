@@ -1,0 +1,49 @@
+{
+  "series": "Summer 2027",
+  "source": "Cambridge OCR AS and A Level June 2027 final timetable",
+  "alevel": [
+    {
+      "code": "H556/01",
+      "name": "Paper 1 Modelling physics: Modules 1, 2, 3 and 5",
+      "date": "2027-05-21",
+      "session": "Morning",
+      "length": "2 hours 15 minutes",
+      "marks": 100
+    },
+    {
+      "code": "H556/02",
+      "name": "Paper 2 Exploring physics: Modules 1, 2, 4 and 6",
+      "date": "2027-05-27",
+      "session": "Afternoon",
+      "length": "2 hours 15 minutes",
+      "marks": 100
+    },
+    {
+      "code": "H556/03",
+      "name": "Paper 3 Unified physics: all six modules",
+      "date": "2027-06-08",
+      "session": "Morning",
+      "length": "1 hour 30 minutes",
+      "marks": 70
+    }
+  ],
+  "as": [
+    {
+      "code": "H156/01",
+      "name": "AS Paper 1 Breadth in physics",
+      "date": "2027-05-12",
+      "session": "Morning",
+      "length": "1 hour 30 minutes",
+      "marks": 70
+    },
+    {
+      "code": "H156/02",
+      "name": "AS Paper 2 Depth in physics",
+      "date": "2027-05-18",
+      "session": "Afternoon",
+      "length": "1 hour 30 minutes",
+      "marks": 70
+    }
+  ],
+  "asNote": ""
+}

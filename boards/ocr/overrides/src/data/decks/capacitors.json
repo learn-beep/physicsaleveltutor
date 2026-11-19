@@ -1,0 +1,18 @@
+{
+ "topic": "capacitors",
+ "name": "Capacitors",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Capacitance",
+   "definition": "The charge stored per unit potential difference, C = Q/V.",
+   "examiner": "The farad is one coulomb per volt."
+  },
+  {
+   "term": "Time constant",
+   "definition": "The product CR: the time for the charge, p.d. or current of a discharging capacitor to fall to 1/e (about 37%) of its initial value.",
+   "examiner": "τ = CR. After 0.69CR the value has halved."
+  }
+ ]
+}

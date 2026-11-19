@@ -1,4 +1,4 @@
-// Builds the site: AQA at the root (as before) and Eduqas under /eduqas/.
+// Builds the site: AQA at the root (as before), Eduqas under /eduqas/ and OCR under /ocr/.
 // 1. `astro build` of this repo as it stands (AQA data in src/data) -> dist/
 // 2. a copy of the repo in .build/eduqas with Eduqas data (boards/eduqas/data), the string replacements in
 //    boards/eduqas/replace.json and the page overrides in boards/eduqas/overrides/ -> built, moved under dist/eduqas/
@@ -21,8 +21,8 @@ const run = (cmd, cwd) => execSync(cmd, { cwd, stdio: 'inherit', env: process.en
 fs.rmSync(DIST, { recursive: true, force: true });
 run('npx astro build', root);
 
-// 2. Eduqas
-for (const board of ['eduqas']) {
+// 2. The other boards (boards/<board>/)
+for (const board of ['eduqas', 'ocr']) {
   const B = path.join(root, 'boards', board);
   const work = path.join(BUILD, board);
   fs.rmSync(work, { recursive: true, force: true });
@@ -65,6 +65,7 @@ for (const board of ['eduqas']) {
     fs.mkdirSync(path.dirname(dest), { recursive: true });
     if (/\.(html|js|json|css|xml)$/.test(f)) {
       let s = fs.readFileSync(f, 'utf8').replace(rx, (m, pre, r) => `${pre}/${board}/${r}`);
+      if (rel === 'index.html') s = s.replace(new RegExp(`(href|content)="${DOMAIN}/"`, 'g'), `$1="${DOMAIN}/${board}/"`); // the board home's canonical and og:url
       if (f.endsWith('.html')) s = s.replace(/data-board-home/g, '').replace(/href="\/" data-home-board/g, `href="/${board}/"`);
       fs.writeFileSync(dest, s);
     } else fs.copyFileSync(f, dest);

@@ -1,0 +1,206 @@
+{
+ "site": {
+  "name": "A-level Physics Tutor",
+  "domain": "https://www.physicsaleveltutor.com",
+  "whatsapp": "447888786687",
+  "email": "enquiries@physicsaleveltutor.com",
+  "company": "aleveltutors.online Limited",
+  "companyNumber": "14401016",
+  "registeredOffice": "5 Northbrook Court, Northbrook Avenue, Winchester SO23 0JP",
+  "spec": "OCR A-level Physics A (H556) and AS (H156), specification version 3.0 (March 2026).",
+  "examYear": 2027,
+  "board": "ocr",
+  "boardName": "OCR"
+ },
+ "whatsappMessage": "Hi, I'm looking for an OCR Physics Tutor. The student is in Year ..... Their name is ..................... we would like ........ lessons per week, the best two times for tutoring are ................. and ......................",
+ "faviconLetter": "P",
+ "ogTitle": [
+  "OCR A-level Physics",
+  "past papers, by topic"
+ ],
+ "ogSubtitle": "Mark schemes, examiner comments, practice and tutors · physicsaleveltutor.com",
+ "paperNames": {
+  "H556-1": "Paper 1",
+  "H556-2": "Paper 2",
+  "H556-3": "Paper 3",
+  "H156-1": "Paper 1",
+  "H156-2": "Paper 2"
+ },
+ "oldSpecFlag": "not_current_spec",
+ "exams": {
+  "series": "Summer 2027",
+  "source": "Cambridge OCR AS and A Level June 2027 final timetable",
+  "alevel": [
+   {
+    "code": "H556/01",
+    "name": "Paper 1 Modelling physics: Modules 1, 2, 3 and 5",
+    "date": "2027-05-21",
+    "session": "Morning",
+    "length": "2 hours 15 minutes",
+    "marks": 100
+   },
+   {
+    "code": "H556/02",
+    "name": "Paper 2 Exploring physics: Modules 1, 2, 4 and 6",
+    "date": "2027-05-27",
+    "session": "Afternoon",
+    "length": "2 hours 15 minutes",
+    "marks": 100
+   },
+   {
+    "code": "H556/03",
+    "name": "Paper 3 Unified physics: all six modules",
+    "date": "2027-06-08",
+    "session": "Morning",
+    "length": "1 hour 30 minutes",
+    "marks": 70
+   }
+  ],
+  "as": [
+   {
+    "code": "H156/01",
+    "name": "AS Paper 1 Breadth in physics",
+    "date": "2027-05-12",
+    "session": "Morning",
+    "length": "1 hour 30 minutes",
+    "marks": 70
+   },
+   {
+    "code": "H156/02",
+    "name": "AS Paper 2 Depth in physics",
+    "date": "2027-05-18",
+    "session": "Afternoon",
+    "length": "1 hour 30 minutes",
+    "marks": 70
+   }
+  ],
+  "asNote": ""
+ },
+ "boundaries": {
+  "source": "OCR's published overall grade boundaries for Physics A (June series). The A-level total is 100 + 100 + 70 = 270 raw marks with no weighting; the AS total is 140 (two 70-mark papers). June 2024 and June 2025 are from OCR's own grade-boundary documents; June 2022, 2023 and 2026 at A level are from tutor2u's and Save My Exams' tables of OCR's figures, and the June 2026 AS row from Save My Exams. The June 2026 papers themselves are not yet public.",
+  "alevel": [
+   {
+    "series": "June 2026",
+    "max": 270,
+    "A*": 207,
+    "A": 178,
+    "B": 151,
+    "C": 124,
+    "D": 97,
+    "E": 70
+   },
+   {
+    "series": "June 2025",
+    "max": 270,
+    "A*": 206,
+    "A": 179,
+    "B": 151,
+    "C": 123,
+    "D": 96,
+    "E": 69
+   },
+   {
+    "series": "June 2024",
+    "max": 270,
+    "A*": 207,
+    "A": 175,
+    "B": 146,
+    "C": 117,
+    "D": 88,
+    "E": 59
+   },
+   {
+    "series": "June 2023",
+    "max": 270,
+    "A*": 211,
+    "A": 182,
+    "B": 151,
+    "C": 120,
+    "D": 90,
+    "E": 60
+   },
+   {
+    "series": "June 2022",
+    "max": 270,
+    "A*": 211,
+    "A": 181,
+    "B": 147,
+    "C": 113,
+    "D": 80,
+    "E": 47
+   }
+  ],
+  "as": [
+   {
+    "series": "June 2026",
+    "max": 140,
+    "A": 106,
+    "B": 93,
+    "C": 80,
+    "D": 68,
+    "E": 56
+   },
+   {
+    "series": "June 2025",
+    "max": 140,
+    "A": 93,
+    "B": 81,
+    "C": 69,
+    "D": 57,
+    "E": 46
+   },
+   {
+    "series": "June 2024",
+    "max": 140,
+    "A": 101,
+    "B": 88,
+    "C": 75,
+    "D": 63,
+    "E": 51
+   }
+  ]
+ },
+ "tutors": [],
+ "moduleFrom": "module",
+ "asFromCode": true,
+ "asExclude": "1.2",
+ "formatMap": {
+  "Level of response": "Extended response",
+  "Diagram / circuit": "Diagram or graph",
+  "Graph / sketch": "Diagram or graph",
+  "Complete table/equation": "Short answer",
+  "Data analysis": "Practical and data analysis"
+ },
+ "skillText": {
+  "M 0.6": "Use calculators to handle sin x, cos x and tan x when x is expressed in degrees or radians",
+  "M 1.5": "Identify uncertainties in measurements and use simple techniques to determine uncertainty when data are combined",
+  "M 2.1": "Understand and use the symbols =, <, <<, >>, >, ∝, ≈, Δ",
+  "M 2.2": "Change the subject of an equation, including non-linear equations",
+  "M 2.3": "Substitute numerical values into algebraic equations using appropriate units for physical quantities",
+  "M 2.5": "Use logarithms in relation to quantities that range over several orders of magnitude",
+  "M 3.1": "Translate information between graphical, numerical and algebraic forms",
+  "M 3.12": "Sketch relationships which are modelled by y = k/x, y = kx², y = k/x², y = kx, y = sin x, y = cos x, y = e^(±x) and y = sin²x, y = cos²x as applied to physical relationships",
+  "M 3.6": "Draw and use the slope of a tangent to a curve as a measure of rate of change",
+  "M 3.8": "Understand the possible physical significance of the area between a curve and the x axis and be able to calculate it or estimate it by graphical methods as appropriate",
+  "M 3.9": "Apply the concepts underlying calculus (but without requiring the explicit use of derivatives or integrals) by solving equations involving rates of change using a graphical method or spreadsheet modelling",
+  "M 4.2": "Visualise and represent 2D and 3D forms, including two-dimensional representations of 3D objects",
+  "M 4.3": "Calculate areas of triangles, circumferences and areas of circles, surface areas and volumes of rectangular blocks, cylinders and spheres",
+  "M 4.4": "Use Pythagoras’ theorem, and the angle sum of a triangle",
+  "M 4.6": "Use of small angle approximations including sin θ ≈ θ, tan θ ≈ θ, cos θ ≈ 1 for small θ where appropriate",
+  "M 4.7": "Understand the relationship between degrees and radians and translate from one to the other"
+ },
+ "erClean": [
+  [
+   "\\s+Section [AB] Question \\d.*$",
+   ""
+  ],
+  [
+   "^Section [AB] Question \\d+ \\(a\\) and \\(b\\) \\(i – iv\\)\\s*",
+   ""
+  ],
+  [
+   "\\s*Section [AB]\\s*$",
+   ""
+  ]
+ ]
+}

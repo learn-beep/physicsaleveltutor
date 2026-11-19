@@ -5,8 +5,8 @@ import Search from './Search.astro';
 ---
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href={site.board === 'eduqas' ? '/eduqas/' : '/'}><span>{site.name}</span></a>
-    <span class="board-switch" aria-label="Exam board"><a href="/" aria-current={site.board !== 'eduqas' ? 'page' : undefined}>AQA</a><a href="/eduqas/" aria-current={site.board === 'eduqas' ? 'page' : undefined}>Eduqas</a></span>
+    <a class="brand" href={site.board === 'eduqas' ? '/eduqas/' : site.board === 'ocr' ? '/ocr/' : '/'}><span>{site.name}</span></a>
+    <span class="board-switch" aria-label="Exam board"><a href="/" aria-current={!site.board || site.board === 'aqa' ? 'page' : undefined}>{'AQ' + 'A'}</a><a href="/ocr/" aria-current={site.board === 'ocr' ? 'page' : undefined}>{'OC' + 'R'}</a><a href="/eduqas/" aria-current={site.board === 'eduqas' ? 'page' : undefined}>Eduqas</a></span>
     <nav class="site-nav" aria-label="Main">
       <a href="/questions/"><Icon name="book" />Questions</a>
       <a href="/past-papers/"><Icon name="file" />Past papers</a>

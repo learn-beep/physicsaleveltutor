@@ -1,0 +1,84 @@
+{
+  "source": "OCR's published overall grade boundaries for Physics A (June series). The A-level total is 100 + 100 + 70 = 270 raw marks with no weighting; the AS total is 140 (two 70-mark papers). June 2024 and June 2025 are from OCR's own grade-boundary documents; June 2022, 2023 and 2026 at A level are from tutor2u's and Save My Exams' tables of OCR's figures, and the June 2026 AS row from Save My Exams. The June 2026 papers themselves are not yet public.",
+  "alevel": [
+    {
+      "series": "June 2026",
+      "max": 270,
+      "A*": 207,
+      "A": 178,
+      "B": 151,
+      "C": 124,
+      "D": 97,
+      "E": 70
+    },
+    {
+      "series": "June 2025",
+      "max": 270,
+      "A*": 206,
+      "A": 179,
+      "B": 151,
+      "C": 123,
+      "D": 96,
+      "E": 69
+    },
+    {
+      "series": "June 2024",
+      "max": 270,
+      "A*": 207,
+      "A": 175,
+      "B": 146,
+      "C": 117,
+      "D": 88,
+      "E": 59
+    },
+    {
+      "series": "June 2023",
+      "max": 270,
+      "A*": 211,
+      "A": 182,
+      "B": 151,
+      "C": 120,
+      "D": 90,
+      "E": 60
+    },
+    {
+      "series": "June 2022",
+      "max": 270,
+      "A*": 211,
+      "A": 181,
+      "B": 147,
+      "C": 113,
+      "D": 80,
+      "E": 47
+    }
+  ],
+  "as": [
+    {
+      "series": "June 2026",
+      "max": 140,
+      "A": 106,
+      "B": 93,
+      "C": 80,
+      "D": 68,
+      "E": 56
+    },
+    {
+      "series": "June 2025",
+      "max": 140,
+      "A": 93,
+      "B": 81,
+      "C": 69,
+      "D": 57,
+      "E": 46
+    },
+    {
+      "series": "June 2024",
+      "max": 140,
+      "A": 101,
+      "B": 88,
+      "C": 75,
+      "D": 63,
+      "E": 51
+    }
+  ]
+}

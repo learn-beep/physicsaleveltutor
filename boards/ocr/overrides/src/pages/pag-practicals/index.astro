@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allQuestions, topicByslug } from '../../lib/data';
+const prac = allQuestions.filter((q) => (q.features || []).includes('practical') && !q.notCurrentSpec && q.topics.length);
+const isPag = (s) => /^PAG ?\d/.test(s.code);
+const key = (s) => s.code.replace(' ', '');
+const codes = {};
+for (const q of prac) for (const s of q.skills || []) { if (!isPag(s)) continue; const k = key(s); if (!codes[k]) codes[k] = { text: s.text, qs: [] }; codes[k].qs.push(q); }
+const skillsOnly = prac.filter((q) => !(q.skills || []).some(isPag));
+// What each practical activity group covers and what the written papers ask about it, in the site's words. To be checked by a tutor.
+const how = {
+  'PAG1': ['Investigating motion', 'Acceleration of free fall with light gates, a trapdoor and electromagnet or a video; trolleys on ramps; terminal velocity of a ball in a liquid. Papers ask for a graph that gives g from its gradient (s against t², or v² against s), the effect of air resistance and reaction time, and the percentage uncertainty in each reading.'],
+  'PAG2': ['Investigating properties of materials', 'Force–extension for springs, rubber and wires; the Young modulus of a wire with a micrometer and a marker or vernier. Papers ask why the wire is long and thin, how the diameter is measured (several places, then averaged), and which measurement gives the largest percentage uncertainty.'],
+  'PAG3': ['Investigating electrical properties', 'Resistivity of a wire from R against L; I–V characteristics of a resistor, filament lamp and diode; e.m.f. and internal resistance from V against I. Papers ask for the circuit, how to limit heating, and what the gradient and intercept stand for.'],
+  'PAG4': ['Investigating electrical circuits', 'Series and parallel circuits, potential dividers with a thermistor or LDR, and sensing circuits. Papers ask how the output p.d. changes with temperature or light, how to calibrate the sensor and how to choose the fixed resistor.'],
+  'PAG5': ['Investigating waves', 'Wavelength of light with a double slit or a diffraction grating; stationary waves on a string or in an air column to find the speed of sound; the oscilloscope for frequency; polarisation with filters or microwaves. Papers ask about measuring across several fringes or nodes and laser safety.'],
+  'PAG6': ['Investigating quantum effects', 'The Planck constant from the threshold p.d. of LEDs of known wavelength (V against 1/λ); photoelectric observations; and, as the specification prints PAG6 against refraction, the refractive index and total internal reflection with a ray box or laser. Papers ask how to judge when an LED just lights and how to use the gradient.'],
+  'PAG7': ['Investigating ionising radiation', 'Absorption of alpha, beta and gamma by paper, aluminium and lead; the inverse-square law for gamma; half-life of protactinium or from dice models. Papers ask about subtracting the background count, long counting times and safe handling of sources.'],
+  'PAG8': ['Investigating gases', "Boyle's law with a trapped column of gas and a pressure gauge; pressure or volume against temperature to estimate absolute zero; specific heat capacity and specific latent heat by an electrical method. Papers ask about letting the temperature settle, energy losses and extrapolating the graph."],
+  'PAG9': ['Investigating capacitors', 'Charging and discharging a capacitor through a resistor with a data logger or a stopwatch; capacitors in series and parallel. Papers ask for ln V against t (gradient −1/CR), the time constant from the graph and how to pick R and C so the discharge can be timed.'],
+  'PAG10': ['Investigating simple harmonic motion', 'Period of a pendulum or a mass on a spring (T² against l or m), timing many oscillations past a fiducial marker at the centre; damping; and circular motion with a whirling bung. Papers ask why you time from the equilibrium position and how the uncertainty in T is reduced.'],
+  'PAG11': ['Investigation', 'An open-ended investigation chosen by your school (for example, a variable that affects the period of an oscillator or the output of a sensor). The written papers test it through planning questions: variables, range, method and analysis.'],
+  'PAG12': ['Research skills', 'Using sources and referencing them, for example on the uses of ultrasound or the history of a constant. It is assessed by your teacher for the practical endorsement, not by a named question in the written papers.'],
+};
+const ref = (q) => `${q.series.replace('June ', 'Jun ').replace('November ', 'Nov ')} ${q.level === 'AS' ? 'AS ' : ''}${q.paper.replace('Paper ', 'P')} Q${q.question}`;
+---
+<Base title="OCR A-level Physics A PAG practicals: PAG1 to PAG12, with every past-paper question" description="The OCR A-level Physics A practical activity groups (PAG1 to PAG12): what each covers, what the written papers ask about it, and every past-paper question tagged to it, with mark schemes. Plus the planning, uncertainty and evaluation questions." context="practicals" leadLine="Practical questions are at least 15% of the marks and come up in every paper. A tutor can take you through each PAG.">
+  <h1>PAG practicals</h1>
+  <p>OCR A-level Physics A groups its practical work into twelve practical activity groups (PAGs). Your teacher assesses them for the practical endorsement, which is reported separately as a pass. The written papers test the same skills: Module 1 (practical skills) is examined in every paper, and at least 15% of the marks are for practical work. Below is what each PAG covers, what the papers ask about it, and every past-paper question tagged to it. There are {prac.length} practical question parts in total; <a href="/questions/type/practical-questions/">see them all with their mark schemes</a>.</p>
+  <h2>The twelve practical activity groups</h2>
+  <div class="table-wrap"><table><thead><tr><th>PAG</th><th>Activity group</th><th>What the papers ask</th><th>Questions</th></tr></thead>
+  <tbody>{Object.keys(how).map((c) => <tr><td>{codes[c] ? <a href={`#${c}`}>{c}</a> : c}</td><td>{how[c][0]}{Number(c.slice(3)) <= 6 ? ' (Year 1 content)' : ''}</td><td>{how[c][1]}</td><td>{codes[c]?.qs.length || '—'}</td></tr>)}</tbody></table></div>
+  <p class="muted">Descriptions written by the site from the specification and the mark schemes; being checked by our tutor. Schools choose their own experiments within each group, so yours may differ from the examples here. Questions are tagged to a PAG only when the part is about that practical; PAG11 and PAG12 are not tagged.</p>
+  {Object.keys(how).filter((c) => codes[c]).map((c) => <section id={c}><h2>{c}: {how[c][0]}</h2><p class="muted">{how[c][1]}</p>
+    <ul class="qlinks">{codes[c].qs.sort((a, b) => b.year - a.year).map((q) => <li><a href={`/questions/${q.topics[0]}/#${q.id}`}>{ref(q)}</a> <span class="muted">{q.marks} mark{q.marks === 1 ? '' : 's'} · {topicByslug.get(q.topics[0])?.name}</span></li>)}</ul></section>)}
+  <section id="skills"><h2>Planning, analysis and evaluation</h2><p class="muted">Questions on experimental design, variables, uncertainties, graphs and improvements that are not tied to one practical activity group.</p>
+    <details class="spec-fold"><summary>{skillsOnly.length} questions</summary><ul class="qlinks">{skillsOnly.sort((a, b) => b.year - a.year).map((q) => <li><a href={`/questions/${q.topics[0]}/#${q.id}`}>{ref(q)}</a> <span class="muted">{q.marks} mark{q.marks === 1 ? '' : 's'} · {topicByslug.get(q.topics[0])?.name}</span></li>)}</ul></details></section>
+</Base>

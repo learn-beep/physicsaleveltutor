@@ -1,0 +1,33 @@
+{
+ "topic": "emf-pd-and-resistance",
+ "name": "E.m.f., p.d., resistance and resistivity",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Potential difference",
+   "definition": "The energy transferred from electrical energy to other forms per unit charge, V = W/Q.",
+   "examiner": "The volt is one joule per coulomb."
+  },
+  {
+   "term": "Electromotive force (e.m.f.)",
+   "definition": "The energy transferred from other forms to electrical energy per unit charge, ℰ = W/Q.",
+   "examiner": "The distinction from p.d. is the direction of the energy transfer."
+  },
+  {
+   "term": "Resistance",
+   "definition": "Potential difference divided by current, R = V/I.",
+   "examiner": "The ohm is one volt per ampere."
+  },
+  {
+   "term": "Ohm's law",
+   "definition": "For a metallic conductor at constant temperature, the current is directly proportional to the potential difference across it.",
+   "examiner": "Say \"at constant temperature\"."
+  },
+  {
+   "term": "Resistivity",
+   "definition": "ρ = RA/L: a property of the material, equal to the resistance of a 1 m length with a 1 m² cross-sectional area.",
+   "examiner": "Unit Ω m. It depends on the material and temperature, not the dimensions."
+  }
+ ]
+}

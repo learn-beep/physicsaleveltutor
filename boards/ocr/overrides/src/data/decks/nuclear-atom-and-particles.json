@@ -1,0 +1,38 @@
+{
+ "topic": "nuclear-atom-and-particles",
+ "name": "The nuclear atom and fundamental particles",
+ "checked": false,
+ "studies": [],
+ "terms": [
+  {
+   "term": "Hadron",
+   "definition": "A particle that experiences the strong nuclear force; it is made of quarks.",
+   "examiner": "Protons and neutrons are hadrons."
+  },
+  {
+   "term": "Lepton",
+   "definition": "A fundamental particle that does not experience the strong nuclear force, such as the electron and the neutrino.",
+   "examiner": ""
+  },
+  {
+   "term": "Baryon",
+   "definition": "A hadron made of three quarks, such as the proton (uud) and the neutron (udd).",
+   "examiner": ""
+  },
+  {
+   "term": "Meson",
+   "definition": "A hadron made of a quark and an antiquark.",
+   "examiner": ""
+  },
+  {
+   "term": "Antiparticle",
+   "definition": "A particle with the same mass as its particle but the opposite charge.",
+   "examiner": "The positron is the antiparticle of the electron."
+  },
+  {
+   "term": "Isotopes",
+   "definition": "Nuclei of the same element with the same number of protons but different numbers of neutrons.",
+   "examiner": ""
+  }
+ ]
+}

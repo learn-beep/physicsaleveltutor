@@ -1,0 +1,828 @@
+[
+ {
+  "slug": "practical-skills",
+  "name": "Practical skills: planning, analysis and evaluation",
+  "group": "Modules 1 and 2",
+  "code": "1.1.1 to 1.2.2",
+  "option": null,
+  "statements": [
+   "1.1.1(a)",
+   "1.1.1(b)",
+   "1.1.1(c)",
+   "1.1.2(a)",
+   "1.1.2(b)",
+   "1.1.2(c)",
+   "1.1.3(a)",
+   "1.1.3(b)",
+   "1.1.3(c)",
+   "1.1.3(d)",
+   "1.1.3(d)(i)",
+   "1.1.3(d)(ii)",
+   "1.1.4(a)",
+   "1.1.4(b)",
+   "1.1.4(c)",
+   "1.1.4(d)",
+   "1.1.4(e)",
+   "1.2.1(a)",
+   "1.2.1(b)",
+   "1.2.1(c)",
+   "1.2.1(d)",
+   "1.2.1(e)",
+   "1.2.1(f)",
+   "1.2.1(g)",
+   "1.2.1(h)",
+   "1.2.1(i)",
+   "1.2.1(j)",
+   "1.2.2(a)",
+   "1.2.2(b)",
+   "1.2.2(c)",
+   "1.2.2(d)",
+   "1.2.2(e)",
+   "1.2.2(f)",
+   "1.2.2(g)",
+   "1.2.2(h)",
+   "1.2.2(i)",
+   "1.2.2(j)",
+   "1.2.2(k)",
+   "1.2.2(l)"
+  ]
+ },
+ {
+  "slug": "quantities-and-units",
+  "name": "Physical quantities and S.I. units",
+  "group": "Modules 1 and 2",
+  "code": "2.1.1 to 2.1.2",
+  "option": null,
+  "statements": [
+   "2.1.1(a)",
+   "2.1.1(b)",
+   "2.1.2(a)",
+   "2.1.2(b)",
+   "2.1.2(c)",
+   "2.1.2(d)",
+   "2.1.2(e)",
+   "2.1.2(f)"
+  ]
+ },
+ {
+  "slug": "measurements-and-uncertainties",
+  "name": "Measurements and uncertainties",
+  "group": "Modules 1 and 2",
+  "code": "2.2.1",
+  "option": null,
+  "statements": [
+   "2.2.1(a)",
+   "2.2.1(b)",
+   "2.2.1(c)",
+   "2.2.1(d)"
+  ]
+ },
+ {
+  "slug": "scalars-and-vectors",
+  "name": "Scalars and vectors",
+  "group": "Modules 1 and 2",
+  "code": "2.3.1",
+  "option": null,
+  "statements": [
+   "2.3.1(a)",
+   "2.3.1(b)",
+   "2.3.1(c)",
+   "2.3.1(d)"
+  ]
+ },
+ {
+  "slug": "kinematics",
+  "name": "Kinematics: displacement, velocity and motion graphs",
+  "group": "Module 3",
+  "code": "3.1.1",
+  "option": null,
+  "statements": [
+   "3.1.1(a)",
+   "3.1.1(b)",
+   "3.1.1(c)",
+   "3.1.1(d)"
+  ]
+ },
+ {
+  "slug": "linear-motion",
+  "name": "Linear motion: the suvat equations and free fall",
+  "group": "Module 3",
+  "code": "3.1.2",
+  "option": null,
+  "statements": [
+   "3.1.2(a)(i)",
+   "3.1.2(a)(ii)",
+   "3.1.2(b)(i)",
+   "3.1.2(b)(ii)",
+   "3.1.2(c)"
+  ]
+ },
+ {
+  "slug": "projectile-motion",
+  "name": "Projectile motion",
+  "group": "Module 3",
+  "code": "3.1.3",
+  "option": null,
+  "statements": [
+   "3.1.3(a)",
+   "3.1.3(b)"
+  ]
+ },
+ {
+  "slug": "dynamics-and-terminal-velocity",
+  "name": "Dynamics, drag and terminal velocity",
+  "group": "Module 3",
+  "code": "3.2.1 to 3.2.2",
+  "option": null,
+  "statements": [
+   "3.2.1(a)",
+   "3.2.1(b)",
+   "3.2.1(c)",
+   "3.2.1(d)",
+   "3.2.1(e)",
+   "3.2.1(f)",
+   "3.2.2(a)",
+   "3.2.2(b)",
+   "3.2.2(c)",
+   "3.2.2(d)(i)",
+   "3.2.2(d)(ii)"
+  ]
+ },
+ {
+  "slug": "equilibrium-and-moments",
+  "name": "Equilibrium: moments, couples and centre of mass",
+  "group": "Module 3",
+  "code": "3.2.3",
+  "option": null,
+  "statements": [
+   "3.2.3(a)",
+   "3.2.3(b)",
+   "3.2.3(c)",
+   "3.2.3(d)",
+   "3.2.3(e)",
+   "3.2.3(f)"
+  ]
+ },
+ {
+  "slug": "density-and-pressure",
+  "name": "Density, pressure and upthrust",
+  "group": "Module 3",
+  "code": "3.2.4",
+  "option": null,
+  "statements": [
+   "3.2.4(a)",
+   "3.2.4(b)",
+   "3.2.4(c)"
+  ]
+ },
+ {
+  "slug": "work-energy-and-power",
+  "name": "Work, energy and power",
+  "group": "Module 3",
+  "code": "3.3.1 to 3.3.3",
+  "option": null,
+  "statements": [
+   "3.3.1(a)",
+   "3.3.1(b)",
+   "3.3.1(c)",
+   "3.3.1(d)",
+   "3.3.1(e)",
+   "3.3.2(a)",
+   "3.3.2(b)",
+   "3.3.2(c)",
+   "3.3.3(a)",
+   "3.3.3(b)",
+   "3.3.3(c)"
+  ]
+ },
+ {
+  "slug": "springs",
+  "name": "Springs and Hooke's law",
+  "group": "Module 3",
+  "code": "3.4.1",
+  "option": null,
+  "statements": [
+   "3.4.1(a)",
+   "3.4.1(b)",
+   "3.4.1(c)",
+   "3.4.1(d)(i)",
+   "3.4.1(d)(ii)"
+  ]
+ },
+ {
+  "slug": "materials-and-young-modulus",
+  "name": "Mechanical properties of matter: stress, strain and the Young modulus",
+  "group": "Module 3",
+  "code": "3.4.2",
+  "option": null,
+  "statements": [
+   "3.4.2(a)",
+   "3.4.2(b)",
+   "3.4.2(c)",
+   "3.4.2(d)(i)",
+   "3.4.2(d)(ii)",
+   "3.4.2(e)",
+   "3.4.2(f)"
+  ]
+ },
+ {
+  "slug": "newtons-laws-and-momentum",
+  "name": "Newton's laws of motion and momentum",
+  "group": "Module 3",
+  "code": "3.5.1",
+  "option": null,
+  "statements": [
+   "3.5.1(a)",
+   "3.5.1(b)",
+   "3.5.1(c)",
+   "3.5.1(d)",
+   "3.5.1(e)"
+  ]
+ },
+ {
+  "slug": "collisions",
+  "name": "Collisions: conservation of momentum",
+  "group": "Module 3",
+  "code": "3.5.2",
+  "option": null,
+  "statements": [
+   "3.5.2(a)",
+   "3.5.2(b)",
+   "3.5.2(c)"
+  ]
+ },
+ {
+  "slug": "charge-and-current",
+  "name": "Charge, current and mean drift velocity",
+  "group": "Module 4",
+  "code": "4.1.1 to 4.1.2",
+  "option": null,
+  "statements": [
+   "4.1.1(a)",
+   "4.1.1(b)",
+   "4.1.1(c)",
+   "4.1.1(d)",
+   "4.1.1(e)",
+   "4.1.1(f)",
+   "4.1.1(g)",
+   "4.1.2(a)",
+   "4.1.2(b)",
+   "4.1.2(c)"
+  ]
+ },
+ {
+  "slug": "emf-pd-and-resistance",
+  "name": "E.m.f., p.d., resistance and I–V characteristics",
+  "group": "Module 4",
+  "code": "4.2.1 to 4.2.3",
+  "option": null,
+  "statements": [
+   "4.2.1(a)",
+   "4.2.1(b)",
+   "4.2.2(a)",
+   "4.2.2(b)",
+   "4.2.2(c)",
+   "4.2.2(d)",
+   "4.2.2(e)",
+   "4.2.3(a)",
+   "4.2.3(b)",
+   "4.2.3(c)(i)",
+   "4.2.3(c)(ii)",
+   "4.2.3(d)"
+  ]
+ },
+ {
+  "slug": "resistivity",
+  "name": "Resistivity",
+  "group": "Module 4",
+  "code": "4.2.4",
+  "option": null,
+  "statements": [
+   "4.2.4(a)(i)",
+   "4.2.4(a)(ii)",
+   "4.2.4(b)",
+   "4.2.4(c)"
+  ]
+ },
+ {
+  "slug": "electrical-power",
+  "name": "Electrical power and energy",
+  "group": "Module 4",
+  "code": "4.2.5",
+  "option": null,
+  "statements": [
+   "4.2.5(a)",
+   "4.2.5(b)",
+   "4.2.5(c)"
+  ]
+ },
+ {
+  "slug": "series-and-parallel-circuits",
+  "name": "Series and parallel circuits: Kirchhoff's laws",
+  "group": "Module 4",
+  "code": "4.3.1",
+  "option": null,
+  "statements": [
+   "4.3.1(a)",
+   "4.3.1(b)",
+   "4.3.1(c)",
+   "4.3.1(d)",
+   "4.3.1(e)",
+   "4.3.1(f)"
+  ]
+ },
+ {
+  "slug": "internal-resistance",
+  "name": "Internal resistance and e.m.f.",
+  "group": "Module 4",
+  "code": "4.3.2",
+  "option": null,
+  "statements": [
+   "4.3.2(a)",
+   "4.3.2(b)",
+   "4.3.2(c)(i)",
+   "4.3.2(c)(ii)"
+  ]
+ },
+ {
+  "slug": "potential-dividers",
+  "name": "Potential dividers",
+  "group": "Module 4",
+  "code": "4.3.3",
+  "option": null,
+  "statements": [
+   "4.3.3(a)",
+   "4.3.3(b)",
+   "4.3.3(c)(i)",
+   "4.3.3(c)(ii)"
+  ]
+ },
+ {
+  "slug": "wave-motion",
+  "name": "Wave motion: progressive waves, the wave equation and intensity",
+  "group": "Module 4",
+  "code": "4.4.1",
+  "option": null,
+  "statements": [
+   "4.4.1(a)",
+   "4.4.1(b)(i)",
+   "4.4.1(b)(ii)",
+   "4.4.1(c)",
+   "4.4.1(d)",
+   "4.4.1(e)",
+   "4.4.1(f)(i)",
+   "4.4.1(f)(ii)",
+   "4.4.1(f)(iii)",
+   "4.4.1(g)"
+  ]
+ },
+ {
+  "slug": "electromagnetic-waves-and-refraction",
+  "name": "Electromagnetic waves, polarisation and refraction",
+  "group": "Module 4",
+  "code": "4.4.2",
+  "option": null,
+  "statements": [
+   "4.4.2(a)",
+   "4.4.2(b)",
+   "4.4.2(c)",
+   "4.4.2(d)(i)",
+   "4.4.2(d)(ii)",
+   "4.4.2(e)"
+  ]
+ },
+ {
+  "slug": "superposition-and-interference",
+  "name": "Superposition, interference and the double slit",
+  "group": "Module 4",
+  "code": "4.4.3",
+  "option": null,
+  "statements": [
+   "4.4.3(a)(i)",
+   "4.4.3(a)(ii)",
+   "4.4.3(b)",
+   "4.4.3(c)",
+   "4.4.3(d)",
+   "4.4.3(e)",
+   "4.4.3(f)",
+   "4.4.3(g)(i)",
+   "4.4.3(g)(ii)"
+  ]
+ },
+ {
+  "slug": "stationary-waves",
+  "name": "Stationary waves",
+  "group": "Module 4",
+  "code": "4.4.4",
+  "option": null,
+  "statements": [
+   "4.4.4(a)",
+   "4.4.4(b)",
+   "4.4.4(c)",
+   "4.4.4(d)",
+   "4.4.4(e)(i)",
+   "4.4.4(e)(ii)",
+   "4.4.4(f)",
+   "4.4.4(g)"
+  ]
+ },
+ {
+  "slug": "photons",
+  "name": "Photons and the Planck constant",
+  "group": "Module 4",
+  "code": "4.5.1",
+  "option": null,
+  "statements": [
+   "4.5.1(a)",
+   "4.5.1(b)",
+   "4.5.1(c)",
+   "4.5.1(d)",
+   "4.5.1(e)(i)",
+   "4.5.1(e)(ii)"
+  ]
+ },
+ {
+  "slug": "photoelectric-effect",
+  "name": "The photoelectric effect",
+  "group": "Module 4",
+  "code": "4.5.2",
+  "option": null,
+  "statements": [
+   "4.5.2(a)(i)",
+   "4.5.2(a)(ii)",
+   "4.5.2(b)",
+   "4.5.2(c)",
+   "4.5.2(d)",
+   "4.5.2(e)",
+   "4.5.2(f)"
+  ]
+ },
+ {
+  "slug": "wave-particle-duality",
+  "name": "Wave–particle duality and the de Broglie equation",
+  "group": "Module 4",
+  "code": "4.5.3",
+  "option": null,
+  "statements": [
+   "4.5.3(a)",
+   "4.5.3(b)",
+   "4.5.3(c)"
+  ]
+ },
+ {
+  "slug": "thermal-physics",
+  "name": "Thermal physics: temperature, internal energy and specific heat capacity",
+  "group": "Module 5",
+  "code": "5.1.1 to 5.1.3",
+  "option": null,
+  "statements": [
+   "5.1.1(a)",
+   "5.1.1(b)",
+   "5.1.1(c)",
+   "5.1.1(d)",
+   "5.1.2(a)",
+   "5.1.2(b)",
+   "5.1.2(c)",
+   "5.1.2(d)",
+   "5.1.2(e)",
+   "5.1.2(f)",
+   "5.1.2(g)",
+   "5.1.3(a)",
+   "5.1.3(b)(i)",
+   "5.1.3(b)(ii)",
+   "5.1.3(c)",
+   "5.1.3(d)(i)",
+   "5.1.3(d)(ii)"
+  ]
+ },
+ {
+  "slug": "ideal-gases",
+  "name": "Ideal gases and the kinetic theory",
+  "group": "Module 5",
+  "code": "5.1.4",
+  "option": null,
+  "statements": [
+   "5.1.4(a)",
+   "5.1.4(b)",
+   "5.1.4(c)",
+   "5.1.4(d)(i)",
+   "5.1.4(d)(ii)",
+   "5.1.4(d)(iii)",
+   "5.1.4(e)",
+   "5.1.4(f)",
+   "5.1.4(g)",
+   "5.1.4(h)",
+   "5.1.4(i)"
+  ]
+ },
+ {
+  "slug": "circular-motion",
+  "name": "Circular motion and centripetal force",
+  "group": "Module 5",
+  "code": "5.2.1 to 5.2.2",
+  "option": null,
+  "statements": [
+   "5.2.1(a)",
+   "5.2.1(b)",
+   "5.2.1(c)",
+   "5.2.2(a)",
+   "5.2.2(b)",
+   "5.2.2(c)",
+   "5.2.2(d)(i)",
+   "5.2.2(d)(ii)"
+  ]
+ },
+ {
+  "slug": "simple-harmonic-motion",
+  "name": "Simple harmonic motion, damping and resonance",
+  "group": "Module 5",
+  "code": "5.3.1 to 5.3.3",
+  "option": null,
+  "statements": [
+   "5.3.1(a)",
+   "5.3.1(b)",
+   "5.3.1(c)(i)",
+   "5.3.1(c)(ii)",
+   "5.3.1(d)",
+   "5.3.1(e)",
+   "5.3.1(f)",
+   "5.3.1(g)",
+   "5.3.2(a)",
+   "5.3.2(b)",
+   "5.3.3(a)",
+   "5.3.3(b)(i)",
+   "5.3.3(b)(ii)",
+   "5.3.3(c)",
+   "5.3.3(d)",
+   "5.3.3(e)"
+  ]
+ },
+ {
+  "slug": "gravitational-fields",
+  "name": "Gravitational fields, Newton's law of gravitation and gravitational potential",
+  "group": "Module 5",
+  "code": "5.4.1, 5.4.2, 5.4.4",
+  "option": null,
+  "statements": [
+   "5.4.1(a)",
+   "5.4.1(b)",
+   "5.4.1(c)",
+   "5.4.1(d)",
+   "5.4.1(e)",
+   "5.4.2(a)",
+   "5.4.2(b)",
+   "5.4.2(c)",
+   "5.4.4(a)",
+   "5.4.4(b)",
+   "5.4.4(c)",
+   "5.4.4(d)",
+   "5.4.4(e)"
+  ]
+ },
+ {
+  "slug": "planetary-motion",
+  "name": "Planetary motion: Kepler's laws and satellites",
+  "group": "Module 5",
+  "code": "5.4.3",
+  "option": null,
+  "statements": [
+   "5.4.3(a)",
+   "5.4.3(b)",
+   "5.4.3(c)",
+   "5.4.3(d)",
+   "5.4.3(e)"
+  ]
+ },
+ {
+  "slug": "stars",
+  "name": "Stars: stellar evolution, energy levels, spectra, Wien's law and Stefan's law",
+  "group": "Module 5",
+  "code": "5.5.1 to 5.5.2",
+  "option": null,
+  "statements": [
+   "5.5.1(a)",
+   "5.5.1(b)",
+   "5.5.1(c)",
+   "5.5.1(d)",
+   "5.5.1(e)",
+   "5.5.1(f)",
+   "5.5.1(g)",
+   "5.5.2(a)",
+   "5.5.2(b)",
+   "5.5.2(c)",
+   "5.5.2(d)",
+   "5.5.2(e)",
+   "5.5.2(f)",
+   "5.5.2(g)",
+   "5.5.2(h)",
+   "5.5.2(i)",
+   "5.5.2(j)",
+   "5.5.2(k)"
+  ]
+ },
+ {
+  "slug": "cosmology",
+  "name": "Cosmology: parallax, the Doppler effect, Hubble's law and the Big Bang",
+  "group": "Module 5",
+  "code": "5.5.3",
+  "option": null,
+  "statements": [
+   "5.5.3(a)",
+   "5.5.3(b)",
+   "5.5.3(c)",
+   "5.5.3(d)",
+   "5.5.3(e)",
+   "5.5.3(f)",
+   "5.5.3(g)",
+   "5.5.3(h)",
+   "5.5.3(i)",
+   "5.5.3(j)",
+   "5.5.3(k)",
+   "5.5.3(l)",
+   "5.5.3(m)",
+   "5.5.3(n)",
+   "5.5.3(o)"
+  ]
+ },
+ {
+  "slug": "capacitors",
+  "name": "Capacitors: energy, charging and discharging",
+  "group": "Module 6",
+  "code": "6.1.1 to 6.1.3",
+  "option": null,
+  "statements": [
+   "6.1.1(a)",
+   "6.1.1(b)",
+   "6.1.1(c)",
+   "6.1.1(d)",
+   "6.1.1(e)(i)",
+   "6.1.1(e)(ii)",
+   "6.1.2(a)",
+   "6.1.2(b)",
+   "6.1.2(c)",
+   "6.1.3(a)(i)",
+   "6.1.3(a)(ii)",
+   "6.1.3(b)",
+   "6.1.3(c)",
+   "6.1.3(d)",
+   "6.1.3(e)"
+  ]
+ },
+ {
+  "slug": "electric-fields",
+  "name": "Electric fields, Coulomb's law and electric potential",
+  "group": "Module 6",
+  "code": "6.2.1 to 6.2.4",
+  "option": null,
+  "statements": [
+   "6.2.1(a)",
+   "6.2.1(b)",
+   "6.2.1(c)",
+   "6.2.1(d)",
+   "6.2.2(a)",
+   "6.2.2(b)",
+   "6.2.2(c)",
+   "6.2.2(d)",
+   "6.2.3(a)",
+   "6.2.3(b)",
+   "6.2.3(c)",
+   "6.2.4(a)",
+   "6.2.4(b)",
+   "6.2.4(c)",
+   "6.2.4(d)",
+   "6.2.4(e)"
+  ]
+ },
+ {
+  "slug": "magnetic-fields",
+  "name": "Magnetic fields and the motion of charged particles",
+  "group": "Module 6",
+  "code": "6.3.1 to 6.3.2",
+  "option": null,
+  "statements": [
+   "6.3.1(a)",
+   "6.3.1(b)",
+   "6.3.1(c)",
+   "6.3.1(d)",
+   "6.3.1(e)(i)",
+   "6.3.1(e)(ii)",
+   "6.3.1(f)",
+   "6.3.2(a)",
+   "6.3.2(b)",
+   "6.3.2(c)"
+  ]
+ },
+ {
+  "slug": "electromagnetic-induction",
+  "name": "Electromagnetism: Faraday's law, Lenz's law and transformers",
+  "group": "Module 6",
+  "code": "6.3.3",
+  "option": null,
+  "statements": [
+   "6.3.3(a)",
+   "6.3.3(b)",
+   "6.3.3(c)",
+   "6.3.3(d)(i)",
+   "6.3.3(d)(ii)",
+   "6.3.3(e)",
+   "6.3.3(f)(i)",
+   "6.3.3(f)(ii)"
+  ]
+ },
+ {
+  "slug": "nuclear-atom-and-particles",
+  "name": "The nuclear atom and fundamental particles",
+  "group": "Module 6",
+  "code": "6.4.1 to 6.4.2",
+  "option": null,
+  "statements": [
+   "6.4.1(a)",
+   "6.4.1(b)",
+   "6.4.1(c)",
+   "6.4.1(d)",
+   "6.4.1(e)",
+   "6.4.1(f)",
+   "6.4.1(g)",
+   "6.4.2(a)",
+   "6.4.2(b)",
+   "6.4.2(c)",
+   "6.4.2(d)",
+   "6.4.2(e)",
+   "6.4.2(f)",
+   "6.4.2(g)",
+   "6.4.2(h)",
+   "6.4.2(i)",
+   "6.4.2(j)",
+   "6.4.2(k)",
+   "6.4.2(l)"
+  ]
+ },
+ {
+  "slug": "radioactivity",
+  "name": "Radioactivity: decay, half-life and activity",
+  "group": "Module 6",
+  "code": "6.4.3",
+  "option": null,
+  "statements": [
+   "6.4.3(a)",
+   "6.4.3(b)(i)",
+   "6.4.3(b)(ii)",
+   "6.4.3(c)",
+   "6.4.3(d)",
+   "6.4.3(e)(i)",
+   "6.4.3(e)(ii)",
+   "6.4.3(f)(i)",
+   "6.4.3(f)(ii)",
+   "6.4.3(g)",
+   "6.4.3(h)"
+  ]
+ },
+ {
+  "slug": "nuclear-fission-and-fusion",
+  "name": "Mass–energy, binding energy, fission and fusion",
+  "group": "Module 6",
+  "code": "6.4.4",
+  "option": null,
+  "statements": [
+   "6.4.4(a)",
+   "6.4.4(b)",
+   "6.4.4(c)",
+   "6.4.4(d)",
+   "6.4.4(e)",
+   "6.4.4(f)",
+   "6.4.4(g)",
+   "6.4.4(h)",
+   "6.4.4(i)",
+   "6.4.4(j)",
+   "6.4.4(k)"
+  ]
+ },
+ {
+  "slug": "medical-imaging",
+  "name": "Medical imaging: X-rays, CAT scans, PET, the gamma camera and ultrasound",
+  "group": "Module 6",
+  "code": "6.5.1 to 6.5.3",
+  "option": null,
+  "statements": [
+   "6.5.1(a)",
+   "6.5.1(b)",
+   "6.5.1(c)",
+   "6.5.1(d)",
+   "6.5.1(e)",
+   "6.5.1(f)",
+   "6.5.1(g)",
+   "6.5.2(a)",
+   "6.5.2(b)",
+   "6.5.2(c)",
+   "6.5.2(d)",
+   "6.5.2(e)",
+   "6.5.3(a)",
+   "6.5.3(b)",
+   "6.5.3(c)",
+   "6.5.3(d)",
+   "6.5.3(e)",
+   "6.5.3(f)",
+   "6.5.3(g)"
+  ]
+ }
+]

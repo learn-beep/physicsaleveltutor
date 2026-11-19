@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allPapers, OCR_MATERIALS } from '../../lib/data';
+const seriesList = [...new Set(allPapers.map((p) => p.series))];
+const cell = (series, spec, code) => allPapers.find((p) => p.series === series && p.spec === spec && String(p.paperNo).replace(/^0/, '') === code);
+---
+<Base title="OCR A-level Physics A past papers (H556 and AS H156) 2016–2025 with question-by-question tables" description="Every OCR A-level and AS Physics A paper since 2016 with a question-by-question table of topics, marks and question types, mark schemes and examiners' comments." context="past-papers">
+  <h1>OCR A-level Physics A past papers</h1>
+  <p>Every H556 and H156 series since 2016, all from OCR's own downloads. Each paper page lists every question with its topic, marks and type, and shows the questions with their mark schemes and examiner's comments.</p>
+  <p><a class="btn" href={OCR_MATERIALS} rel="noopener">OCR's past papers and mark schemes</a></p>
+  <h2>A level (H556)</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Series</th><th>Paper 1 Modelling physics</th><th>Paper 2 Exploring physics</th><th>Paper 3 Unified physics</th></tr></thead>
+    <tbody>{seriesList.filter((s) => allPapers.some((p) => p.series === s && p.spec === 'H556')).map((s) => <tr><td>{s}</td>{['1', '2', '3'].map((n) => { const p = cell(s, 'H556', n); return <td>{p ? <a href={`/past-papers/${p.slug}/`}>{p.paper}</a> : '—'}</td>; })}</tr>)}</tbody>
+  </table></div>
+  <h2 id="as">AS (H156)</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Series</th><th>Paper 1 Breadth in physics</th><th>Paper 2 Depth in physics</th></tr></thead>
+    <tbody>{seriesList.filter((s) => allPapers.some((p) => p.series === s && p.spec === 'H156')).map((s) => <tr><td>{s}</td>{['1', '2'].map((n) => { const p = cell(s, 'H156', n); return <td>{p ? <a href={`/past-papers/${p.slug}/`}>{p.paper}</a> : '—'}</td>; })}</tr>)}</tbody>
+  </table></div>
+  <p class="muted">There were no summer exams in 2020 or 2021; the November 2020 and November 2021 papers are the autumn series OCR ran instead. The A-level papers start in June 2017 and the AS papers in June 2016. Paper 1 covers Modules 1, 2, 3 and 5; Paper 2 covers Modules 1, 2, 4 and 6; Paper 3 covers all six. OCR removed one multiple-choice question (Q10) from the June 2025 AS Paper 1, so that paper is shown without it. The June 2026 papers will be added when OCR makes them public.</p>
+</Base>
